@@ -32,6 +32,8 @@
 }
 
 .person-section {
+  width: 20rem;
+  height: 20rem;
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -61,6 +63,7 @@
 }
 
 .person-name-overlay {
+  color: var(--bg);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -76,11 +79,8 @@
 }
 
 .person-name {
-  color: white;
   font-size: 2rem;
-  font-weight: bold;
   font-family: 'Redaction', sans-serif;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   display: block;
   text-align: center;
 }

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { getCelebrities } from "../services/wikidataApi";
-import PersonSection from "./PersonSection";
 import ScorePopup from "./ScorePopup";
 
 
@@ -63,8 +62,39 @@ export default function QuizPage() {
         <p className="score"> your score: {score} / 10</p>
       </div>
       <div className="quiz-split">
-        <PersonSection person={celebrities[0]} onChoose={handleChoice} />
-        <PersonSection person={celebrities[1]} onChoose={handleChoice} />
+        <div
+          className="person-section"
+          onClick={() => handleChoice(celebrities[0])}
+        >
+          <div className="person-image-container">
+            <img
+              src={celebrities[0].image}
+              alt={celebrities[0].name}
+              className="person-image"
+            />
+            <div className="person-name-overlay">
+              <span className="person-name">{celebrities[0].name}</span>
+              <p>{celebrities[0].description}</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className="person-section"
+          onClick={() => handleChoice(celebrities[1])}
+        >
+          <div className="person-image-container">
+            <img
+              src={celebrities[1].image}
+              alt={celebrities[1].name}
+              className="person-image"
+            />
+            <div className="person-name-overlay">
+              <span className="person-name">{celebrities[1].name}</span>
+              <p>{celebrities[1].description}</p>
+            </div>
+          </div>
+        </div>
       </div>
       {showPopup && <ScorePopup isCorrect={isCorrect} onClose={closePopup} />}
     </div>
