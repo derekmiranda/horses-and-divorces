@@ -1,5 +1,7 @@
+import { useEffect, useState } from "react";
 import "./QuizPage.css"
 import useCountdown from "../hooks/useCountdown";
+import { getCelebrities } from "../services/wikidataApi";
 
 function PersonSection({ children }) {
   return (
@@ -10,11 +12,28 @@ function PersonSection({ children }) {
   )
 }
 
+async function testGetCelebrities() {
+  try {
+    const data = await getCelebrities();
+    console.log("Fetched data:", data);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+}
+
+testGetCelebrities();
+
 function QuizPage() {
   const { secondsLeft, isRunning, pause, start, reset } = useCountdown(30, {
     autoStart: false,
     onExpire: () => console.log("time's up"),
   });
+  
+  const [celebrities, setCelebrities] = useState([]);
+
+  useEffect(() => {
+    getCelebrities().then(setCelebrities);
+  }, []);
 
   return (
     <>
