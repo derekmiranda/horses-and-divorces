@@ -57,14 +57,15 @@ export default function QuizPage() {
   }
 
   return (
-    <div>
-      <h1>Horses and Divorces / Wiki-Exes</h1>
-      <p>Score: {score}</p>
-      <section className="quiz-row">
+    <div className="quiz-container">
+      <div className="quiz-header">
+        <h1>who had more spouses?</h1>
+        <p className="score"> your score: {score} / 10</p>
+      </div>
+      <div className="quiz-split">
         <PersonSection person={celebrities[0]} onChoose={handleChoice} />
-        <p>Who has the most divorces?</p>
         <PersonSection person={celebrities[1]} onChoose={handleChoice} />
-      </section>
+      </div>
       {showPopup && <ScorePopup isCorrect={isCorrect} onClose={closePopup} />}
     </div>
   );
