@@ -8,19 +8,27 @@ export default function QuizPage() {
   const [score, setScore] = useState(0);
   const [showPopup, setShowPopup] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
+  const [hasAnswered, setHasAnswered] = useState(false);
+
 
   async function fetchCelebrities() {
     const data = await getCelebrities();
     setCelebrities(() => {
-      const randomIndices = [];
-      while (randomIndices.length < 2) {
-        const randomIndex = Math.floor(Math.random() * data.length);
-        if (!randomIndices.includes(randomIndex)) {
-          randomIndices.push(randomIndex); // Ensure unique indices
+      let celeb1, celeb2;
+      do {
+        const randomIndices = [];
+        while (randomIndices.length < 2) {
+          const randomIndex = Math.floor(Math.random() * data.length);
+          if (!randomIndices.includes(randomIndex)) {
+            randomIndices.push(randomIndex); // Ensure unique indices
+          }
         }
-      }
-      return [data[randomIndices[0]], data[randomIndices[1]]]; // Pick two random celebrities
+        celeb1 = data[randomIndices[0]];
+        celeb2 = data[randomIndices[1]];
+      } while (celeb1.spouseCount === celeb2.spouseCount); // Ensure spouseCount is different
+      return [celeb1, celeb2];
     });
+    setHasAnswered(false);
   }
 
   useEffect(() => {
@@ -33,6 +41,8 @@ export default function QuizPage() {
   }
 
   const handleChoice = (chosenPerson) => {
+    if (hasAnswered) return;
+
     const [person1, person2] = celebrities;
     const correctPerson = person1.spouseCount > person2.spouseCount ? person1 : person2;
 
@@ -43,11 +53,12 @@ export default function QuizPage() {
     } else {
       setIsCorrect(false)
     }
+    setHasAnswered(true)
     setShowPopup(true)
-    fetchCelebrities();
   };
 
   const closePopup = () => {
+    fetchCelebrities();
     setShowPopup(false); // Hide the popup
   };
 
@@ -96,7 +107,6 @@ export default function QuizPage() {
           </div>
         </div>
       </div>
-      {showPopup && <ScorePopup isCorrect={isCorrect} onClose={closePopup} />}
     </div>
   );
 }
