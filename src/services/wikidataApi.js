@@ -1,5 +1,5 @@
 import Celebs from "../assets/Celebs.json";
-
+// add in celebs when you are ready to change the dataset call
 export async function getCelebrities() {
   const endpoint = "https://query.wikidata.org/sparql";
   const query = `
@@ -16,7 +16,7 @@ export async function getCelebrities() {
   const res = await fetch(url, { headers });
   const data = await res.json();
 
-  const apiResults = await Promise.all(
+  return Promise.all(
     data.results.bindings.map(async (entry) => {
       const qid = entry.person.value.split('/').pop();
       const { name, description } = await fetchEntityData(qid);
@@ -30,9 +30,6 @@ export async function getCelebrities() {
       };
     })
   );
-  const combinedResults = [...Celebs, ...apiResults];
-
-  return combinedResults;
 }
 
 async function fetchEntityData(qid) {

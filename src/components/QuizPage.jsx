@@ -106,6 +106,16 @@ export default function QuizPage() {
             </div>
           </div>
         </div>
+        <br />
+        <div>
+        {showPopup && (
+                <ScorePopup
+                  isCorrect={isCorrect}
+                  onClose={closePopup}
+                  celebrities={celebrities}
+                />
+              )}
+        </div>
       </div>
     </div>
   );

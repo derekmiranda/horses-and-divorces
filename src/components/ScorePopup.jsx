@@ -1,5 +1,4 @@
 export default function ScorePopup({ isCorrect, onClose, celebrities }) {
-
   return (
     <div className="popup" onClick={onClose}>
       <div className="popup-content" onClick={(e) => e.stopPropagation()}>
