@@ -1,16 +1,86 @@
-.quiz-row {
+.quiz-container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.quiz-header {
+  text-align: center;
+}
+
+.quiz-header h1 {
+  font-size: 3.6rem;
+  margin-bottom: 1rem;
+  font-family: Redaction;
+  font-weight: 400;
+  letter-spacing: -0.16rem;
+}
+
+.quiz-header .score {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+}
+
+.quiz-split {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  gap: 4rem;
+  height: 80%;
+  overflow: hidden;
 }
 
-.quiz-row > * {
-  margin: 4px;
+.person-section {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
-.person-img {
-  width: 200px;
-  height: 200px;
-  background: blue;
-  border-radius: 8px;
+.person-section:hover {
+  transform: scale(1.02);
+}
+
+.person-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.person-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.person-section:hover .person-image {
+  filter: brightness(0.7);
+}
+
+.person-name-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 2rem 1rem 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.person-section:hover .person-name-overlay {
+  transform: translateY(0);
+}
+
+.person-name {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Redaction', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  display: block;
+  text-align: center;
 }
