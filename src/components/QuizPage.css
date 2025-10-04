@@ -1,5 +1,16 @@
+.quiz-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-page > * {
+  margin: 4px;
+}
+
 .person-img {
   width: 200px;
   height: 200px;
   background: blue;
+  border-radius: 8px;
 }
