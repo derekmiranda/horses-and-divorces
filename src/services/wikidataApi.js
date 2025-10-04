@@ -14,18 +14,30 @@ export async function getCelebrities() {
   const res = await fetch(url, { headers });
   const data = await res.json();
 
-  return data.results.bindings.map(entry => ({
-    name: fetchName(entry.person.value.split('/').pop()),
-    uri: entry.person.value,
-    image: entry.image.value,
-    spouseCount: Number(entry.spouseCount.value),
-  }));
+  return Promise.all(
+    data.results.bindings.map(async (entry) => {
+      const qid = entry.person.value.split('/').pop();
+      const { name, description } = await fetchEntityData(qid);
+
+      return {
+        name,
+        description,
+        uri: entry.person.value,
+        image: entry.image.value,
+        spouseCount: Number(entry.spouseCount.value),
+      };
+    })
+  );
 }
 
-async function fetchName(qid) {
+async function fetchEntityData(qid) {
   const url = `https://www.wikidata.org/wiki/Special:EntityData/${qid}.json`;
   const res = await fetch(url);
   const data = await res.json();
 
-  return data.entities[qid].labels.en.value;
+  const entity = data.entities[qid];
+  const name = entity.labels?.en?.value || "No name available";
+  const description = entity.descriptions?.en?.value || "No description available";
+
+  return { name, description };
 }
