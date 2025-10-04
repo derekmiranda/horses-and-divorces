@@ -1,37 +1,71 @@
 import { useEffect, useState } from "react";
-import "./QuizPage.css"
+import { getCelebrities } from "../services/wikidataApi";
+import PersonSection from "./PersonSection";
+import ScorePopup from "./ScorePopup";
 
-function PersonSection({ children }) {
+
+export default function QuizPage() {
+  const [celebrities, setCelebrities] = useState([]);
+  const [score, setScore] = useState(0);
+  const [showPopup, setShowPopup] = useState(false);
+  const [isCorrect, setIsCorrect] = useState(false);
+
+  async function fetchCelebrities() {
+    const data = await getCelebrities();
+    setCelebrities(() => {
+      const randomIndices = [];
+      while (randomIndices.length < 2) {
+        const randomIndex = Math.floor(Math.random() * data.length);
+        if (!randomIndices.includes(randomIndex)) {
+          randomIndices.push(randomIndex); // Ensure unique indices
+        }
+      }
+      return [data[randomIndices[0]], data[randomIndices[1]]]; // Pick two random celebrities
+    });
+  }
+
+  useEffect(() => {
+    fetchCelebrities(); // Fetch the initial set of celebrities
+  }, []);
+
+
+  if (!celebrities) {
+    return <div>Loading...</div>; // Show loading state while fetching
+  }
+
+  const handleChoice = (chosenPerson) => {
+    const [person1, person2] = celebrities;
+    const correctPerson = person1.spouseCount > person2.spouseCount ? person1 : person2;
+
+    // Update the score if the player chose correctly
+    if (chosenPerson.name === correctPerson.name) {
+      setScore((prevScore) => prevScore + 1);
+      setIsCorrect(true)
+    } else {
+      setIsCorrect(false)
+    }
+    setShowPopup(true)
+    fetchCelebrities();
+  };
+
+  const closePopup = () => {
+    setShowPopup(false); // Hide the popup
+  };
+
+  if (celebrities.length < 2) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div>
-      <div className="person-img"></div>
-      <button>{children}</button>
-    </div>
-  )
-}
-
-async function testGetCelebrities() {
-  try {
-    const data = await getCelebrities();
-    console.log("Fetched data:", data);
-  } catch (error) {
-    console.error("Error fetching data:", error);
-  }
-}
-
-testGetCelebrities();
-
-function QuizPage() {
-  return (
-    <>
-      <h1>horses and divorces / wiki-exes</h1>
+      <h1>Horses and Divorces / Wiki-Exes</h1>
+      <p>Score: {score}</p>
       <section className="quiz-row">
-        <PersonSection>this one?</PersonSection>
-        <p>who has the most divorces?</p>
-        <PersonSection>or this one?</PersonSection>
+        <PersonSection person={celebrities[0]} onChoose={handleChoice} />
+        <p>Who has the most divorces?</p>
+        <PersonSection person={celebrities[1]} onChoose={handleChoice} />
       </section>
-    </>
-  )
+      {showPopup && <ScorePopup isCorrect={isCorrect} onClose={closePopup} />}
+    </div>
+  );
 }
-
-export default QuizPage
