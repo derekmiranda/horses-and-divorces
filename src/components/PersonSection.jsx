@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 export default function PersonSection({ person, onChoose }) {
   return (
     <div>
