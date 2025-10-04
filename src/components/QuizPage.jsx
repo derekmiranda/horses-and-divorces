@@ -1,25 +1,6 @@
 import { useEffect, useState } from "react";
 import "./QuizPage.css"
-
-function PersonSection({ children }) {
-  return (
-    <div>
-      <div className="person-img"></div>
-      <button>{children}</button>
-    </div>
-  )
-}
-
-async function testGetCelebrities() {
-  try {
-    const data = await getCelebrities();
-    console.log("Fetched data:", data);
-  } catch (error) {
-    console.error("Error fetching data:", error);
-  }
-}
-
-testGetCelebrities();
+import  PersonSection from "./PersonSection";
 
 function QuizPage() {
   return (
