@@ -1,10 +1,10 @@
-.quiz-page {
+.quiz-row {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.quiz-page > * {
+.quiz-row > * {
   margin: 4px;
 }
 
