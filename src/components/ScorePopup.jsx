@@ -1,5 +1,3 @@
-import "./ScorePopup.css";
-
 export default function ScorePopup({ isCorrect, onClose, celebrities }) {
 
   return (

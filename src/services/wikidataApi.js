@@ -1,3 +1,5 @@
+import Celebs from "../assets/Celebs.json";
+
 export async function getCelebrities() {
   const endpoint = "https://query.wikidata.org/sparql";
   const query = `
@@ -14,7 +16,7 @@ export async function getCelebrities() {
   const res = await fetch(url, { headers });
   const data = await res.json();
 
-  return Promise.all(
+  const apiResults = await Promise.all(
     data.results.bindings.map(async (entry) => {
       const qid = entry.person.value.split('/').pop();
       const { name, description } = await fetchEntityData(qid);
@@ -28,6 +30,9 @@ export async function getCelebrities() {
       };
     })
   );
+  const combinedResults = [...Celebs, ...apiResults];
+
+  return combinedResults;
 }
 
 async function fetchEntityData(qid) {
