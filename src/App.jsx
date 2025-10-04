@@ -4,9 +4,9 @@ import StartScreen from './components/StartPage'
 import QuizPage from './components/QuizPage'
 
 function App() {
-  const [currentScreen, setCurrentScreen] = useState('quiz')
+  const [currentScreen, setCurrentScreen] = useState('screen')
 
-  let screen = <StartScreen /> 
+  let screen = <StartScreen onStart={() => setCurrentScreen('quiz')} />
   switch (currentScreen) {
     case 'quiz':
       screen = <QuizPage />

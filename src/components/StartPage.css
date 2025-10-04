@@ -1,0 +1,59 @@
+@keyframes fontCycle {
+    0% {
+        font-family: 'Redaction';
+    }
+
+    14.28% {
+        font-family: 'Redaction 10';
+    }
+
+    28.56% {
+        font-family: 'Redaction 20';
+    }
+
+    42.84% {
+        font-family: 'Redaction 35';
+    }
+
+    57.12% {
+        font-family: 'Redaction 50';
+    }
+
+    71.4% {
+        font-family: 'Redaction 70';
+    }
+
+    85.68% {
+        font-family: 'Redaction 100';
+    }
+
+    100% {
+        font-family: 'Redaction';
+    }
+}
+
+.start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    gap: 1rem;
+}
+
+.start-screen h1 {
+    animation: fontCycle 2s ease-in-out infinite;
+    font-size: 8rem;
+    font-weight: bold;
+    line-height:80%;
+}
+
+button {
+    padding: 1 1.5 1 1.5rem;
+}
+
+p { 
+    font-family: Redaction;
+}

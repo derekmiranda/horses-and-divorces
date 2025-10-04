@@ -1,10 +1,15 @@
-function StartScreen() {
+import "./QuizPage.css"
+import "./StartPage.css"
+
+
+function StartScreen({ onStart }) {
   return (
-    <>
-      <h1>horses and divorces / wiki-exes</h1>
-      <p>guess which person has the most divorces!</p>
-      <button>start</button>
-    </>
+    <div className="start-screen">
+      <h1>horses and divorces</h1>
+      <p>guess which public figure has more divorces 👀</p>
+      
+      <button onClick={onStart}>start</button>
+    </div>
   )
 }
 
