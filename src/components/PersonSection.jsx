@@ -16,6 +16,8 @@ export default function PersonSection({ person, onChoose }) {
           <span className="person-name">{person.name}</span>
         </div>
       </div>
+      <button onClick={() => onChoose(person)}>{person.name}</button>
+      <p>{person.description}</p>
     </div>
   );
 }
