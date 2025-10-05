@@ -101,7 +101,6 @@
   justify-content: center;
   text-align: center;
   padding: 2rem;
-  gap: clamp(0.2rem, 2vw, 0.4rem);
 }
 
 .quiz-container button {

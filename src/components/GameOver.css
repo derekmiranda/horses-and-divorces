@@ -1,0 +1,13 @@
+.quiz-header {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.4rem, 0.6rem, 1rem);
+}
+
+.quiz-header h1 {
+    animation: fontCycle 2s infinite;
+}
+
+.non-animate {
+    animation: none;
+}

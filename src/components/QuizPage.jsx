@@ -28,9 +28,9 @@ function getRandomCelebs(allCelebs) {
       // ensure no ties
       while (
         randomIndices.length && ((
-        allCelebs[randomIndices[0]].spouseCount ===
-        allCelebs[randomIndex].spouseCount
-        ) || randomIndex === randomIndices[0]) 
+          allCelebs[randomIndices[0]].spouseCount ===
+          allCelebs[randomIndex].spouseCount
+        ) || randomIndex === randomIndices[0])
       ) {
         randomIndex = Math.floor(Math.random() * allCelebs.length);
       }
@@ -116,14 +116,14 @@ export default function QuizPage() {
 
   if (currPairIdx >= NUM_QUESTIONS) {
     return (
-      <>
+      <div className="quiz-container">
         <GameOver score={score} num_questions={NUM_QUESTIONS} />
-        <div className="quiz-footer">
+        <div>
           <button onClick={() => resetState(allCelebrities)}>
             Play Again?
           </button>
         </div>
-      </>
+      </div>
     );
   } else if (!celebrities.length) {
     return <div>Loading...</div>; // Show loading state while fetching
