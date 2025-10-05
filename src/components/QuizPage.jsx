@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { getCelebrities } from "../services/wikidataApi";
+import allCelebrities from '../assets/Celebs.json'
 import ScorePopup from "./ScorePopup";
+import GameOver from "./GameOver";
 
-const NUM_QUESTIONS = 5;
+const NUM_QUESTIONS = 10;
 
 function PersonSection({ handleClick, imgSrc, name, description }) {
   return (
@@ -26,21 +27,28 @@ function getRandomCelebs(allCelebs) {
     if (!randomIndices.includes(randomIndex)) {
       // ensure no ties
       while (
-        randomIndices.length &&
+        randomIndices.length && ((
         allCelebs[randomIndices[0]].spouseCount ===
         allCelebs[randomIndex].spouseCount
+        ) || randomIndex === randomIndices[0]) 
       ) {
-        randomIndex = (randomIndex + 1) % allCelebs.length;
+        randomIndex = Math.floor(Math.random() * allCelebs.length);
       }
       randomIndices.push(randomIndex); // Ensure unique indices
     }
+  }
+
+  // randomize swapping celebs
+  if (Math.random() > 0.5) {
+    let temp = randomIndices[0]
+    randomIndices[0] = randomIndices[1]
+    randomIndices[1] = temp
   }
 
   return randomIndices.map((i) => allCelebs[i]);
 }
 
 export default function QuizPage() {
-  const [allCelebrities, setAllCelebrities] = useState([]);
   const [celebPairs, setCelebPairs] = useState([]);
   const [currPairIdx, setCurrPairIdx] = useState(0);
   const [score, setScore] = useState(0);
@@ -54,12 +62,6 @@ export default function QuizPage() {
     setCurrPairIdx((i) => i + 1);
     setHasAnswered(false);
   };
-
-  async function fetchCelebrities() {
-    const data = await getCelebrities();
-    setAllCelebrities(data);
-    return data;
-  }
 
   function resetState(allCelebrities) {
     const celebPairs = [];
@@ -75,8 +77,7 @@ export default function QuizPage() {
   }
 
   async function init() {
-    const data = await fetchCelebrities();
-    resetState(data);
+    resetState(allCelebrities);
 
     // preload imgs
     celebPairs.forEach((pair) => {
@@ -117,9 +118,12 @@ export default function QuizPage() {
     return (
       <div className="quiz-container">
         <div className="quiz-header">
-          <h2>
+          <h1>
             you guessed {score} out of {NUM_QUESTIONS}!!
-          </h2>
+          </h1>
+          <GameOver score={score} />
+        </div>
+        <div className="quiz-footer">
           <button onClick={() => resetState(allCelebrities)}>
             Play Again?
           </button>

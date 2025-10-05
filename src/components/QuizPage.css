@@ -52,7 +52,9 @@
   overflow: hidden;
   border: 2px solid var(--color-primary);
   will-change: transform, box-shadow;
-  transition: transform 400ms cubic-bezier(.34, 1.56, .64, 1), box-shadow 400ms cubic-bezier(.34, 1.56, .64, 1);
+  transition: transform 400ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: var(--pointer);
 }
 
 .person-image {
@@ -84,7 +86,7 @@
 }
 
 .person-name-static {
-  font-family: 'Redaction 35', sans-serif;
+  font-family: "Redaction 35", sans-serif;
   font-weight: 500;
   font-size: 1.6rem;
   text-align: center;
