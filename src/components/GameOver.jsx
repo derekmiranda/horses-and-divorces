@@ -6,8 +6,15 @@ export default function GameOver({ score, celebPairs }) {
     .sort((c1, c2) => c2.spouseCount - c1.spouseCount)
     console.log('celebsSortedBySpouseNumber', celebsSortedBySpouseNumber)
   return <>
-    <h4>{endScreenCopy(score)}</h4>
+      <div className="quiz-container">
+      <div className="quiz-header">
+        <h1>
+          you guessed {score} out of {num_questions}!!
+        </h1>
+        <h4>{endScreenCopy(score)}</h4>
     <SpouseCountList celebs={celebsSortedBySpouseNumber} />
+      </div>
+    </div>
   </>
 }
 
