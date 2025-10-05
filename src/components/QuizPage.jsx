@@ -116,7 +116,7 @@ export default function QuizPage() {
 
   if (currPairIdx >= NUM_QUESTIONS) {
     return (
-      <div className="quiz-container"div className="quiz-container">
+      <div className="quiz-container">
         <div className="quiz-header">
           <h1>
             you guessed {score} out of {NUM_QUESTIONS}!!
