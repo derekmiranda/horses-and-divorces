@@ -3,7 +3,7 @@ import allCelebrities from '../assets/Celebs.json'
 import ScorePopup from "./ScorePopup";
 import GameOver from "./GameOver";
 
-const NUM_QUESTIONS = 1;
+const NUM_QUESTIONS = 10;
 
 function PersonSection({ handleClick, imgSrc, name, description }) {
   return (
