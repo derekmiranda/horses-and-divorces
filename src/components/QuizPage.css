@@ -1,6 +1,6 @@
 .quiz-page {
   width: 90vw;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,10 +19,7 @@
   font-size: 1rem;
 }
 
-.celeb-container {
-  overflow: hidden;
-}
-
+.celeb-container {}
 
 .quiz-split {
   display: flex;
@@ -43,7 +40,6 @@
   transform: translate(-0.3rem, -0.3rem) scale(1.02);
   box-shadow: 0.8rem 0.8rem 0 rgba(28, 25, 237);
 }
-
 
 .person-section:active .person-image-container {
   transform: translate(1.2rem, 1.2rem) scale(0.98);
