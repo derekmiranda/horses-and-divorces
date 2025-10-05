@@ -1,0 +1,12 @@
+.spouse-count-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+.game-over-person-image-container {
+  width: 64px;
+  height: 32px;
+}
