@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Redaction';
+    src: url('/path-to-font/Redaction.woff2') format('woff2'),
+         url('/path-to-font/Redaction.woff') format('woff');
+    font-display: swap; /* Ensures text is visible while the font loads */
+}
+
 @keyframes fontCycle {
     0% {
         font-family: 'Redaction';
