@@ -1,6 +1,14 @@
-export default function GameOver({ score }) {
+export default function GameOver({ score, num_questions  }) {
   return <>
-    <h4>{endScreenCopy(score)}</h4>
+    <div className="quiz-container">
+      <div className="quiz-header">
+        <h1>
+          you guessed {score} out of {num_questions}!!
+        </h1>
+        <h4>{endScreenCopy(score)}</h4>
+      </div>
+    </div>
+
   </>
 }
 
