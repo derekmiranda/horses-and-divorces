@@ -1,1752 +1,958 @@
-[
-  {
-    "person": "http://www.wikidata.org/entity/Q78230",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Minna%20Wagner%20%281865%2C%20Humblot%20%26%20Sagel%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q27167",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ann%20Druyan%201.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q40263",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jay%20Grdina.JPG",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q207596",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Daryl%20Hannah%20by%20Dana%20Fineman.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q234773",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Priscilla%20Presley%202014.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q240896",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MarinaVlady-1955-Harcourt.png",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q435925",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Julie%20Gayet%202024%20%28cropped%29.jpg",
-    "spouseCount": "4"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q460831",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nicolas%20Mignard%20-%20Portrait%20pr%C3%A9sum%C3%A9%20d%27Armande%20B%C3%A9jart%20%28vers%201640-1700%29%2C%20com%C3%A9dienne%20-%20P1721%20-%20Mus%C3%A9e%20Carnavalet.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q2975100",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claire%20Nebout%202011.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q4054963",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lyudmila%20Abramova%2C%202018.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q5509254",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Funke%20Akindele.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q5509254",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Funke%20Akindele%20at%202021%20AMA%20Award%2002.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q43044",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Demi%20Moore%20at%20the%202024%20Toronto%20International%20Film%20Festival%203%20%28cropped%29%20%28cropped%29.jpg",
-    "spouseCount": "6"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q76717",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claudia%20Schiffer%2020091006%20Chanel%2005.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q210462",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Christina%20Hendricks%20at%20PaleyFest%202014.jpg",
-    "spouseCount": "4"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q230654",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Maria%20Shriver%20by%20Gage%20Skidmore.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q230654",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MariaShriverApr2013.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q233993",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Barbara%20Bach%20-%201978.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q442991",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/OliviaHarrisonApr09.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1174489",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/David%20Furnish%202022.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1174489",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/David%20Furnish%20at%20St%20Paul%27s%20Cathedral%2C%20London%2C%20United%20Kingdom%20on%2014%20October%202024%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1320512",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Freddie%20Stroma%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q44221",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Superpower%20%282023%29-60535.jpg",
-    "spouseCount": "9"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q192990",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/GuyRitchiebyKathyHutchins.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q234144",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rita%20Wilson%20and%20her%20band%20perform%20at%20a%20Greek%20Independence%20Day%20reception%20on%20March%2029%2C%202023%20in%20the%20East%20Room%20of%20the%20White%20House%20%28cropped%29.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q234144",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rita%20Wilson%20by%20Gage%20Skidmore%202.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1393800",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%C3%89dith%20Piaf%20%26%20Theo%20Sarapo%20914-6437.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1678088",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lucienne%20Boyer%20en%20Jack%20Pills%2C%20Bestanddeelnr%20901-2468.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q3441020",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/RomaneSerda.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q6294",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hillary%20Clinton%20official%20Secretary%20of%20State%20portrait%20crop.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q32337",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lita%20Grey.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q95050",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Paulette%20Goddard%2C%20A%20Stranger%20Came%20Home%20publicity%20%281954%29%20I.jpg",
-    "spouseCount": "6"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q137808",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oona%20O%27Neill%20-%201943.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q309941",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ice%20T%20SVU%20March%202011%20%28cropped%29.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q444509",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Franca%20Rame%201963.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q444509",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Franca%20Rame%20senato.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1034113",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henrietta%20Smithson.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1981049",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%D0%9D%D0%B0%20%D1%81%D1%8A%D1%91%D0%BC%D0%BE%D1%87%D0%BD%D0%BE%D0%B9%20%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D0%BA%D0%B5%20%D0%9A%D1%80%D0%B5%D1%81%D1%82%D1%8C%D1%8F%D0%BD%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%20%D1%81%D1%8B%D0%BD%D0%B0.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q2516986",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Julianne%20Phillips%203847.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q104000",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lauren%20Bacall%20by%20Bernard%20Gotfryd.jpg",
-    "spouseCount": "4"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q230138",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tatum%20O%27Neal%20in%202019.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q238391",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Anefo%20911-6566%20Haya%20Harareet%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q238391",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Haya%20Harareet%20in%20Ben%20Hur%20trailer.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q271597",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Victoria%20Tennant%202010.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q275428",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mary%20Philips%20in%20A%20Farewell%20to%20Arms%20%281932%29.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q354863",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Formal%20portrait%20of%20Lee%20de%20Forest.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q529654",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mayo%20Methot%20-%20Marked%20Woman.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q3554543",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vanesa%20Lorenzo%20en%20la%20inauguraci%C3%B3n%20de%20la%20exposici%C3%B3n%20en%20la%20Sala%20Canal%20de%20Isabel%20II%20del%20modisto%20Manuel%20Pertegaz%20%282%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q15732807",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Maradona%20y%20dalma%201987%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q215976",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Patricia%20Arquette%202015.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q485387",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kang%20Hye-jung%20from%20acrofan.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q734944",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Clifford%20Odets-signed.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1966219",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv%20Bild%20102-10879%2C%20Natalya%20Rozenel.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q16208883",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Harvey%20So%20Solid%202021.png",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q35332",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Brad%20Pitt-69858.jpg",
-    "spouseCount": "6"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q105817",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kevin%20Kline%2C%20No%20Strings%20Attached%20Premiere.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q105817",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/KevinKlineAAFeb09.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q179150",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sonny%20Bono%20in%201966.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q186304",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/President%20Trump%20Meets%20with%20Sentencing%20Commutation%20Recipients%20%2849624188912%29%20%28cropped%29.jpg",
-    "spouseCount": "6"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q215497",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kevin%20Federline.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q233466",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Elisabeth%20Moss%20portrait%202013.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q233466",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Square%2001%20%2837062396652%29%20%28cropped%29.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q430911",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Peng%20Liyuan.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q641975",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jeff%20Richmond%202010.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1132612",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Anita%20Dobson%202015.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q2026593",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MariyaAndreeva.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q2559968",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Wera%20Blanke.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q3157197",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jack%20Haley%2C%20Jr.%20at%20the%20Air%20America%20movie%20premiere%20in%201990.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q4251124",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kay%20Cannon%20at%20SXSW%20Red%20Carpet%20premiere%20of%20BLOCKERS%20%2826876904668%29%20%28cropped%29.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q10264401",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/David%20Gest.png",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q16735484",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rogue%20Interview%20with%20Joshua%20Sasse%202013%20%28cropped-J1%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q26101945",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Virginia-Nicolson-Welles-1938.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q113382662",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eugenie%20Grosup.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q32045",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hemsworth%20Liam.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q108941",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carrie%20Fisher%202013-a%20straightened.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q116861",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fran%20Walsh%20DNZM%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q134077",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rachel%20Weisz%202024%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q153120",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Marlene%20and%20Rudolf%201923.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q188461",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dannii%20Minogue%20arrives%20at%20the%2058th%20Annual%20Logie%20Awards%20at%20Crown%20Palladium%20%2826904220225%29%20cropped%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q230465",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kiele%20Sanchez%20-%20Kingdom%20Premiere%20Oct%202014%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q236017",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jiang%20Qing%201976.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q238871",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Diane%20Cilento%2C%201954.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q242535",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caterina%20Valente%20%281966%29%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q256531",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iman%201996.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q256531",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iman%20at%20the%202009%20Tribeca%20Film%20Festival.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q314805",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Elliott%20Gould%20-%201986.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q315051",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/James%20Brolin%202013%20%28cropped%29.jpg",
-    "spouseCount": "6"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q466584",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MCHAT%201905%20Olga%20Knipperova.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q503706",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chris%20Pratt%202018.jpg",
-    "spouseCount": "4"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q554560",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ren%C3%A9%20Angelil.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q644565",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Patrick%20J%20Adams.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1340718",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mark%20Neveldine%202011.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q2669959",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Angie%20Bowie%20at%20Satan%27s%20Hollow%2C%20Manchester%2C%20on%20Saturday%20the%2017th%20of%20April%202010.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q2892218",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bayard%20Veiller%201920.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q6120528",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Damala.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q24605465",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Alida%20Craig%20%28IA%20alidacraig00kingiala%29.pdf",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q106770881",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Matt%20Kaplan%20at%20the%202011%20Whistler%20Film%20Festival%20%285909353883%29.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q10520",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/David%20Beckham%20UNICEF%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q42745",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rita%20Hayworth-publicity.JPG",
-    "spouseCount": "5"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q63051",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Werner%20Krau%C3%9F%20um%201920%20by%20Alexander%20Binder.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q63051",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Werner%20Krauss.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q180004",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fergie%20Washington%20D.C%202014%20%28cropped%29.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q254462",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nicoletta%20Braschi.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q287186",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ilary%20Blasi%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q683828",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michael%20Des%20Barres%20at%20the%20Chiller%20Theatre%20Expo%202017.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q2597050",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Marla%20Maples%20%282014%29.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q2905958",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Blanche%20Albane%20par%20Henri%20Doucet.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q3037149",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/English%20actress%20Dorothea%20Baird%20%28SAYRE%202087%29%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q3459755",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Paola%20Mori%201955%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q5429553",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%D9%81%D9%87%DB%8C%D9%85%D9%87%20%D8%B1%D8%A7%D8%B3%D8%AA%DA%A9%D8%A7%D8%B1.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q8209372",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/NYU%20Local%20chats%20with%20Dylan%20Sprouse%2001%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q97045",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/BerlinerLeben-1910%20Wedekind-Frank-Tilly.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q97045",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tilly%20Wedekind.png",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1744",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Madonna%20Rebel%20Heart%20Tour%202015%20-%20Stockholm%20%2823051472299%29%20%28cropped%29.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q24829",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Orson%20Welles%201937%20cr3-4.jpg",
-    "spouseCount": "9"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q34816",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kathryn%20Bigelow%20by%20David%20Shankbone.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q53003",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Roberto%20Rossellini.jpg",
-    "spouseCount": "8"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q163249",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jessica%20Biel%202012.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q164782",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ashton%20Kutcher%20-%202023%20-%20P060603-652701%20%28cropped%29.jpg",
-    "spouseCount": "4"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q208214",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Linda%20Hamilton%20Photo%20Op%20GalaxyCon%20Raleigh%202024.jpg",
-    "spouseCount": "4"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q212236",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/James%20Hill%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q233253",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/June%20Carter%20Cash%201988%20%28cropped%29.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q235635",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Amis%20in%202017.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q272972",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Robin%20Wright%20Cannes%202017%20%28cropped%29.jpg",
-    "spouseCount": "6"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q273136",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ryan%20Phillippe%202011%20Shankbone%202.JPG",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q281352",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claire%20Keim%20Cannes%202014%202.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q299419",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carlo%20Ponti%201951.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q333475",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mel%20Ferrer%20-%201960.jpg",
-    "spouseCount": "8"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q962908",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dick%20Haymes%20in%20State%20Fair%20trailer.jpg",
-    "spouseCount": "6"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1111542",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Joanne%20Woodward%2C%20Museum%20of%20Westport%20History%28cropped2%29.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1111542",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Photo%20American%20actress%20Joanne%20Woodward%201958%20-%20Touring%20Club%20Italiano%2004%200802%20%28cropped%29.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1408164",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lovis%20Corinth%20Die%20Geigenspielerin%201900.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q3242438",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lisa%20Ortiz%20Sound%20Cadence%202023.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q3608387",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Karen%20Mart%C3%ADnez%20en%20Gala%20de%20los%20Latin%20Grammy%2C%2041%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q16527026",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Anne%20Byrne%20Hoffman%20%28cropped%29.JPG",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q410",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Sagan%20Planetary%20Society.JPG",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q28487",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/B%C3%A9r%C3%A9nice%20Bejo%20Cannes%202016.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q28556",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michel%20Hazanavicius.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q40715",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jennifer%20Lopez%20at%20the%202025%20Sundance%20Film%20Festival%20%28cropped%203%29.jpg",
-    "spouseCount": "8"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q81328",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Harrison%20Ford%20at%20the%202009%20Deauville%20American%20Film%20Festival%2C%20cropped.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q152555",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Alexa%20Vega%203%2C%202012%20%28cropped%29.jpg",
-    "spouseCount": "4"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q170530",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sarah%20Jessica%20Parker%202022.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q191027",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Patricia%20Neal%20by%20Bert%20Parry%2C%201950.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q219655",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carey%20Mulligan%20at%20the%202025%20Sundance%20Film%20Festival%20%28cropped%29.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q228607",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Anouk%20Aim%C3%A9e%20Harcourt%201952.jpg",
-    "spouseCount": "4"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q228638",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Isla%20Fisher%202013.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q231187",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sarah%20Miles%20in%201980%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q231648",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/GabrielleUnionMay10.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q232187",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Alex%20Kingston%202012.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q234058",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/RheaPerlmanAug2011.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q240467",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Natasha%20Gregson%20Wagner%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q242951",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Emma%20Thomas%202.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q273532",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Louise%20Lasser%20Mary%20Hartman%201976.JPG",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q339593",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nanny%20and%20the%20Professor%20Richard%20Long%201970.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q498263",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Alan%20Ruck%20%2840740365053%29%20%28cropped1%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q596626",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Elizabeth%20Bitsie%20Tulloch%20Photo%20Op%20GalaxyCon%20Raleigh%202021.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q652495",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Diane%20Hegarty%20%282009%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q860409",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jurij%20Zawadskij%201952%20Dorys.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1119784",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kosztol%C3%A1nyi%20Dezs%C5%91%20%C3%A9s%20csal%C3%A1dja%20%28Sz%C3%A9kely%20Alad%C3%A1r%2C%201918%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1530593",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dayanara%20Torres%202011.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1533336",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rafael%20Bardem%20i%20Sol%C3%A9.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1575818",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hanne%20Brinkmann%2C%20by%20Mac%20Walten%20Berlin.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q3546783",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kaoru%20Yachigusa%201955%20Scan10005.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q7302247",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/RebySky2011.png",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q11530062",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Matsuoka%20Mayu%20from%20%22Tremble%20All%20You%20Want%22%20at%20Opening%20Ceremony%20of%20the%20Tokyo%20International%20Film%20Festival%202017%20%2828423739169%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q11616294",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Wakayama%20Setsuko%20-%201945-ca1950.png",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q19046792",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/V%C3%A1radi%20Aranka-M%C3%A1rtonfy.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q62809",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Olga%20Tschechowa%20-%20Yva%20-%20Ross-Verlag%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q62809",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tchechowa.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q69562",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ulay.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q117497",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Der%20goldene%20Schuss%20Com%20C18-008-005%20%28cropped%29.tif",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q119798",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/59th%20Karlovy%20Vary%20International%20Film%20Festival%2C%20Michael%20Douglas%2007%20%28cropped%29.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q217787",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/CaroleKingHWOFDec2012.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q236151",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carey%20Lowell%202011%20Shankbone.JPG",
-    "spouseCount": "4"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q291874",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ayda%20Field%20Cannes%202015.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q309631",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edward%20Furlong%202009.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1139912",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ono%20Kensho%20from%20%22Komada%20-A%20Whisky%20Family-%22%20at%20Red%20Carpet%20of%20the%20Tokyo%20International%20Film%20Festival%202023%20%2853348527925%29%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1700875",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hedy%20Lamarr%20and%20John%20Loder.jpg",
-    "spouseCount": "5"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q3664119",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ferruccio%20De%20Ceresa%20and%20Cecilia%20Sacchi.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q4261578",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lilina.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q4261578",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Maria%20Lilina.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q5531333",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hedy%20Lamarr%20and%20her%20new%20husband%20Gene%20Markey%2C%20March%201939.jpg",
-    "spouseCount": "4"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q15513587",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Marion%20marshall.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q11662",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Steffi%20Graf%20in%20Hamburg%202010%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q13909",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Angelina%20Jolie-643531%20%28cropped%29.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1575879",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hannelore%20Kramm%20im%20Heino-Fanshop%20%28sq%20cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q4445403",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vera%20Stravinsky%20by%20Serge%20Sudeikine.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q882",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Charlie%20Chaplin%20portrait%20Getty%201739411952.jpg",
-    "spouseCount": "8"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q4235",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Miley%20Cyrus%20Primavera19%20-226%20%2848986293772%29%20%28cropped%29.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q40054",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jonathan%20Ross%20by%20Gage%20Skidmore%202.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q106204",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Trintignant-Italie-1963.png",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q269037",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Movita%20in%20Mutiny%20on%20the%20Bounty%20trailer.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q316596",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Justin%20Theroux-63738.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q318736",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fernando%20Fern%C3%A1n%20G%C3%B3mez.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q379157",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dharmendra.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q453743",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lena%20Yada.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q454724",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Barbora%20Kodetov%C3%A1%202019.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q519547",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Raih%20Zinaida.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q534436",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Anna%20Kashfi%20in%20Night%20of%20the%20Quarter%20Moon.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q575317",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ian%20Gomez%202012.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1396558",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Luma%20de%20Oliveira.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1992638",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Harry-Fox01.JPG",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q16728020",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yash%20Chopra%20gets%20title%20Ambassador%20of%20Interlaken.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q20481438",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Esterh%C3%A1zyIlona.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q11637",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Judy%20Garland%20The%20Harvey%20Girls%20MGM%20Publicity%20still.jpeg",
-    "spouseCount": "10"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q89831",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rose%20Stradner%20in%20The%20Keys%20of%20the%20Kingdom%20trailer.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q106099",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jeanne%20Moreau%20%282009%29.jpg",
-    "spouseCount": "4"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q115250",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lesley-Anne%20Down.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q228699",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sharon%20Tate%20Valley%20of%20the%20Dolls%201967%20-%20Restoration.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q229258",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gena%20Rowlands%20Tony%20Rome%201968.JPG",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q234890",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Emmanuelle%20Seigner%2C%202013%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q239854",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Debra%20Paget.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q253328",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/EvelynKeyes.jpg",
-    "spouseCount": "4"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q264730",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gloria%20Vanderbilt%201959.JPG",
-    "spouseCount": "4"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q447601",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eleanor%20Boardman%20Argentinean%20Magazine%20AD.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q447601",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eleanor%20Boardman%20phot124.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q448467",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jana%20Brejchov%C3%A1%201975-04-17.jpg",
-    "spouseCount": "4"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q458801",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bessmeredyth2.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1326496",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lucy%20Doraine%20Binder3.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q2708193",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lili%20Damita%20from%20Stars%20of%20the%20Photoplay.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q2710971",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/LindaGriffith1913.png",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q4815644",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Athole%20Shearer%201920.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q5249911",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dee%20Hartford%201967.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q6688524",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Louisa%20Horton%201948.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q8062459",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yvonne%20Howell%2C%20Flaming%20Flappers.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q11727538",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Joanna%20Szczerbic.JPG",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q12001943",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/V%C4%9Bra%20K%C5%99esadlov%C3%A1%20%282015%29%20II.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q96742732",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Alice%20Wilson%2C%20stage%20actress%20%28SAYRE%2011044%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q108802270",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Helen%20Howell%2C%201928.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q19504",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fritz%20Lang%20%281969%29.jpg",
-    "spouseCount": "6"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q65154",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rudolf%20Klein-Rogge.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q212545",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Natasha%20Richardson%201999%20%28cropped%29.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q240677",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nicholas%20Ray%20%281953%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q253952",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%D0%90%D0%BD%D0%B0%D0%BD%D0%B8%D0%B0%D1%88%D0%B2%D0%B8%D0%BB%D0%B8%20%D0%9D%D0%B8%D0%BD%D0%B0%20%D0%93%D0%B5%D0%B4%D0%B5%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%BD%D0%B0.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q294185",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/David%20Arquette%202009.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q391359",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/David%20Harbour%20by%20Gage%20Skidmore%202.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q458668",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carla%20Del%20Poggio.JPG",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1555393",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20Gussy%20Holl.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q6394361",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kerri-Anne%20Kennerley%202017%2001.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q7599523",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Stanley%20Clements%20in%20%27Neath%20Brooklyn%20Bridge.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q12812940",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%C4%B0nci%20Pars%20%C3%96zg%C3%BCrg%C3%BCn.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q16976525",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%D0%A2%D0%B5%D1%80%D0%BD%D0%BE%D0%BF%D1%96%D0%BB%D1%8C%20-%20%C2%AB%D0%9C%D1%96%D1%81%D1%82%D0%BE%20%D0%BF%D1%80%D0%BE%D1%84%D0%B5%D1%81%D1%96%D0%B9%C2%BB%20-%20%D0%9C%D0%B0%D1%80%D0%B8%D0%BD%D0%B0%20%D0%9F%D0%BE%D1%80%D0%BE%D1%88%D0%B5%D0%BD%D0%BA%D0%BE%20-%2015095664.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q40162",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kate%20Capshaw%2C%20actress.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q222071",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Life%20Ball%202014%20Courtney%20Love%20Crop.png",
-    "spouseCount": "4"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q533970",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vie%20priv%C3%A9e%20Com%20L10-0171-0014%20%28cropped%29.tif",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1807081",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bosse%20as%20Indra%27s%20daughter%20in%20A%20Dream%20Play.1907.png",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q2177602",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%D0%AD%D0%BB%D0%B4%D0%B5%D1%80%2C%20%D0%A0%D1%83%D1%82%20%281%29.jpg",
-    "spouseCount": "6"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q2942199",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cathy%20Guetta%20NRJ%20Music%20Awards%202012.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q3032150",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yoko%20Yaguchi%201944.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q3290526",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Margaret%20Sinclair%20Trudeau%20at%20UFV%2072%20%282017%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q4938547",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Billingsfors-open-air-theater-Director-Ellen-Bergman-in-the-instruction-post-at-142826716929.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q9299606",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mayte%20Garcia%20on%20RumorFix.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q32522",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/JenniferAnistonHWoFFeb2012.jpg",
-    "spouseCount": "4"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q55729",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dagmar-Havlova-Veskrnova-TV-show-Bolkoviny.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q62515",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gunter%20Sachs%20-%20ETH-BIB%20-%20Com%20C20-028-088-003.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q62766",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jay-Z%20%40%20Shawn%20%27Jay-Z%27%20Carter%20Foundation%20Carnival%20%28crop%202%29.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q62766",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jay-Z%20concert%20%28cropped%29.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q124229",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lolita%20Morena%20smile.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q151973",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Richard%20Burton%20-%20The%20Robe.jpg",
-    "spouseCount": "8"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q174346",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Katie%20Holmes%20WHCAD%20%28cropped%29.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q175571",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leila%20Kalomi%20%28cropped%29.png",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q192682",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ryan%20Reynolds%20at%20the%202025%20Toronto%20International%20Film%20Festival%20%28cropped%29.jpg",
-    "spouseCount": "6"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q233054",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MimiRogersApr09.jpg",
-    "spouseCount": "4"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q240566",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Miketodd.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q311241",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bobby%20Brown%20on%20Sister%20Circle%20Live.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q363708",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eddie%20Fisher%20-%20still.JPG",
-    "spouseCount": "5"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q383420",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Roger%20Vadim%20-%20still.jpg",
-    "spouseCount": "10"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1385992",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michael%20Wilding%20in%20Stage%20Fright%20trailer.jpg",
-    "spouseCount": "4"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q5145253",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Colin%20Jost%20301%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q12349183",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ilona%20Von%20Montagh.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q22326557",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nicole%20Ansari%20-%20ETH-BIB%20-%20Com%20LC1501-00A-015-002.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q9535",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shah%20Rukh%20Khan%20graces%20the%20launch%20of%20the%20new%20Santro.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q88725",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lina%20Loos%201904.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q89182",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Marie%20Theres%20Kroetz-Relin%20-%203261%20cropped.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q89182",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Marie%20Theres%20Kroetz%20Relin%20cropped.JPG",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q98665",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Juliane%20Lorenz%20%28cropped%29.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q114096",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Elsie%20Altmann%20Setzer.Jpeg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q209098",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Madeleine%20Stowe%20in%20Haiti%20crop.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q347950",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gaspar%20No%C3%A9%20%282021%29.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q374220",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Danny%20Masterson%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q439404",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lalla%20Ward%202014.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q464835",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Padma%20Lakshmi%20%282017%29%2005.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q514420",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Josephine-Sarah-Marcus-c1881.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q534305",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%D0%92%D0%B0%D0%BB%D0%B5%D0%BD%D1%82%D0%B8%D0%BD%D0%B0%20%D0%A1%D0%B5%D1%80%D0%BE%D0%B2%D0%B0.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q842633",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Steph%20Mcmahon.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q924626",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Miguel%2BVaroni%2BArrivals%2BBillboard%2BLatin%2BMusic%2B6peQxrw1tWll.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1138422",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chunichi1966-01-25-1.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q2190435",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/DebrawMarshall.JPG",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q2346249",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Steffiana-de-la-Cruz%202011-01-06%20photoby%20Adam-Bielawski.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q6782141",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mar%C3%ADa%20Vaner%20by%20Annemarie%20Heinrich%2C%201959.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q11955629",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Zofia%20Borucka%20Shankbone%202010%20NYC%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q42016569",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Philippa%20Strache%20-%20FP%C3%96-Neujahrstreffen%202019.JPG",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q48889254",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aankomst%20Ingrid%20Bergmann%20op%20Schiphol%20Lars%20Schmidt%20en%20Ingrid%20Bergmann%2C%20Bestanddeelnr%20912-2299.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q50082651",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Actress%20Leila%20George%20at%2081st%20Venice%20International%20Film%20Festival%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q55884531",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Olga%20und%20Lili%20Schnitzler.png",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1511003",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fotothek%20df%20pk%200000018%20027%20Paul%20Wegener%20in%20der%20Titelrolle%2C%20Agathe%20Poschmann%20als%20Recha%2C%20Kai%20M%C3%B6ller%20als%20Sulta%20%28Gerda%20M%C3%BCller%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1622098",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/2023-09-28-Bill%20und%20Tom%20Kaulitz-Deutscher%20Fernsehpreis%202023%20-0338%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1622098",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tom%20Kaulitz%202010.JPG",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q6495834",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Latha%20Rajinikanth%20at%20NDTV%20Indian%20Of%20The%20Year%202013%20awards.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q16759",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kaley%20Cuoco%20%2835303585254%29%20%28cropped%29.jpg",
-    "spouseCount": "6"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q43247",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bergman%20Harcourt%201957.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q43247",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ingrid%20Bergman%20studio%20portrait%20photo.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q43247",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ingrid%20Bergman%20The%20Constant%20Wife%201975%20%28cropped%29.JPG",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q93604",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lotte%20Lenya.jpg",
-    "spouseCount": "4"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q129429",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/VivienLeighToMiaKuryluk.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q205599",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/GeorgeLazenby11.14.08ByLuigiNovi.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q230035",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Joan%20Plowright%201960%20%28cropped%29.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q232113",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aankomst%20Franse%20filmster%20Anna%20Karina%20op%20Schiphol%2C%20Anna%20Karina%20tijdens%20persconfer%2C%20Bestanddeelnr%20921-0593.jpg",
-    "spouseCount": "4"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q237897",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sara%20Foster%20TechCrunch%20Disrupt%202024.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q265621",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Maria%20Mercader.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q290996",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Franti%C5%A1ek%20N%C4%9Bmec%CB%90%20Sentiment%C3%A1ln%C3%AD%20romance%20-%20Stella%20Z%C3%A1zvorkov%C3%A1%20%28cropped%29.png",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q299704",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sherry%20Lansing%202002.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q374855",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Adriana%20Asti.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q3963190",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Soava%20Gallone.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q7693276",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ted%20Hartley%20Chopper%20One%20cast%201974%20%28cropped%29.JPG",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q108882414",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Elizabeth%20Young%20in%20Silver%20Screen%20magazine%20%28Feb%201934%29.png",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q19810",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/VictoriaBeckham2018-2-Crop.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q45870",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gauri%20Khan.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q95055",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eiganotomo-janewyman-dec1953.jpg",
-    "spouseCount": "4"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q158707",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Patricia%20Nixon%2C%20bw%20photo%20c1969.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q193426",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nancy%20Reagan.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q238432",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bridgette-Wilson.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q464932",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jaya%20B%20Big%20B%E2%80%99s%20birthday.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q5529942",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Geeta%20Basra%20walks%20the%20ramp%20for%20Cotton%20Council%20show%20%287%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q6414821",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kiran%20Rao%20on%20Day%203%20of%20Lakme%20Fashion%20Week%202017.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q21063646",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vicky%20Kaushal%20at%20HT%20Style%20Awards.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q8877",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MKr25402%20Steven%20Spielberg%20%28Berlinale%202023%29.jpg",
-    "spouseCount": "4"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q23261",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Godzilla%20Resurgence%20World%20Premiere%20Red%20Carpet-%20Anno%20Hideaki%20%2828526527191%29.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q32661",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jane%20Goldman.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q32661",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jane%20Goldman%20by%20Gage%20Skidmore.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q37079",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tom%20Cruise-2428.jpg",
-    "spouseCount": "6"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q60528",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fotothek%20df%20Pk%2089.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q62327",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Magda-schneider%201935.jpg",
-    "spouseCount": "3"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q229166",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Amber%20Heard%20%2843723454772%29.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q471542",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kishore%20Kumar%202016%20postcard%20of%20India%20%28cropped%29.jpg",
-    "spouseCount": "4"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q583186",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Benjamin%20Millepied%202015.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q1677936",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jacques%20Charrier%201960.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q7922443",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Muhammad%20Ali%20and%20Jimmy%20Carter.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q7922443",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Veronica%20Porch%C3%A9%20Ali%20%281977%29.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q19864411",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dr.%20Khalilah%20Camacho-Ali%20joins%20Fleet%20Week%20Miami%202024%20%282%29%20%28cropped%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q20685410",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sam%20Esmail%20at%20SXSW%202016.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q22249542",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Robert%20Koch%20and%20wife.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q48869259",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ida%20Ferrier.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q61260",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv%20Bild%20183-S01144%2C%20Berlin%2C%20Gustav%20Gr%C3%BCndgens%20als%20%27Hamlet%27.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q61597",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Erika%20Mann%20NYWTS.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q66434",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/2019%20BR%20Filmbrunch%20-%20Andrea%20Sawatzki%20-%20by%202eight%20-%20DSC6776.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q69862",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carlos%20Thompson-Lana%20Turner%20in%20Flame%20and%20the%20Flesh.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q85450",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Unbekannter%20Fotograf%20%28Archiv%20Philipp%20Kester%29%2C%20Carola%20Neher%2C%201925.jpg",
-    "spouseCount": "2"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q117577",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Christina%20Surer%20%28IAA%202009%29.jpg",
-    "spouseCount": "1"
-  },
-  {
-    "person": "http://www.wikidata.org/entity/Q181887",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rex%20Harrison%20Allan%20Warren.jpg",
-    "spouseCount": "6"
+{
+  "head" : {
+    "vars" : [ "person", "image", "spouseCount", "dob" ]
+  },
+  "results" : {
+    "bindings" : [ {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q222805"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Ninoy%20Aquino.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1932-11-27T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q233306"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Mirka%20Federer%20Olympic%20Games%202012.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1978-04-01T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q285536"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Imelda%20Marcos.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1929-07-02T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2688967"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Arnoldas%20Abramavi%C4%8Dius%20at%20the%20135th%20Plenary%20Session%20of%20the%20European%20Committee%20of%20the%20Regions%20%2848137570852%29.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1967-07-18T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q31129"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Queen%20Paola%20with%20the%20President%20and%20the%20Prime%20Minister%20of%20India%2C%20and%20the%20King%20Albert%20II%20%28cropped%29.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1937-09-11T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q43044"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Demi%20Moore%20at%20the%202024%20Toronto%20International%20Film%20Festival%203%20%28cropped%29%20%28cropped%29.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "3"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1962-11-11T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q66805"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv%20B%20145%20Bild-F054905-0019%2C%20Bonn%2C%20Walter%20und%20Mildred%20Scheel%20geben%20Autogramme%20%28Mildred%20Scheel%29.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1932-12-31T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q71341"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv%20Bild%20146-2008-0320%2C%20Karl%20Carstens%2C%20Veronica%20Carstens.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1923-06-18T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q75163"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Lotte%20Ulbricht%20%28cropped%29.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1903-04-19T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q76717"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Claudia%20Schiffer%2020091006%20Chanel%2005.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1970-08-25T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q76893"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv%20Bild%20183-1986-0313-300%2C%20Margot%20Honecker%2C%20Minister%20f%C3%BCr%20Volksbildung.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1927-04-17T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q77960"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv%20B%20145%20Bild-F075763-0023%2C%20UdSSR%2C%20Besuch%20Bundespr%C3%A4sident%20von%20Weizs%C3%A4cker.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1932-05-17T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q155712"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Andre%20Previn%20%28on%20In%20Tune%2C%20BBC%20Radio%2C%202012%29.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "5"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1929-04-06T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q185025"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Rainier%20III%20%28JFKWHP-KN-C17888%2C%20cropped%29.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1923-05-31T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q208466"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Charlene%2C%20Princess%20of%20Monaco-4.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1978-01-25T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q210462"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Christina%20Hendricks%20at%20PaleyFest%202014.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1975-05-03T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q215342"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Maria%20Kaczy%C5%84ska%20%28official%20portrait%29%20cropped.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1942-08-21T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q228899"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/ETH-BIB-Montreux%2C%20Linda%20McCartney-Com%20L21-0605-0002-0003.tif"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1941-09-24T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q230654"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Maria%20Shriver%20by%20Gage%20Skidmore.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1955-11-06T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q230654"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/MariaShriverApr2013.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1955-11-06T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q233993"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Barbara%20Bach%20-%201978.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1946-08-28T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q234074"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Patti%20boyd-1547297748.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "2"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1944-03-17T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q237324"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Lisa%20Marie%20Presley.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "4"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1968-02-01T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q237324"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Lisa%20Marie%20Presley%20at%20car%20race%20%28cropped%29.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "4"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1968-02-01T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q266568"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Heather%20Mills%20-%20Wien%202019%20%281%29.JPG"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1968-01-12T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q442991"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/OliviaHarrisonApr09.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1948-05-18T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q445703"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Consuelo%20en%201942%20%C3%A0%20Montr%C3%A9al.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "3"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1901-04-10T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q977009"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Fotothek%20df%20pk%200000213%20009.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1909-08-01T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1174489"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/David%20Furnish%202022.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1962-10-25T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1174489"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/David%20Furnish%20at%20St%20Paul%27s%20Cathedral%2C%20London%2C%20United%20Kingdom%20on%2014%20October%202024%20%28cropped%29.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1962-10-25T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1320512"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Freddie%20Stroma%20%28cropped%29.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1987-01-08T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1649757"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Eileen%20o%27Shaughnessy.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1905-09-25T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1679945"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/James%20A%20Mollison.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1905-04-19T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q23040890"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Nina-Lincoln-Rindt-1965.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "3"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1943-01-01T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q32947601"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/%D7%93%D7%A0%D7%99%D7%90%D7%9C%D7%94%20%D7%A4%D7%99%D7%A7.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1983-11-21T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q98386957"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Erika%20Krenz%20%28cropped%29.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1939-11-11T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6294"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Hillary%20Clinton%20official%20Secretary%20of%20State%20portrait%20crop.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1947-10-26T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q32337"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Lita%20Grey.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1908-04-15T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q86165"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Elisabeth%20Waldheim%201971.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1922-04-13T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q95050"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Paulette%20Goddard%2C%20A%20Stranger%20Came%20Home%20publicity%20%281954%29%20I.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "3"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1910-06-03T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q117012"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Yoko%20Ono%202011%20SXSW.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "3"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1933-02-18T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q137808"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Oona%20O%27Neill%20-%201943.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1925-05-14T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q233999"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Nadezhda%20Alliluyeva%201.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1901-09-22T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q241019"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Mildred%20Harris%20-%20Motion%20Picture%20Magazine%20-%201918.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "3"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1901-11-29T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q253192"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Cynthia%20Lennon%2C%201964.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "3"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1939-09-10T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q253660"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Sajida%20Talfah%20%28first%20wife%20of%20Saddam%20Hussein%29.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1937-06-24T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q257083"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Patti%20Scialfa%2011022008.JPG"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1953-07-29T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q309941"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Ice%20T%20SVU%20March%202011%20%28cropped%29.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1958-02-16T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q444509"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Franca%20Rame%201963.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1929-07-18T00:00:00Z"
+      }
+    }, {
+      "person" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q444509"
+      },
+      "image" : {
+        "type" : "uri",
+        "value" : "http://commons.wikimedia.org/wiki/Special:FilePath/Franca%20Rame%20senato.jpg"
+      },
+      "spouseCount" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+        "type" : "literal",
+        "value" : "1"
+      },
+      "dob" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "1929-07-18T00:00:00Z"
+      }
+    } ]
   }
-]
+}
