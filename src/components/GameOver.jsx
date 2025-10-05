@@ -35,13 +35,15 @@ function endScreenCopy(score){
 }
 
 function SpouseCountList({ celebs }) {
-  return celebs.map(celeb => (
-    <div key={celeb.name} className="spouse-count-row">
+  return celebs.map((celeb, i) => (
+    <a key={i} href={celeb.wikiUrl}>
+    <div className="spouse-count-row">
       <div className="game-over-person-image-container">
         <img src={celeb.image} alt={celeb.name} className="person-image" />
       </div>
       <p>{celeb.name}</p>
       <p>{celeb.spouseCount}</p>
     </div>
+    </a>
   ))
 }
