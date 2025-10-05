@@ -1,6 +1,6 @@
 export default function GameOver({ score }) {
   return <>
-    {endScreenCopy(score)}
+    <h4>{endScreenCopy(score)}</h4>
   </>
 }
 
