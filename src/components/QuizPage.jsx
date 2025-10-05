@@ -118,10 +118,7 @@ export default function QuizPage() {
     return (
       <div className="quiz-container">
         <div className="quiz-header">
-          <h1>
-            you guessed {score} out of {NUM_QUESTIONS}!!
-          </h1>
-          <GameOver score={score} celebPairs={celebPairs} />
+          <GameOver score={score} celebPairs={celebPairs} totalQuestions={NUM_QUESTIONS} />
         </div>
         <div className="quiz-footer">
           <button onClick={() => resetState(allCelebrities)}>
