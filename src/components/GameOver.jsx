@@ -1,6 +1,13 @@
-export default function GameOver({ score }) {
+import './GameOver.css'
+
+export default function GameOver({ score, celebPairs }) {
+  const celebsSortedBySpouseNumber = celebPairs.reduce((accum, pair) => accum.concat(...pair), [])
+    .filter((celeb, i, arr) => arr.findIndex(c => c.name === celeb.name) === i)
+    .sort((c1, c2) => c2.spouseCount - c1.spouseCount)
+    console.log('celebsSortedBySpouseNumber', celebsSortedBySpouseNumber)
   return <>
     <h4>{endScreenCopy(score)}</h4>
+    <SpouseCountList celebs={celebsSortedBySpouseNumber} />
   </>
 }
 
@@ -19,4 +26,16 @@ function endScreenCopy(score){
     default:
       return "Invalid score. Did you sneak into the game without playing?";
   }
+}
+
+function SpouseCountList({ celebs }) {
+  return celebs.map(celeb => (
+    <div key={celeb.name} className="spouse-count-row">
+      <div className="game-over-person-image-container">
+        <img src={celeb.image} alt={celeb.name} className="person-image" />
+      </div>
+      <p>{celeb.name}</p>
+      <p>{celeb.spouseCount}</p>
+    </div>
+  ))
 }

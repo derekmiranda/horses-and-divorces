@@ -121,7 +121,7 @@ export default function QuizPage() {
           <h1>
             you guessed {score} out of {NUM_QUESTIONS}!!
           </h1>
-          <GameOver score={score} />
+          <GameOver score={score} celebPairs={celebPairs} />
         </div>
         <div className="quiz-footer">
           <button onClick={() => resetState(allCelebrities)}>
@@ -130,8 +130,6 @@ export default function QuizPage() {
         </div>
       </div>
     );
-  } else if (!celebrities.length) {
-    return <div>Loading...</div>; // Show loading state while fetching
   }
 
   return (
