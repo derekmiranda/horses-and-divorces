@@ -1,167 +1,166 @@
 @font-face {
-  font-family: 'Redaction';
-  src: url('./fonts/Redaction-Regular.woff2') format('woff2');
+  font-family: "Redaction";
+  src: url("./fonts/Redaction-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Redaction';
-  src: url('./fonts/Redaction-Bold.woff2') format('woff2');
+  font-family: "Redaction";
+  src: url("./fonts/Redaction-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Redaction';
-  src: url('./fonts/Redaction-Italic.woff2') format('woff2');
+  font-family: "Redaction";
+  src: url("./fonts/Redaction-Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Redaction 10';
-  src: url('./fonts/Redaction_10-Regular.woff2') format('woff2');
+  font-family: "Redaction 10";
+  src: url("./fonts/Redaction_10-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Redaction 10';
-  src: url('./fonts/Redaction_10-Bold.woff2') format('woff2');
+  font-family: "Redaction 10";
+  src: url("./fonts/Redaction_10-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Redaction 10';
-  src: url('./fonts/Redaction_10-Italic.woff2') format('woff2');
+  font-family: "Redaction 10";
+  src: url("./fonts/Redaction_10-Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Redaction 20';
-  src: url('./fonts/Redaction_20-Regular.woff2') format('woff2');
+  font-family: "Redaction 20";
+  src: url("./fonts/Redaction_20-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Redaction 20';
-  src: url('./fonts/Redaction_20-Bold.woff2') format('woff2');
+  font-family: "Redaction 20";
+  src: url("./fonts/Redaction_20-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Redaction 20';
-  src: url('./fonts/Redaction_20-Italic.woff2') format('woff2');
+  font-family: "Redaction 20";
+  src: url("./fonts/Redaction_20-Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Redaction 35';
-  src: url('./fonts/Redaction_35-Regular.woff2') format('woff2');
+  font-family: "Redaction 35";
+  src: url("./fonts/Redaction_35-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Redaction 35';
-  src: url('./fonts/Redaction_35-Bold.woff2') format('woff2');
+  font-family: "Redaction 35";
+  src: url("./fonts/Redaction_35-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Redaction 35';
-  src: url('./fonts/Redaction_35-Italic.woff2') format('woff2');
+  font-family: "Redaction 35";
+  src: url("./fonts/Redaction_35-Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Redaction 50';
-  src: url('./fonts/Redaction_50-Regular.woff2') format('woff2');
+  font-family: "Redaction 50";
+  src: url("./fonts/Redaction_50-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Redaction 50';
-  src: url('./fonts/Redaction_50-Bold.woff2') format('woff2');
+  font-family: "Redaction 50";
+  src: url("./fonts/Redaction_50-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Redaction 50';
-  src: url('./fonts/Redaction_50-Italic.woff2') format('woff2');
+  font-family: "Redaction 50";
+  src: url("./fonts/Redaction_50-Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Redaction 70';
-  src: url('./fonts/Redaction_70-Regular.woff2') format('woff2');
+  font-family: "Redaction 70";
+  src: url("./fonts/Redaction_70-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Redaction 70';
-  src: url('./fonts/Redaction_70-Bold.woff2') format('woff2');
+  font-family: "Redaction 70";
+  src: url("./fonts/Redaction_70-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Redaction 70';
-  src: url('./fonts/Redaction_70-Italic.woff2') format('woff2');
+  font-family: "Redaction 70";
+  src: url("./fonts/Redaction_70-Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Redaction 100';
-  src: url('./fonts/Redaction_100-Regular.woff2') format('woff2');
+  font-family: "Redaction 100";
+  src: url("./fonts/Redaction_100-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Redaction 100';
-  src: url('./fonts/Redaction_100-Bold.woff2') format('woff2');
+  font-family: "Redaction 100";
+  src: url("./fonts/Redaction_100-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Redaction 100';
-  src: url('./fonts/Redaction_100-Italic.woff2') format('woff2');
+  font-family: "Redaction 100";
+  src: url("./fonts/Redaction_100-Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -177,18 +176,21 @@ ul,
 * {
   margin: 0;
   padding: 0;
-  -webkit-font-smoothing: antialiased
+  -webkit-font-smoothing: antialiased;
 }
 
 :root {
-  font-family: 'Redaction', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Redaction", system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 18px;
   --color-primary: rgb(28, 25, 237);
-  --bg: #F7F6FF;
+  --bg: #f7f6ff;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --pointer: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="%23F7F6FF" stroke="%23000000" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"></path></svg>')
+      4 0,
+    pointer;
 }
 
 body {
@@ -209,7 +211,7 @@ h2 {
   font-size: 3.2rem;
   line-height: 0.8;
   font-weight: 500;
-  font-family: 'Redaction 50', sans-serif;
+  font-family: "Redaction 50", sans-serif;
   color: var(--color-primary);
 }
 
@@ -217,10 +219,8 @@ h3 {
   font-size: 2.4rem;
   margin-bottom: 1rem;
   font-weight: 400;
-  font-family: 'Redaction 35', sans-serif;
+  font-family: "Redaction 35", sans-serif;
 }
-
-
 
 button {
   all: unset;
@@ -229,7 +229,7 @@ button {
   margin: 1.2rem;
   padding: 0.5em 1em;
   font: inherit;
-  cursor: pointer;
+  cursor: var(--pointer);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -246,8 +246,6 @@ button:hover:not(:active) {
   border: 2px solid rgba(0, 0, 0);
   box-shadow: 5px 5px 0 rgba(0, 0, 0);
 }
-
-
 
 /* @media (prefers-color-scheme: light) {
   :root {
