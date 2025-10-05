@@ -620,7 +620,7 @@
     "description": "Swedish director and screenwriter (1914–2007)",
     "uri": "http://www.wikidata.org/entity/Q7546",
     "wikiUrl": "https://en.wikipedia.org/wiki/Ingmar_Bergman",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ingmar%20Bergman%20%241966%29.jpg",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ingmar%20Bergman%20%281966%29.jpg",
     "spouseCount": 5
   },
   {
@@ -636,7 +636,7 @@
     "description": "American actress (1904–1965)",
     "uri": "http://www.wikidata.org/entity/Q265354",
     "wikiUrl": "https://en.wikipedia.org/wiki/Constance_Bennett",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Motion%20picture%20actress%20Constance%20Bennett%20%24SAYRE%205472%29.jpg",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Motion%20picture%20actress%20Constance%20Bennett%20%28SAYRE%205472%29.jpg",
     "spouseCount": 5
   },
   {
@@ -652,15 +652,15 @@
     "description": "Russian singer, actress, TV and film director",
     "uri": "http://www.wikidata.org/entity/Q1972714",
     "wikiUrl": "https://en.wikipedia.org/wiki/Lolita_Milyavskaya",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%D0%9B%D0%BE%D0%BB%D0%B4%D1%42%D0%B0%20%D0%9C%D0%B4%D0%BB%D1%4F%D0%B2%D1%41%D0%BA%D0%B0%D1%4F%20%24cropped%29.jpg",
-    "spouseCount": 10
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%D0%9B%D0%BE%D0%BB%D0%B8%D1%82%D0%B0%20%D0%9C%D0%B8%D0%BB%D1%8F%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%28cropped%29.jpg",
+    "spouseCount": 5
   },
   {
     "name": "Eva Gabor",
     "description": "Hungarian-American actress and socialite (1919–1995)",
     "uri": "http://www.wikidata.org/entity/Q235924",
     "wikiUrl": "https://en.wikipedia.org/wiki/Eva_Gabor",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eva%20Gabor%20Green%20Acres%201969%20%24cropped%29.jpg",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eva%20Gabor%20Green%20Acres%201969%20%28cropped%29.jpg",
     "spouseCount": 5
   },
   {
@@ -676,7 +676,7 @@
     "description": "American actor (1920–1946)",
     "uri": "http://www.wikidata.org/entity/Q3090544",
     "wikiUrl": "https://en.wikipedia.org/wiki/Paul_Frees",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Paul%20Frees%20in%20Suddenly%20%241954%29.jpg",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Paul%20Frees%20in%20Suddenly%20%281954%29.jpg",
     "spouseCount": 5
   },
   {
@@ -692,7 +692,7 @@
     "description": "American actor and filmmaker (born 1960)",
     "uri": "http://www.wikidata.org/entity/Q44221",
     "wikiUrl": "https://en.wikipedia.org/wiki/Sean_Penn",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Superpower%20%242023%29-60535.jpg",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Superpower%20%282023%29-60535.jpg",
     "spouseCount": 3
   },
   {
@@ -720,6 +720,14 @@
     "spouseCount": 3
   },
   {
+    "name": "Dennis Quaid",
+    "description": "American actor",
+    "uri": "http://www.wikidata.org/entity/Q200768",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Dennis_Quaid",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dennis%20Quaid%20Blue%20Angels.JPEG",
+    "spouseCount": 3
+  },
+  {
     "name": "Jane Fonda",
     "description": "American actress and activist",
     "uri": "http://www.wikidata.org/entity/Q41142",
@@ -732,7 +740,7 @@
     "description": "American actor, singer, producer, and businessman (born 1952)",
     "uri": "http://www.wikidata.org/entity/Q201927",
     "wikiUrl": "https://en.wikipedia.org/wiki/David_Hasselhoff",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/David%20Hasselhof%20at%20re-publica%20May%202014%20%24cropped%29.jpg",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/David%20Hasselhof%20at%20re-publica%20May%202014%20%28cropped%29.jpg",
     "spouseCount": 3
   },
   {
@@ -740,7 +748,7 @@
     "description": "Canadian actor (1935–2024)",
     "uri": "http://www.wikidata.org/entity/Q103744",
     "wikiUrl": "https://en.wikipedia.org/wiki/Donald_Sutherland",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Donald%20Sutherland%20%24cropped%29.JPG",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Donald%20Sutherland%20%28cropped%29.JPG",
     "spouseCount": 3
   },
   {
@@ -772,7 +780,7 @@
     "description": "American actor and comedian (1951–2014)",
     "uri": "http://www.wikidata.org/entity/Q43334",
     "wikiUrl": "https://en.wikipedia.org/wiki/Robin_Williams",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Robin%20Williams%202011a%20%242%29.jpg",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Robin%20Williams%202011a%20%282%29.jpg",
     "spouseCount": 3
   },
   {
@@ -780,7 +788,7 @@
     "description": "Soviet and Russian musician, actor, radio and television presenter, producer, screenwriter",
     "uri": "http://www.wikidata.org/entity/Q1940399",
     "wikiUrl": "https://en.wikipedia.org/wiki/Aleksandr_Tsekalo",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%D0%90%D0%BB%D0%B5%D0%BA%D1%41%D0%B0%D0%BD%D0%B4%D1%40%20%D0%A6%D0%B5%D0%BA%D0%B0%D0%BB%D0%BE.jpg",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%20%D0%A6%D0%B5%D0%BA%D0%B0%D0%BB%D0%BE.jpg",
     "spouseCount": 3
   },
   {
@@ -2933,7 +2941,7 @@
     "uri": "http://www.wikidata.org/entity/Q3026579",
     "wikiUrl": "https://en.wikipedia.org/wiki/Dick_Emery",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dick%20Emery%20and%20Susie%20Silvey.jpg",
-    "spouseCount": 5
+    "spouseCount": 2
   },
   {
     "name": "Christina Hendricks",
@@ -2941,7 +2949,7 @@
     "uri": "http://www.wikidata.org/entity/Q210462",
     "wikiUrl": "https://en.wikipedia.org/wiki/Christina_Hendricks",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Christina%20Hendricks%20at%20PaleyFest%202014.jpg",
-    "spouseCount": 4
+    "spouseCount": 2
   },
   {
     "name": "Julie Gayet",
@@ -2956,8 +2964,8 @@
     "description": "American actor, producer and model (born 1974)",
     "uri": "http://www.wikidata.org/entity/Q164742",
     "wikiUrl": "https://en.wikipedia.org/wiki/Ashton_Kutcher",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ashton%20Kutcher%20-%202023%20-%20P060603-652701%20%24cropped%29.jpg",
-    "spouseCount": 4
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ashton%20Kutcher%20-%202023%20-%20P060603-652701%20%28cropped%29.jpg",
+    "spouseCount": 2
   },
   {
     "name": "Mimi Rogers",
@@ -2965,47 +2973,47 @@
     "uri": "http://www.wikidata.org/entity/Q233054",
     "wikiUrl": "https://en.wikipedia.org/wiki/Mimi_Rogers",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MimiRogersApr09.jpg",
-    "spouseCount": 4
+    "spouseCount": 2
   },
   {
     "name": "Kishore Kumar",
     "description": "Indian singer and actor (1929–1947)",
     "uri": "http://www.wikidata.org/entity/Q471542",
     "wikiUrl": "https://en.wikipedia.org/wiki/Kishore_Kumar",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kishore%20Kumar%202016%20postcard%20of%20India%20%24cropped%29.jpg",
-    "spouseCount": 4
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kishore%20Kumar%202016%20postcard%20of%20India%20%28cropped%29.jpg",
+    "spouseCount": 2
   },
   {
     "name": "Chris Pratt",
     "description": "American actor (born 1979)",
     "uri": "http://www.wikidata.org/entity/Q503706",
     "wikiUrl": "https://en.wikipedia.org/wiki/Chris_Pratt",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chris%20Pratt%202014.jpg",
-    "spouseCount": 4
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chris%20Pratt%202018.jpg",
+    "spouseCount": 2
   },
   {
     "name": "Marc Anthony",
     "description": "American singer (born 1964)",
     "uri": "http://www.wikidata.org/entity/Q26625",
     "wikiUrl": "https://en.wikipedia.org/wiki/Marc_Anthony",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Interview%20with%20Marc%20Anthony%20%24cropped%29.png",
-    "spouseCount": 4
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Interview%20with%20Marc%20Anthony%20%28cropped%29.png",
+    "spouseCount": 2
   },
   {
     "name": "Diane Lane",
     "description": "American actress",
     "uri": "http://www.wikidata.org/entity/Q255070",
     "wikiUrl": "https://en.wikipedia.org/wiki/Diane_Lane",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Diane%20Lane%20%24Berlin%20Film%20Festival%202011%29%202.jpg",
-    "spouseCount": 4
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Diane%20Lane%20%28Berlin%20Film%20Festival%202011%29%202.jpg",
+    "spouseCount": 2
   },
   {
-    "name": "No name available",
+    "name": "Nick Cannon",
     "description": "American rapper, actor and comedian",
     "uri": "http://www.wikidata.org/entity/Q344533",
     "wikiUrl": "https://en.wikipedia.org/wiki/Nick_Cannon",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nick%20Cannon%20by%20David%20Shankbone.jpg",
-    "spouseCount": 4
+    "spouseCount": 2
   },
   {
     "name": "Ben Affleck",
@@ -3013,7 +3021,7 @@
     "uri": "http://www.wikidata.org/entity/Q443114",
     "wikiUrl": "https://en.wikipedia.org/wiki/Ben_Affleck",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ben%20Affleck%20by%20Gage%20Skidmore%203.jpg",
-    "spouseCount": 4
+    "spouseCount": 2
   },
   {
     "name": "Douglas Fairbanks Jr.",
@@ -3021,7 +3029,7 @@
     "uri": "http://www.wikidata.org/entity/Q524424",
     "wikiUrl": "https://en.wikipedia.org/wiki/Douglas_Fairbanks_Jr.",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Douglas%20Fairbanks%20Jnr%20colour%20Allan%20Warren.jpg",
-    "spouseCount": 4
+    "spouseCount": 2
   },
   {
     "name": "Lauren Bacall",
@@ -3029,7 +3037,7 @@
     "uri": "http://www.wikidata.org/entity/Q104000",
     "wikiUrl": "https://en.wikipedia.org/wiki/Lauren_Bacall",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lauren%20Bacall%20by%20Bernard%20Gotfryd.jpg",
-    "spouseCount": 4
+    "spouseCount": 2
   },
   {
     "name": "Carey Lowell",
@@ -3037,15 +3045,15 @@
     "uri": "http://www.wikidata.org/entity/Q236151",
     "wikiUrl": "https://en.wikipedia.org/wiki/Carey_Lowell",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carey%20Lowell%202011%20Shankbone.JPG",
-    "spouseCount": 4
+    "spouseCount": 2
   },
   {
     "name": "Steven Spielberg",
     "description": "American filmmaker (born 1946)",
     "uri": "http://www.wikidata.org/entity/Q4477",
     "wikiUrl": "https://en.wikipedia.org/wiki/Steven_Spielberg",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MKr25402%20Steven%20Spielberg%20%24Berlinale%202023%29.jpg",
-    "spouseCount": 4
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MKr25402%20Steven%20Spielberg%20%28Berlinale%202023%29.jpg",
+    "spouseCount": 2
   },
   {
     "name": "Jada Pinkett Smith",
@@ -3053,7 +3061,7 @@
     "uri": "http://www.wikidata.org/entity/Q224747",
     "wikiUrl": "https://en.wikipedia.org/wiki/Jada_Pinkett_Smith",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jada%20Pinkett%20Smith%20at%20NY%20PaleyFest%202014%20for%20Gotham.jpg",
-    "spouseCount": 4
+    "spouseCount": 1
   },
   {
     "name": "Linda Hamilton",
@@ -3061,7 +3069,7 @@
     "uri": "http://www.wikidata.org/entity/Q204214",
     "wikiUrl": "https://en.wikipedia.org/wiki/Linda_Hamilton",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Linda%20Hamilton%20Photo%20Op%20GalaxyCon%20Raleigh%202024.jpg",
-    "spouseCount": 4
+    "spouseCount": 2
   },
   {
     "name": "Courtney Love",
@@ -3069,7 +3077,7 @@
     "uri": "http://www.wikidata.org/entity/Q222071",
     "wikiUrl": "https://en.wikipedia.org/wiki/Courtney_Love",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Life%20Ball%202014%20Courtney%20Love%20Crop.png",
-    "spouseCount": 4
+    "spouseCount": 2
   },
   {
     "name": "Jeanne Moreau",
