@@ -1,11 +1,17 @@
 import "./ScorePopup.css";
 
+function addSPerhaps(n) {
+  return n === 1 ? "" : "s";
+}
+
 export default function ScorePopup({
   isCorrect,
   onClose,
   celebrities,
   visible,
 }) {
+  if (!celebrities.length) return null;
+
   let ppClassName = "popup";
   if (!visible) {
     ppClassName += " popup--hide";
@@ -16,9 +22,10 @@ export default function ScorePopup({
       <div className="popup-content" onClick={(e) => e.stopPropagation()}>
         <h2>{isCorrect ? "✅Correct!" : "❌ Wrong"}</h2>
         <p>
-          {celebrities[0].name} had {celebrities[0].spouseCount} spouse(s) and{" "}
-          <br />
-          {celebrities[1].name} had {celebrities[1].spouseCount} spouse(s)
+          {celebrities[0].name} had {celebrities[0].spouseCount} spouse
+          {addSPerhaps(celebrities[0].spouseCount)} and <br />
+          {celebrities[1].name} had {celebrities[1].spouseCount} spouse
+          {addSPerhaps(celebrities[1].spouseCount)}
         </p>
         <button onClick={onClose}>Next Round</button>
       </div>

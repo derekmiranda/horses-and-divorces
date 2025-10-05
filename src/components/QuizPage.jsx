@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { getCelebrities } from "../services/wikidataApi";
 import ScorePopup from "./ScorePopup";
 
+const NUM_QUESTIONS = 10;
+
 function PersonSection({ handleClick, imgSrc, name, description }) {
   return (
     <div className="person-section" onClick={handleClick}>
@@ -18,7 +20,6 @@ function PersonSection({ handleClick, imgSrc, name, description }) {
 
 function getRandomCelebs(allCelebs) {
   const randomIndices = [];
-  const mapCelebs = () => randomIndices.map((i) => allCelebs[i]);
 
   while (randomIndices.length < 2 && allCelebs.length >= 2) {
     let randomIndex = Math.floor(Math.random() * allCelebs.length);
@@ -35,21 +36,22 @@ function getRandomCelebs(allCelebs) {
     }
   }
 
-  return mapCelebs();
+  return randomIndices.map((i) => allCelebs[i]);
 }
 
 export default function QuizPage() {
   const [allCelebrities, setAllCelebrities] = useState([]);
-  const [celebrities, setCelebrities] = useState([]);
+  const [celebPairs, setCelebPairs] = useState([]);
+  const [currPairIdx, setCurrPairIdx] = useState(0);
   const [score, setScore] = useState(0);
   const [showPopup, setShowPopup] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
   const [hasAnswered, setHasAnswered] = useState(false);
 
+  const celebrities = celebPairs[currPairIdx] || [];
+
   const prepNextQuestion = () => {
-    setCelebrities(() => {
-      return getRandomCelebs(allCelebrities);
-    });
+    setCurrPairIdx((i) => i + 1);
     setHasAnswered(false);
   };
 
@@ -59,24 +61,44 @@ export default function QuizPage() {
     return data;
   }
 
+  function resetState(allCelebrities) {
+    const celebPairs = [];
+    for (let i = 0; i < NUM_QUESTIONS; i++) {
+      celebPairs.push(getRandomCelebs(allCelebrities));
+    }
+    setCelebPairs(celebPairs);
+    setShowPopup(false);
+    setIsCorrect(false);
+    setHasAnswered(false);
+    setCurrPairIdx(0);
+    setScore(0);
+  }
+
   async function init() {
     const data = await fetchCelebrities();
-    setCelebrities(getRandomCelebs(data));
+    resetState(data);
+
+    // preload imgs
+    celebPairs.forEach((pair) => {
+      pair.forEach((celeb) => {
+        const img = new Image();
+        img.src = celeb.image;
+      });
+    });
   }
 
   useEffect(() => {
     init(); // Fetch the initial set of celebrities
   }, []);
 
-  const handleChoice = (chosenPerson) => {
+  const handleChoice = (idx) => {
     if (hasAnswered) return;
 
     const [person1, person2] = celebrities;
-    const correctPerson =
-      person1.spouseCount > person2.spouseCount ? person1 : person2;
+    const correctIdx = person1.spouseCount > person2.spouseCount ? 0 : 1;
 
     // Update the score if the player chose correctly
-    if (chosenPerson.name === correctPerson.name) {
+    if (idx === correctIdx) {
       setScore((prevScore) => prevScore + 1);
       setIsCorrect(true);
     } else {
@@ -91,19 +113,37 @@ export default function QuizPage() {
     setShowPopup(false); // Hide the popup
   };
 
-  if (!celebrities.length) {
+  if (currPairIdx >= NUM_QUESTIONS) {
+    return (
+      <div className="quiz-container">
+        <div className="quiz-header">
+          <h1>
+            you guessed {score} out of {NUM_QUESTIONS}!!
+          </h1>
+          <button onClick={() => resetState(allCelebrities)}>
+            Play Again?
+          </button>
+        </div>
+      </div>
+    );
+  } else if (!celebrities.length) {
     return <div>Loading...</div>; // Show loading state while fetching
   }
+
   return (
     <div className="quiz-container">
       <div className="quiz-header">
         <h1>who had more spouses?</h1>
-        <p className="score"> your score: {score} / 10</p>
+        <p className="score">
+          {" "}
+          your score: {score} / {NUM_QUESTIONS}
+        </p>
+        <p className="score"> # {currPairIdx + 1}</p>
       </div>
       <div className="quiz-split">
-        {celebrities.map((celeb) => (
+        {celebrities.map((celeb, i) => (
           <PersonSection
-            handleClick={() => handleChoice(celeb)}
+            handleClick={() => handleChoice(i)}
             imgSrc={celeb.image}
             name={celeb.name}
             description={celeb.description}

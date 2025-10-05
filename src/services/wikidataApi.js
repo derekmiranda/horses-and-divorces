@@ -24,11 +24,11 @@ export async function getCelebrities() {
   return Promise.all(
     jsonData.results.bindings.map(async (entry) => {
       const qid = entry.person.value.split("/").pop();
-      // const { name, description } = await fetchEntityData(qid);
+      const { name, description } = await fetchEntityData(qid);
 
       return {
-        name: "",
-        description: "",
+        name,
+        description,
         uri: entry.person.value,
         image: entry.image.value,
         spouseCount: Number(entry.spouseCount.value),
