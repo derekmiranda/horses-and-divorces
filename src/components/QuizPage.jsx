@@ -116,8 +116,13 @@ export default function QuizPage() {
 
   if (currPairIdx >= NUM_QUESTIONS) {
     return (
-      <div className="quiz-container">
-        <GameOver score={score} num_questions={NUM_QUESTIONS} />
+      <div className="quiz-container"div className="quiz-container">
+        <div className="quiz-header">
+          <h1>
+            you guessed {score} out of {NUM_QUESTIONS}!!
+          </h1>
+          <GameOver score={score} celebPairs={celebPairs} />
+        </div>
         <div>
           <button onClick={() => resetState(allCelebrities)}>
             Play Again?
@@ -125,8 +130,6 @@ export default function QuizPage() {
         </div>
       </div>
     );
-  } else if (!celebrities.length) {
-    return <div>Loading...</div>; // Show loading state while fetching
   }
 
   return (

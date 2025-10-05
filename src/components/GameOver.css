@@ -7,6 +7,18 @@
 .quiz-header h1 {
     animation: fontCycle 2s infinite;
 }
+.spouse-count-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+.game-over-person-image-container {
+  width: 64px;
+  height: 32px;
+}
 
 .non-animate {
     animation: none;
