@@ -429,7 +429,7 @@
     "uri": "http://www.wikidata.org/entity/Q83325",
     "wikiUrl": "https://en.wikipedia.org/wiki/Pamela_Anderson",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pamela%20Anderson%202024%20Headshot%20by%20Norman%20Wong.jpg",
-    "spouseCount": 20
+    "spouseCount": 5
   },
   {
     "name": "Nicolas Cage",
@@ -437,15 +437,7 @@
     "uri": "http://www.wikidata.org/entity/Q42869",
     "wikiUrl": "https://en.wikipedia.org/wiki/Nicolas_Cage",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nicolas%20Cage%20Deauville%202013%202.jpg",
-    "spouseCount": 20
-  },
-  {
-    "name": "Douglas Fowley",
-    "description": "American actor (1911-1998)",
-    "uri": "http://www.wikidata.org/entity/Q1252302",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Douglas_Fowley",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Douglas%20Fowley%20in%2020%20Mule%20Team%20%281940%29.png",
-    "spouseCount": 16
+    "spouseCount": 5
   },
   {
     "name": "Martin Scorsese",
@@ -453,23 +445,7 @@
     "uri": "http://www.wikidata.org/entity/Q41148",
     "wikiUrl": "https://en.wikipedia.org/wiki/Martin_Scorsese",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Martin%20Scorsese-68749.jpg",
-    "spouseCount": 15
-  },
-  {
-    "name": "Martin Scorsese",
-    "description": "American filmmaker (born 1942)",
-    "uri": "http://www.wikidata.org/entity/Q41148",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Martin_Scorsese",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Martin%20Scorsese%20MFF%202023.jpg",
-    "spouseCount": 15
-  },
-  {
-    "name": "No name available",
-    "description": "American actor (1936–2009)",
-    "uri": "http://www.wikidata.org/entity/Q187038",
-    "wikiUrl": "https://en.wikipedia.org/wiki/David_Carradine",
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/David%20Carradine%20Polanski%20Unauthorized.jpg",
-    "spouseCount": 15
+    "spouseCount": 5
   },
   {
     "name": "Elizabeth Taylor",
@@ -477,7 +453,7 @@
     "uri": "http://www.wikidata.org/entity/Q34851",
     "wikiUrl": "https://en.wikipedia.org/wiki/Elizabeth_Taylor",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Elizabeth%20Taylor%20with%20Kennedy%20award.jpg",
-    "spouseCount": 14
+    "spouseCount": 7
   },
   {
     "name": "Hedy Lamarr",
@@ -485,7 +461,7 @@
     "uri": "http://www.wikidata.org/entity/Q49034",
     "wikiUrl": "https://en.wikipedia.org/wiki/Hedy_Lamarr",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hedy%20Lamarr%20in%20The%20Heavenly%20Body%201944.jpg",
-    "spouseCount": 12
+    "spouseCount": 6
   },
   {
     "name": "Frank Sinatra",
@@ -493,7 +469,7 @@
     "uri": "http://www.wikidata.org/entity/Q40912",
     "wikiUrl": "https://en.wikipedia.org/wiki/Frank_Sinatra",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Frank%20Sinatra%20%281957%20studio%20portrait%20close-up%29.jpg",
-    "spouseCount": 12
+    "spouseCount": 4
   },
   {
     "name": "John Cleese",
@@ -501,7 +477,7 @@
     "uri": "http://www.wikidata.org/entity/Q25014",
     "wikiUrl": "https://en.wikipedia.org/wiki/John_Cleese",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/John%20Cleese%20Photo%20Op%20GalaxyCon%20San%20Jose%202024.jpg",
-    "spouseCount": 12
+    "spouseCount": 4
   },
   {
     "name": "Gloria Swanson",
@@ -509,7 +485,7 @@
     "uri": "http://www.wikidata.org/entity/Q229232",
     "wikiUrl": "https://en.wikipedia.org/wiki/Gloria_Swanson",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gloria%20Swanson%201941.jpg",
-    "spouseCount": 12
+    "spouseCount": 6
   },
   {
     "name": "Peter Ustinov",
@@ -517,7 +493,7 @@
     "uri": "http://www.wikidata.org/entity/Q55796",
     "wikiUrl": "https://en.wikipedia.org/wiki/Peter_Ustinov",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sir%20Peter%20Ustinov%20Allan%20Warren.jpg",
-    "spouseCount": 12
+    "spouseCount": 3
   },
   {
     "name": "David Lynch",
@@ -525,7 +501,7 @@
     "uri": "http://www.wikidata.org/entity/Q2071",
     "wikiUrl": "https://en.wikipedia.org/wiki/David_Lynch",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/David%20Lynch%20at%20the%201990%20Emmy%20Awards.jpg",
-    "spouseCount": 12
+    "spouseCount": 4
   },
   {
     "name": "Norman Mailer",
@@ -541,7 +517,7 @@
     "uri": "http://www.wikidata.org/entity/Q134333",
     "wikiUrl": "https://en.wikipedia.org/wiki/Roger_Moore",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sir%20Roger%20Moore%20Allan%20Warren.jpg",
-    "spouseCount": 12
+    "spouseCount": 6
   },
   {
     "name": "Lana Wood",
@@ -549,7 +525,7 @@
     "uri": "http://www.wikidata.org/entity/Q242749",
     "wikiUrl": "https://en.wikipedia.org/wiki/Lana_Wood",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lana%20Wood%20-%201982.jpg",
-    "spouseCount": 12
+    "spouseCount": 6
   },
   {
     "name": "Whoopi Goldberg",
@@ -557,7 +533,7 @@
     "uri": "http://www.wikidata.org/entity/Q49001",
     "wikiUrl": "https://en.wikipedia.org/wiki/Whoopi_Goldberg",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Whoopi%20Goldberg%20in%202024%20%28cropped%29.jpg",
-    "spouseCount": 12
+    "spouseCount": 3
   },
   {
     "name": "Roger Vadim",
