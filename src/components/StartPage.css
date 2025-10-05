@@ -50,6 +50,12 @@
     line-height: 80%;
 }
 
+.start-screen button {
+    font-family: "Redaction 50";
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
 p {
     font-family: Redaction;
 }

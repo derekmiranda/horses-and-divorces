@@ -7,13 +7,13 @@ const NUM_QUESTIONS = 10;
 function PersonSection({ handleClick, imgSrc, name, description }) {
   return (
     <div className="person-section" onClick={handleClick}>
+      <div className="person-name-static">{name}</div>
       <div className="person-image-container">
         <img src={imgSrc} alt={name} className="person-image" />
         <div className="person-name-overlay">
-          <span className="person-name">{name}</span>
           <p>{description}</p>
         </div>
-      </div>{" "}
+      </div>
     </div>
   );
 }
@@ -28,7 +28,7 @@ function getRandomCelebs(allCelebs) {
       while (
         randomIndices.length &&
         allCelebs[randomIndices[0]].spouseCount ===
-          allCelebs[randomIndex].spouseCount
+        allCelebs[randomIndex].spouseCount
       ) {
         randomIndex = (randomIndex + 1) % allCelebs.length;
       }
@@ -131,32 +131,33 @@ export default function QuizPage() {
   }
 
   return (
-    <div className="quiz-container">
-      <div className="quiz-header">
-        <h1>who had more spouses?</h1>
-        <p className="score">
-          {" "}
-          your score: {score} / {NUM_QUESTIONS}
-        </p>
-        <p className="score"> # {currPairIdx + 1}</p>
+    <div className="quiz-page">
+      <div className="quiz-status">
+        <span className="score">your score: {score} / {NUM_QUESTIONS}</span>
+        <span className="progress">Round {currPairIdx + 1}</span>
       </div>
-      <div className="quiz-split">
-        {celebrities.map((celeb, i) => (
-          <PersonSection
-            handleClick={() => handleChoice(i)}
-            imgSrc={celeb.image}
-            name={celeb.name}
-            description={celeb.description}
-            key={celeb.name}
-          />
-        ))}
+      <div className="celeb-container">
+        <div className="quiz-header">
+          <h2>who had more spouses?</h2>
+        </div>
+        <div className="quiz-split">
+          {celebrities.map((celeb, i) => (
+            <PersonSection
+              handleClick={() => handleChoice(i)}
+              imgSrc={celeb.image}
+              name={celeb.name}
+              description={celeb.description}
+              key={celeb.name}
+            />
+          ))}
+        </div>
+        <ScorePopup
+          visible={showPopup}
+          isCorrect={isCorrect}
+          onClose={closePopup}
+          celebrities={celebrities}
+        />
       </div>
-      <ScorePopup
-        visible={showPopup}
-        isCorrect={isCorrect}
-        onClose={closePopup}
-        celebrities={celebrities}
-      />
     </div>
   );
 }

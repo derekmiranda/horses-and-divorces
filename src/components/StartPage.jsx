@@ -8,7 +8,7 @@ function StartScreen({ onStart }) {
       <h1>horses and divorces</h1>
       <p>guess which public figure has more divorces 👀</p>
 
-      <button onClick={onStart}>start</button>
+      <button onClick={onStart}>Start Guessing</button>
     </div>
   )
 }

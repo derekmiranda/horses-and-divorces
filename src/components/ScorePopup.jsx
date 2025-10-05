@@ -20,7 +20,7 @@ export default function ScorePopup({
   return (
     <div className={ppClassName} onClick={onClose}>
       <div className="popup-content" onClick={(e) => e.stopPropagation()}>
-        <h2>{isCorrect ? "✅Correct!" : "❌ Wrong"}</h2>
+        <h3>{isCorrect ? "✅ CORRECT ✅" : "❌ WRONG ❌"}</h3>
         <p>
           {celebrities[0].name} had {celebrities[0].spouseCount} spouse
           {addSPerhaps(celebrities[0].spouseCount)} and <br />
