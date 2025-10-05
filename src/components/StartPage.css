@@ -34,6 +34,7 @@
 
 .start-screen {
     display: flex;
+    height: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -46,8 +47,11 @@
 .start-screen h1 {
     animation: fontCycle 2s infinite;
     font-size: 8rem;
-    font-weight: bold;
     line-height: 80%;
+}
+
+.start-screen h4 {
+ 
 }
 
 .start-screen button {
@@ -58,4 +62,21 @@
 
 p {
     font-family: Redaction;
+}
+
+@media (max-width: 420px) {
+    .start-screen h1 {
+        font-size: 3rem;
+    }
+
+    .start-screen h4 {
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+}
+
+.disclaimer {
+    position: absolute;
+    bottom: 100px;
+    width: 40%;
 }

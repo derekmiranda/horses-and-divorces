@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getCelebrities } from "../services/wikidataApi";
 import ScorePopup from "./ScorePopup";
 
-const NUM_QUESTIONS = 10;
+const NUM_QUESTIONS = 1;
 
 function PersonSection({ handleClick, imgSrc, name, description }) {
   return (
@@ -117,9 +117,9 @@ export default function QuizPage() {
     return (
       <div className="quiz-container">
         <div className="quiz-header">
-          <h1>
+          <h2>
             you guessed {score} out of {NUM_QUESTIONS}!!
-          </h1>
+          </h2>
           <button onClick={() => resetState(allCelebrities)}>
             Play Again?
           </button>
