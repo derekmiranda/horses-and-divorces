@@ -197,7 +197,6 @@ body {
   display: flex;
   height: 100vh;
   background-color: var(--bg);
-  overflow: hidden;
 }
 
 h1 {
