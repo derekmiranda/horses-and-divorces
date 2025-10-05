@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getCelebrities } from "../services/wikidataApi";
 import ScorePopup from "./ScorePopup";
 
-const NUM_QUESTIONS = 1;
+const NUM_QUESTIONS = 5;
 
 function PersonSection({ handleClick, imgSrc, name, description }) {
   return (
