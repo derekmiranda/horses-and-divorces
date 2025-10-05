@@ -4,7 +4,6 @@ export default function GameOver({ score, celebPairs }) {
   const celebsSortedBySpouseNumber = celebPairs.reduce((accum, pair) => accum.concat(...pair), [])
     .filter((celeb, i, arr) => arr.findIndex(c => c.name === celeb.name) === i)
     .sort((c1, c2) => c2.spouseCount - c1.spouseCount)
-    console.log('celebsSortedBySpouseNumber', celebsSortedBySpouseNumber)
   return <>
       <div className="quiz-container">
       <div className="quiz-header">
