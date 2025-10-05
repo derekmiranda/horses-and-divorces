@@ -22,9 +22,9 @@ function endScreenCopy(score){
   switch (true) {
     case score === 10:
       return "Hollywood should fear you. You know everything.";
-    case score >= 7 && score <= 9:
+    case score >= 6 && score <= 9:
       return "You’ve clearly spent a healthy amount of time reading celebrity gossip";
-    case score === 5 || score === 6:
+    case score === 5:
       return "Half right, half wrong — just like most celebrity marriages.";
     case score >= 1 && score <= 4:
       return "Do you even read the tabloids?!";
