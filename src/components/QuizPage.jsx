@@ -28,9 +28,9 @@ function getRandomCelebs(allCelebs) {
       // ensure no ties
       while (
         randomIndices.length && ((
-        allCelebs[randomIndices[0]].spouseCount ===
-        allCelebs[randomIndex].spouseCount
-        ) || randomIndex === randomIndices[0]) 
+          allCelebs[randomIndices[0]].spouseCount ===
+          allCelebs[randomIndex].spouseCount
+        ) || randomIndex === randomIndices[0])
       ) {
         randomIndex = Math.floor(Math.random() * allCelebs.length);
       }
@@ -120,7 +120,7 @@ export default function QuizPage() {
         <div className="quiz-header">
           <GameOver score={score} celebPairs={celebPairs} totalQuestions={NUM_QUESTIONS} />
         </div>
-        <div className="quiz-footer">
+        <div>
           <button onClick={() => resetState(allCelebrities)}>
             Play Again?
           </button>

@@ -1,11 +1,11 @@
-import './GameOver.css'
+import "./GameOver.css";
 
 export default function GameOver({ score, celebPairs, totalQuestions }) {
   const celebsSortedBySpouseNumber = celebPairs.reduce((accum, pair) => accum.concat(...pair), [])
     .filter((celeb, i, arr) => arr.findIndex(c => c.name === celeb.name) === i)
     .sort((c1, c2) => c2.spouseCount - c1.spouseCount)
+   console.log('celebsSortedBySpouseNumber', celebsSortedBySpouseNumber)
   return <>
-      <div className="quiz-container">
       <div className="quiz-header">
         <h1>
           you guessed {score} out of {totalQuestions}!!
@@ -13,11 +13,10 @@ export default function GameOver({ score, celebPairs, totalQuestions }) {
         <h4>{endScreenCopy(score)}</h4>
         <SpouseCountList celebs={celebsSortedBySpouseNumber} />
       </div>
-    </div>
   </>
 }
 
-function endScreenCopy(score){
+function endScreenCopy(score) {
   switch (true) {
     case score === 10:
       return "Hollywood should fear you. You know everything.";

@@ -85,7 +85,7 @@ p {
 
 .disclaimer {
     position: absolute;
-    bottom: clamp(0.4rem, 0.8rem, 1.2rem);
+    bottom: clamp(0.6rem, 0.8rem, 1.2rem);
     width: 50%;
     font-size: clamp(0.8rem, 1rem, 1.2rem);
 }
