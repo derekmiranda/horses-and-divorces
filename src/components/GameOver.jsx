@@ -4,16 +4,18 @@ export default function GameOver({ score, celebPairs, totalQuestions }) {
   const celebsSortedBySpouseNumber = celebPairs.reduce((accum, pair) => accum.concat(...pair), [])
     .filter((celeb, i, arr) => arr.findIndex(c => c.name === celeb.name) === i)
     .sort((c1, c2) => c2.spouseCount - c1.spouseCount)
-   console.log('celebsSortedBySpouseNumber', celebsSortedBySpouseNumber)
-  return <>
-      <div className="quiz-header">
-        <h1>
-          you guessed {score} out of {totalQuestions}!!
-        </h1>
-        <h4>{endScreenCopy(score)}</h4>
+  console.log('celebsSortedBySpouseNumber', celebsSortedBySpouseNumber)
+  return (
+    <div className="game-over-page">
+      <div className="quiz-header non-animate">
+        <h1>you guessed {score} out of {totalQuestions}!!</h1>
+        <h4 className="game-over-subtitle">{endScreenCopy(score)}</h4>
+      </div>
+      <div className="spouse-list">
         <SpouseCountList celebs={celebsSortedBySpouseNumber} />
       </div>
-  </>
+    </div>
+  )
 }
 
 function endScreenCopy(score) {
@@ -35,14 +37,14 @@ function endScreenCopy(score) {
 
 function SpouseCountList({ celebs }) {
   return celebs.map((celeb, i) => (
-    <a key={i} href={celeb.wikiUrl}>
-    <div className="spouse-count-row">
-      <div className="game-over-person-image-container">
-        <img src={celeb.image} alt={celeb.name} className="person-image" />
+    <a key={i} href={celeb.wikiUrl} className="spouse-row-link" target="_blank" rel="noreferrer">
+      <div className="spouse-count-row">
+        <div className="game-over-person-image-container">
+          <img src={celeb.image} alt={celeb.name} className="person-image" />
+        </div>
+        <p className="spouse-name">{celeb.name}</p>
+        <p className="spouse-count">{celeb.spouseCount}</p>
       </div>
-      <p>{celeb.name}</p>
-      <p>{celeb.spouseCount}</p>
-    </div>
     </a>
   ))
 }

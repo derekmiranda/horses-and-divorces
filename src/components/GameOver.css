@@ -1,23 +1,31 @@
 .quiz-header {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     gap: clamp(0.4rem, 0.6rem, 1rem);
 }
 
 .quiz-header h1 {
-    animation: fontCycle 2s infinite;
+    /* animation: fontCycle 2s infinite; */
 }
+
+/* Ensure only the title animates; stop any inherited animations */
+.spouse-count-row,
+.spouse-count-row * {
+    animation: none !important;
+}
+
 .spouse-count-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
 }
 
 .game-over-person-image-container {
-  width: 64px;
-  height: 32px;
+    width: 64px;
+    height: 32px;
 }
 
 .non-animate {
