@@ -207,6 +207,7 @@ h1 {
 
 h2 {
   font-size: 3.2rem;
+  line-height: 0.8;
   font-weight: 500;
   font-family: 'Redaction 50', sans-serif;
   color: var(--color-primary);
