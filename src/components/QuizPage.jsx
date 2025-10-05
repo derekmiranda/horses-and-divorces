@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import allCelebrities from '../assets/Celebs.json'
 import ScorePopup from "./ScorePopup";
+import GameOver from "./GameOver";
 
 const NUM_QUESTIONS = 10;
 
@@ -120,6 +121,9 @@ export default function QuizPage() {
           <h1>
             you guessed {score} out of {NUM_QUESTIONS}!!
           </h1>
+          <GameOver score={score} />
+        </div>
+        <div className="quiz-footer">
           <button onClick={() => resetState(allCelebrities)}>
             Play Again?
           </button>
