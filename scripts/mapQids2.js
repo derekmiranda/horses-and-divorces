@@ -1,9 +1,11 @@
-[
+import { writeFile } from 'fs/promises';
+import { resolve } from 'path';
+
+const data = [
   {
     "name": "Queen Paola of Belgium",
     "description": "queen consort of the Belgians",
     "uri": "http://www.wikidata.org/entity/Q31129",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Queen_Paola_of_Belgium",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Queen%20Paola%20with%20the%20President%20and%20the%20Prime%20Minister%20of%20India%2C%20and%20the%20King%20Albert%20II%20%28cropped%29.jpg",
     "spouseCount": 1
   },
@@ -11,7 +13,6 @@
     "name": "Demi Moore",
     "description": "American actress and producer (born 1962)",
     "uri": "http://www.wikidata.org/entity/Q43044",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Demi_Moore",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Demi%20Moore%20at%20the%202024%20Toronto%20International%20Film%20Festival%203%20%28cropped%29%20%28cropped%29.jpg",
     "spouseCount": 3
   },
@@ -19,7 +20,6 @@
     "name": "Mildred Scheel",
     "description": "German physician (1932–1985)",
     "uri": "http://www.wikidata.org/entity/Q66805",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Mildred_Scheel",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv%20B%20145%20Bild-F054905-0019%2C%20Bonn%2C%20Walter%20und%20Mildred%20Scheel%20geben%20Autogramme%20%28Mildred%20Scheel%29.jpg",
     "spouseCount": 1
   },
@@ -27,7 +27,6 @@
     "name": "Veronica Carstens",
     "description": "German First Lady (1923-2012)",
     "uri": "http://www.wikidata.org/entity/Q71341",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Veronica_Carstens",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv%20Bild%20146-2008-0320%2C%20Karl%20Carstens%2C%20Veronica%20Carstens.jpg",
     "spouseCount": 1
   },
@@ -35,7 +34,6 @@
     "name": "Lotte Ulbricht",
     "description": "German politician (1903-2002)",
     "uri": "http://www.wikidata.org/entity/Q75163",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Lotte_Ulbricht",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lotte%20Ulbricht%20%28cropped%29.jpg",
     "spouseCount": 2
   },
@@ -43,7 +41,6 @@
     "name": "Claudia Schiffer",
     "description": "German model",
     "uri": "http://www.wikidata.org/entity/Q76717",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Claudia_Schiffer",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claudia%20Schiffer%2020091006%20Chanel%2005.jpg",
     "spouseCount": 1
   },
@@ -51,7 +48,6 @@
     "name": "Margot Honecker",
     "description": "East German politician (1927-2016)",
     "uri": "http://www.wikidata.org/entity/Q76893",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Margot_Honecker",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv%20Bild%20183-1986-0313-300%2C%20Margot%20Honecker%2C%20Minister%20f%C3%BCr%20Volksbildung.jpg",
     "spouseCount": 1
   },
@@ -59,7 +55,6 @@
     "name": "Marianne von Weizsäcker",
     "description": "spouse of the German President",
     "uri": "http://www.wikidata.org/entity/Q77960",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Marianne_von_Weizs%C3%A4cker",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv%20B%20145%20Bild-F075763-0023%2C%20UdSSR%2C%20Besuch%20Bundespr%C3%A4sident%20von%20Weizs%C3%A4cker.jpg",
     "spouseCount": 1
   },
@@ -67,7 +62,6 @@
     "name": "André Previn",
     "description": "German-American conductor, pianist, and composer (1929–2019)",
     "uri": "http://www.wikidata.org/entity/Q155712",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Andr%C3%A9_Previn",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Andre%20Previn%20%28on%20In%20Tune%2C%20BBC%20Radio%2C%202012%29.jpg",
     "spouseCount": 5
   },
@@ -75,7 +69,6 @@
     "name": "Rainier III, Prince of Mónaco",
     "description": "Prince of Monaco (1923-2005)",
     "uri": "http://www.wikidata.org/entity/Q185025",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Rainier_III,_Prince_of_Monaco",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rainier%20III%20%28JFKWHP-KN-C17888%2C%20cropped%29.jpg",
     "spouseCount": 1
   },
@@ -83,7 +76,6 @@
     "name": "Charlene, Princess of Monaco",
     "description": "Zimbabwean-South African former Olympic swimmer; wife of Albert II, Prince of Monaco",
     "uri": "http://www.wikidata.org/entity/Q208466",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Charlene,_Princess_of_Monaco",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Charlene%2C%20Princess%20of%20Monaco-4.jpg",
     "spouseCount": 1
   },
@@ -91,7 +83,6 @@
     "name": "Christina Hendricks",
     "description": "British-American actress (born 1975)",
     "uri": "http://www.wikidata.org/entity/Q210462",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Christina_Hendricks",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Christina%20Hendricks%20at%20PaleyFest%202014.jpg",
     "spouseCount": 2
   },
@@ -99,7 +90,6 @@
     "name": "Maria Kaczyńska",
     "description": "First Lady of Poland (1942-2010)",
     "uri": "http://www.wikidata.org/entity/Q215342",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Maria_Kaczy%C5%84ska",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Maria%20Kaczy%C5%84ska%20%28official%20portrait%29%20cropped.jpg",
     "spouseCount": 1
   },
@@ -107,7 +97,6 @@
     "name": "Linda McCartney",
     "description": "American photographer, musician and animal rights activist (1941–1998)",
     "uri": "http://www.wikidata.org/entity/Q228899",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Linda_McCartney",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/ETH-BIB-Montreux%2C%20Linda%20McCartney-Com%20L21-0605-0002-0003.tif",
     "spouseCount": 1
   },
@@ -115,7 +104,6 @@
     "name": "Maria Shriver",
     "description": "First Lady of California from 2003 to 2011",
     "uri": "http://www.wikidata.org/entity/Q230654",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Maria_Shriver",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Maria%20Shriver%20by%20Gage%20Skidmore.jpg",
     "spouseCount": 1
   },
@@ -123,7 +111,6 @@
     "name": "Maria Shriver",
     "description": "First Lady of California from 2003 to 2011",
     "uri": "http://www.wikidata.org/entity/Q230654",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Maria_Shriver",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MariaShriverApr2013.jpg",
     "spouseCount": 1
   },
@@ -131,7 +118,6 @@
     "name": "Barbara Bach",
     "description": "American actress",
     "uri": "http://www.wikidata.org/entity/Q233993",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Barbara_Bach",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Barbara%20Bach%20-%201978.jpg",
     "spouseCount": 1
   },
@@ -139,7 +125,6 @@
     "name": "Pattie Boyd",
     "description": "English model, photographer (born 1944)",
     "uri": "http://www.wikidata.org/entity/Q234074",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Pattie_Boyd",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Patti%20boyd-1547297748.jpg",
     "spouseCount": 2
   },
@@ -147,7 +132,6 @@
     "name": "Lisa Marie Presley",
     "description": "American singer-songwriter (1968–2023)",
     "uri": "http://www.wikidata.org/entity/Q237324",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Lisa_Marie_Presley",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lisa%20Marie%20Presley.jpg",
     "spouseCount": 4
   },
@@ -155,7 +139,6 @@
     "name": "Lisa Marie Presley",
     "description": "American singer-songwriter (1968–2023)",
     "uri": "http://www.wikidata.org/entity/Q237324",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Lisa_Marie_Presley",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lisa%20Marie%20Presley%20at%20car%20race%20%28cropped%29.jpg",
     "spouseCount": 4
   },
@@ -163,7 +146,6 @@
     "name": "Heather Mills",
     "description": "former glamour model, activist",
     "uri": "http://www.wikidata.org/entity/Q266568",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Heather_Mills",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Heather%20Mills%20-%20Wien%202019%20%281%29.JPG",
     "spouseCount": 1
   },
@@ -171,7 +153,6 @@
     "name": "Olivia Harrison",
     "description": "American author, film producer, and widow of George Harrison",
     "uri": "http://www.wikidata.org/entity/Q442991",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Olivia_Harrison",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/OliviaHarrisonApr09.jpg",
     "spouseCount": 1
   },
@@ -179,7 +160,6 @@
     "name": "Consuelo de Saint Exupéry",
     "description": "Salvadoran-French writer and artist (1901-1979)",
     "uri": "http://www.wikidata.org/entity/Q445703",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Consuelo_de_Saint-Exup%C3%A9ry",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Consuelo%20en%201942%20%C3%A0%20Montr%C3%A9al.jpg",
     "spouseCount": 3
   },
@@ -187,7 +167,6 @@
     "name": "Edith Baumann",
     "description": "German politician (1909-1973)",
     "uri": "http://www.wikidata.org/entity/Q977009",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Edith_Baumann",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fotothek%20df%20pk%200000213%20009.jpg",
     "spouseCount": 1
   },
@@ -195,7 +174,6 @@
     "name": "David Furnish",
     "description": "Canadian filmmaker",
     "uri": "http://www.wikidata.org/entity/Q1174489",
-    "wikiUrl": "https://en.wikipedia.org/wiki/David_Furnish",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/David%20Furnish%202022.jpg",
     "spouseCount": 1
   },
@@ -203,7 +181,6 @@
     "name": "David Furnish",
     "description": "Canadian filmmaker",
     "uri": "http://www.wikidata.org/entity/Q1174489",
-    "wikiUrl": "https://en.wikipedia.org/wiki/David_Furnish",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/David%20Furnish%20at%20St%20Paul%27s%20Cathedral%2C%20London%2C%20United%20Kingdom%20on%2014%20October%202024%20%28cropped%29.jpg",
     "spouseCount": 1
   },
@@ -211,7 +188,6 @@
     "name": "Freddie Stroma",
     "description": "British actor",
     "uri": "http://www.wikidata.org/entity/Q1320512",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Freddie_Stroma",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Freddie%20Stroma%20%28cropped%29.jpg",
     "spouseCount": 1
   },
@@ -219,7 +195,6 @@
     "name": "Eileen O'Shaughnessy",
     "description": "British psychologist and writer (1905–1945)",
     "uri": "http://www.wikidata.org/entity/Q1649757",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Eileen_Blair",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eileen%20o%27Shaughnessy.jpg",
     "spouseCount": 1
   },
@@ -227,7 +202,6 @@
     "name": "Jim Mollison",
     "description": "Scottish pioneer aviator (1905–1959)",
     "uri": "http://www.wikidata.org/entity/Q1679945",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Jim_Mollison",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/James%20A%20Mollison.jpg",
     "spouseCount": 1
   },
@@ -235,7 +209,6 @@
     "name": "Nina Rindt",
     "description": "Finnish model",
     "uri": "http://www.wikidata.org/entity/Q23040890",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Nina_Rindt",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nina-Lincoln-Rindt-1965.jpg",
     "spouseCount": 3
   },
@@ -243,7 +216,6 @@
     "name": "Daniella Pick",
     "description": "Israeli singer and television personality",
     "uri": "http://www.wikidata.org/entity/Q32947601",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Daniella_Pick",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%D7%93%D7%A0%D7%99%D7%90%D7%9C%D7%94%20%D7%A4%D7%99%D7%A7.jpg",
     "spouseCount": 1
   },
@@ -251,7 +223,6 @@
     "name": "Erika Krenz",
     "description": "German teacher and wife of Egon Krenz",
     "uri": "http://www.wikidata.org/entity/Q98386957",
-    "wikiUrl": "No wiki url available",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Erika%20Krenz%20%28cropped%29.jpg",
     "spouseCount": 1
   },
@@ -259,7 +230,6 @@
     "name": "Sean Penn",
     "description": "American actor and filmmaker (born 1960)",
     "uri": "http://www.wikidata.org/entity/Q44221",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Sean_Penn",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Superpower%20%282023%29-60535.jpg",
     "spouseCount": 3
   },
@@ -267,7 +237,6 @@
     "name": "Bettina Wulff",
     "description": "Spouse of former German President",
     "uri": "http://www.wikidata.org/entity/Q64185",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Bettina_Wulff",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bettina%20Wulff%20cropped.jpg",
     "spouseCount": 1
   },
@@ -275,7 +244,6 @@
     "name": "Hannelore Kohl",
     "description": "Wife of German chancellor Helmut Kohl (1933–2001)",
     "uri": "http://www.wikidata.org/entity/Q68743",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Hannelore_Kohl",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hannelore.jpg",
     "spouseCount": 1
   },
@@ -283,7 +251,6 @@
     "name": "Eva Köhler",
     "description": "Wife of former German president Horst Köhler",
     "uri": "http://www.wikidata.org/entity/Q69129",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Eva_K%C3%B6hler",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eva%20K%C3%B6hler%20-%203%20juli%202009.jpg",
     "spouseCount": 1
   },
@@ -291,7 +258,6 @@
     "name": "Loki Schmidt",
     "description": "German environmentalist (1919-2010)",
     "uri": "http://www.wikidata.org/entity/Q69314",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Loki_Schmidt",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv%20B%20145%20Bild-F055066-0024%2C%20K%C3%B6ln%2C%20SPD-Parteitag%2C%20Schmidt%20mit%20Ehefrau%20Loki%20cropped.jpg",
     "spouseCount": 1
   },
@@ -299,7 +265,6 @@
     "name": "Doris Schröder-Köpf",
     "description": "German politician and journalist",
     "uri": "http://www.wikidata.org/entity/Q72617",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Doris_Schr%C3%B6der-K%C3%B6pf",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Schr%C3%B6der-K%C3%B6pf%2C%20Doris-8894.jpg",
     "spouseCount": 1
   },
@@ -307,7 +272,6 @@
     "name": "Marlies Schild",
     "description": "former Austrian Alpine skier",
     "uri": "http://www.wikidata.org/entity/Q78574",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Marlies_Schild",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Marlies%20Schild%20Semmering%202010.jpg",
     "spouseCount": 1
   },
@@ -315,7 +279,6 @@
     "name": "Julia Harting",
     "description": "German athlete",
     "uri": "http://www.wikidata.org/entity/Q86570",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Julia_Harting",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/20150725%201622%20DM%20Leichtathletik%20Frauen%20Diskuswurf%209553.jpg",
     "spouseCount": 1
   },
@@ -323,7 +286,6 @@
     "name": "Christina Rau",
     "description": "Spouse of German President",
     "uri": "http://www.wikidata.org/entity/Q91773",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Christina_Rau",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Christina%20Rau%2C%20Schloss%20Bellevue%2C%202002.jpg",
     "spouseCount": 1
   },
@@ -331,7 +293,6 @@
     "name": "Christiane Herzog",
     "description": "Wife of President of Germany (1936–2000)",
     "uri": "http://www.wikidata.org/entity/Q96061",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Christiane_Herzog",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Berlin-Marathon%201996%2C%20Christiane%20Herzog.jpg",
     "spouseCount": 1
   },
@@ -339,7 +300,6 @@
     "name": "Maike Kohl-Richter",
     "description": "German economist and author",
     "uri": "http://www.wikidata.org/entity/Q98885",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Maike_Kohl-Richter",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Maike%20Richter.jpg",
     "spouseCount": 1
   },
@@ -347,7 +307,6 @@
     "name": "Beate Schrott",
     "description": "Austrian hurdler",
     "uri": "http://www.wikidata.org/entity/Q112566",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Beate_Schrott",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Austrian%20Sportspeople%20of%20the%20Year%202014%20red%20carpet%2022%20Beate%20Schrott.jpg",
     "spouseCount": 1
   },
@@ -355,7 +314,6 @@
     "name": "Guy Ritchie",
     "description": "English filmmaker",
     "uri": "http://www.wikidata.org/entity/Q192990",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Guy_Ritchie",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/GuyRitchiebyKathyHutchins.jpg",
     "spouseCount": 2
   },
@@ -363,7 +321,6 @@
     "name": "Rita Wilson",
     "description": "American actress, singer and producer",
     "uri": "http://www.wikidata.org/entity/Q234144",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Rita_Wilson",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rita%20Wilson%20and%20her%20band%20perform%20at%20a%20Greek%20Independence%20Day%20reception%20on%20March%2029%2C%202023%20in%20the%20East%20Room%20of%20the%20White%20House%20%28cropped%29.jpg",
     "spouseCount": 1
   },
@@ -371,7 +328,6 @@
     "name": "Rita Wilson",
     "description": "American actress, singer and producer",
     "uri": "http://www.wikidata.org/entity/Q234144",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Rita_Wilson",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rita%20Wilson%20by%20Gage%20Skidmore%202.jpg",
     "spouseCount": 1
   },
@@ -379,7 +335,6 @@
     "name": "Chelsea Johnson",
     "description": "American pole vaulter",
     "uri": "http://www.wikidata.org/entity/Q257690",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Chelsea_Johnson",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chelsea%20Johnson%20Berlin%202009.jpg",
     "spouseCount": 1
   },
@@ -387,7 +342,6 @@
     "name": "Claude Pompidou",
     "description": "wife of French President Georges Pompidou (1912–2007)",
     "uri": "http://www.wikidata.org/entity/Q269422",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Claude_Pompidou",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Pompidou.jpg",
     "spouseCount": 1
   },
@@ -395,7 +349,6 @@
     "name": "Anisya Kirdyapkina",
     "description": "Russian racewalker",
     "uri": "http://www.wikidata.org/entity/Q270219",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Anisya_Kirdyapkina",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kirdyapkina.JPG",
     "spouseCount": 1
   },
@@ -403,7 +356,6 @@
     "name": "Mickey Rooney",
     "description": "American actor (1920–2014)",
     "uri": "http://www.wikidata.org/entity/Q104081",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Mickey_Rooney",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mickey%20Rooney%20still.jpg",
     "spouseCount": 24
   },
@@ -411,7 +363,6 @@
     "name": "Robert Evans",
     "description": "American film producer (1930–2019)",
     "uri": "http://www.wikidata.org/entity/Q1826885",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Robert_Evans",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/RobertEvansHWOFJul2012.jpg",
     "spouseCount": 21
   },
@@ -419,7 +370,6 @@
     "name": "Larry King",
     "description": "American television and radio host (1933–2021)",
     "uri": "http://www.wikidata.org/entity/Q213430",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Larry_King",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/LarryKingSept10%20%28cropped%29.jpg",
     "spouseCount": 21
   },
@@ -427,7 +377,6 @@
     "name": "Pamela Anderson",
     "description": "Canadian actress and model (born 1967)",
     "uri": "http://www.wikidata.org/entity/Q83325",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Pamela_Anderson",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pamela%20Anderson%202024%20Headshot%20by%20Norman%20Wong.jpg",
     "spouseCount": 20
   },
@@ -435,7 +384,6 @@
     "name": "Nicolas Cage",
     "description": "American actor",
     "uri": "http://www.wikidata.org/entity/Q42869",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Nicolas_Cage",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nicolas%20Cage%20Deauville%202013%202.jpg",
     "spouseCount": 20
   },
@@ -443,7 +391,6 @@
     "name": "Douglas Fowley",
     "description": "American actor (1911-1998)",
     "uri": "http://www.wikidata.org/entity/Q1252302",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Douglas_Fowley",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Douglas%20Fowley%20in%2020%20Mule%20Team%20%281940%29.png",
     "spouseCount": 16
   },
@@ -451,7 +398,6 @@
     "name": "Martin Scorsese",
     "description": "American filmmaker (born 1942)",
     "uri": "http://www.wikidata.org/entity/Q41148",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Martin_Scorsese",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Martin%20Scorsese-68749.jpg",
     "spouseCount": 15
   },
@@ -459,7 +405,6 @@
     "name": "Martin Scorsese",
     "description": "American filmmaker (born 1942)",
     "uri": "http://www.wikidata.org/entity/Q41148",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Martin_Scorsese",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Martin%20Scorsese%20MFF%202023.jpg",
     "spouseCount": 15
   },
@@ -467,7 +412,6 @@
     "name": "No name available",
     "description": "American actor (1936–2009)",
     "uri": "http://www.wikidata.org/entity/Q187038",
-    "wikiUrl": "https://en.wikipedia.org/wiki/David_Carradine",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/David%20Carradine%20Polanski%20Unauthorized.jpg",
     "spouseCount": 15
   },
@@ -475,7 +419,6 @@
     "name": "Elizabeth Taylor",
     "description": "British-American actress (1932–2011)",
     "uri": "http://www.wikidata.org/entity/Q34851",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Elizabeth_Taylor",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Elizabeth%20Taylor%20with%20Kennedy%20award.jpg",
     "spouseCount": 14
   },
@@ -483,7 +426,6 @@
     "name": "Hedy Lamarr",
     "description": "Austrian-American actress and co-inventor of an early technique for spread spectrum communications and frequency hopping (1914-2000)",
     "uri": "http://www.wikidata.org/entity/Q49034",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Hedy_Lamarr",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hedy%20Lamarr%20in%20The%20Heavenly%20Body%201944.jpg",
     "spouseCount": 12
   },
@@ -491,7 +433,6 @@
     "name": "Frank Sinatra",
     "description": "American singer and actor (1915–1998)",
     "uri": "http://www.wikidata.org/entity/Q40912",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Frank_Sinatra",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Frank%20Sinatra%20%281957%20studio%20portrait%20close-up%29.jpg",
     "spouseCount": 12
   },
@@ -499,7 +440,6 @@
     "name": "John Cleese",
     "description": "English comedian and actor (born 1939)",
     "uri": "http://www.wikidata.org/entity/Q25014",
-    "wikiUrl": "https://en.wikipedia.org/wiki/John_Cleese",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/John%20Cleese%20Photo%20Op%20GalaxyCon%20San%20Jose%202024.jpg",
     "spouseCount": 12
   },
@@ -507,7 +447,6 @@
     "name": "Gloria Swanson",
     "description": "American actress (1899–1983)",
     "uri": "http://www.wikidata.org/entity/Q229232",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Gloria_Swanson",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gloria%20Swanson%201941.jpg",
     "spouseCount": 12
   },
@@ -515,7 +454,6 @@
     "name": "Peter Ustinov",
     "description": "British actor, writer and director (1921–2004)",
     "uri": "http://www.wikidata.org/entity/Q55796",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Peter_Ustinov",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sir%20Peter%20Ustinov%20Allan%20Warren.jpg",
     "spouseCount": 12
   },
@@ -523,7 +461,6 @@
     "name": "David Lynch",
     "description": "American filmmaker, visual artist, musician, and actor (1946–2025)",
     "uri": "http://www.wikidata.org/entity/Q2071",
-    "wikiUrl": "https://en.wikipedia.org/wiki/David_Lynch",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/David%20Lynch%20at%20the%201990%20Emmy%20Awards.jpg",
     "spouseCount": 12
   },
@@ -531,7 +468,6 @@
     "name": "Norman Mailer",
     "description": "American writer (1923–2007)",
     "uri": "http://www.wikidata.org/entity/Q180962",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Norman_Mailer",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oliver%20Mark%20-%20Norman%20Mailer%2C%20Berlin%202002.jpg",
     "spouseCount": 12
   },
@@ -539,7 +475,6 @@
     "name": "Roger Moore",
     "description": "English actor (1927–2017)",
     "uri": "http://www.wikidata.org/entity/Q134333",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Roger_Moore",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sir%20Roger%20Moore%20Allan%20Warren.jpg",
     "spouseCount": 12
   },
@@ -547,7 +482,6 @@
     "name": "Lana Wood",
     "description": "American actress",
     "uri": "http://www.wikidata.org/entity/Q242749",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Lana_Wood",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lana%20Wood%20-%201982.jpg",
     "spouseCount": 12
   },
@@ -555,7 +489,6 @@
     "name": "Whoopi Goldberg",
     "description": "American actress, comedian, author and television personality",
     "uri": "http://www.wikidata.org/entity/Q49001",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Whoopi_Goldberg",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Whoopi%20Goldberg%20in%202024%20%28cropped%29.jpg",
     "spouseCount": 12
   },
@@ -563,7 +496,6 @@
     "name": "Roger Vadim",
     "description": "French filmmaker (1928–2000)",
     "uri": "http://www.wikidata.org/entity/Q383420",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Roger_Vadim",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Roger%20Vadim%20-%20still.jpg",
     "spouseCount": 10
   },
@@ -571,7 +503,6 @@
     "name": "No name available",
     "description": "American actor and film director (1936–2010)",
     "uri": "http://www.wikidata.org/entity/Q102711",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Dennis_Hopper",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dennis%20Hopper%20Cannes%202008%20%28cropped%29.jpg",
     "spouseCount": 10
   },
@@ -579,7 +510,6 @@
     "name": "Judy Garland",
     "description": "American actress, singer, dancer and vaudevillian (1922–1969)",
     "uri": "http://www.wikidata.org/entity/Q11637",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Judy_Garland",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Judy%20Garland%20The%20Harvey%20Girls%20MGM%20Publicity%20still.jpeg",
     "spouseCount": 10
   },
@@ -587,7 +517,6 @@
     "name": "Curd Jürgens",
     "description": "German actor (1915–1982)",
     "uri": "http://www.wikidata.org/entity/Q57584",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Curd_J%C3%BCrgens",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv%20B%20145%20Bild-F034157-0020%2C%20Bonn%2C%20Bundeskanzler%20Brandt%20empf%C3%A4ngt%20Schauspieler%20cropped.jpg",
     "spouseCount": 10
   },
@@ -595,7 +524,6 @@
     "name": "Ernest Borgnine",
     "description": "American actor (1917–2012)",
     "uri": "http://www.wikidata.org/entity/Q102551",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Ernest_Borgnine",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ernest%20Borgnine%20McHale%20McHale%27s%20Navy%201962.JPG",
     "spouseCount": 10
   },
@@ -603,7 +531,6 @@
     "name": "Ike Turner",
     "description": "American musician (1931–2007)",
     "uri": "http://www.wikidata.org/entity/Q208871",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Ike_Turner",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iketurner1997.jpg",
     "spouseCount": 10
   },
@@ -611,7 +538,6 @@
     "name": "Cary Grant",
     "description": "British-American actor (1904–1986)",
     "uri": "http://www.wikidata.org/entity/Q83410",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Cary_Grant",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Grant%2C%20Cary%20%28Suspicion%29%2001%20Crisco%20edit.jpg",
     "spouseCount": 10
   },
@@ -619,7 +545,6 @@
     "name": "Henry Fonda",
     "description": "American actor (1905–1982)",
     "uri": "http://www.wikidata.org/entity/Q19155",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Henry_Fonda",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henry%20Fonda%20in%20Warlock.jpg",
     "spouseCount": 10
   },
@@ -627,7 +552,6 @@
     "name": "Kim Jong-il",
     "description": "Supreme Leader of North Korea from 1994 to 2011",
     "uri": "http://www.wikidata.org/entity/Q10665",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Kim_Jong_Il",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kim%20Jong-il%20on%20August%2024%2C%202011.jpg",
     "spouseCount": 10
   },
@@ -635,7 +559,6 @@
     "name": "John Huston",
     "description": "American film director, screenwriter, and actor (1906–1987)",
     "uri": "http://www.wikidata.org/entity/Q51575",
-    "wikiUrl": "https://en.wikipedia.org/wiki/John_Huston",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/John%20Huston%20-%20publicity.JPG",
     "spouseCount": 10
   },
@@ -643,7 +566,6 @@
     "name": "Ingmar Bergman",
     "description": "Swedish director and screenwriter (1918–2007)",
     "uri": "http://www.wikidata.org/entity/Q7546",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Ingmar_Bergman",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ingmar%20Bergman%20%281966%29.jpg",
     "spouseCount": 10
   },
@@ -651,7 +573,6 @@
     "name": "Robert Culp",
     "description": "American actor (1930–2010)",
     "uri": "http://www.wikidata.org/entity/Q369949",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Robert_Culp",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Robert%20Culp%201965.JPG",
     "spouseCount": 10
   },
@@ -659,7 +580,6 @@
     "name": "Constance Bennett",
     "description": "American actress (1904–1965)",
     "uri": "http://www.wikidata.org/entity/Q265358",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Constance_Bennett",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Motion%20picture%20actress%20Constance%20Bennett%20%28SAYRE%205472%29.jpg",
     "spouseCount": 10
   },
@@ -667,7 +587,6 @@
     "name": "Terry Moore",
     "description": "American actor",
     "uri": "http://www.wikidata.org/entity/Q271865",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Terry_Moore_(actress)",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Terry%20Moore%201947%20photo.jpg",
     "spouseCount": 10
   },
@@ -675,7 +594,6 @@
     "name": "Lolita Milyavskaya",
     "description": "Russian singer, actress, TV and film director",
     "uri": "http://www.wikidata.org/entity/Q1972714",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Lolita_Milyavskaya",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%D0%9B%D0%BE%D0%BB%D0%B8%D1%82%D0%B0%20%D0%9C%D0%B8%D0%BB%D1%8F%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%28cropped%29.jpg",
     "spouseCount": 10
   },
@@ -683,7 +601,6 @@
     "name": "Eva Gabor",
     "description": "Hungarian-American actress and socialite (1919–1995)",
     "uri": "http://www.wikidata.org/entity/Q235928",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Eva_Gabor",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eva%20Gabor%20Green%20Acres%201969%20%28cropped%29.jpg",
     "spouseCount": 10
   },
@@ -691,7 +608,6 @@
     "name": "Michael Parks",
     "description": "American actor (1940–2017)",
     "uri": "http://www.wikidata.org/entity/Q525318",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Michael_Parks",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michael%20Parks%20Then%20Came%20Bronson%201969.JPG",
     "spouseCount": 10
   },
@@ -699,7 +615,6 @@
     "name": "Paul Frees",
     "description": "American actor (1920–1986)",
     "uri": "http://www.wikidata.org/entity/Q3090544",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Paul_Frees",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Paul%20Frees%20in%20Suddenly%20%281954%29.jpg",
     "spouseCount": 10
   },
@@ -707,7 +622,6 @@
     "name": "Rick Jason",
     "description": "American actor (1923-2000)",
     "uri": "http://www.wikidata.org/entity/Q6133149",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Rick_Jason",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Luise%20Rainer%20Rick%20Jason%20Combat%201965.jpg",
     "spouseCount": 10
   },
@@ -715,7 +629,6 @@
     "name": "Sean Penn",
     "description": "American actor and filmmaker (born 1960)",
     "uri": "http://www.wikidata.org/entity/Q44221",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Sean_Penn",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Superpower%20%282023%29-60535.jpg",
     "spouseCount": 9
   },
@@ -723,7 +636,6 @@
     "name": "Melanie Griffith",
     "description": "American actress",
     "uri": "http://www.wikidata.org/entity/Q176455",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Melanie_Griffith",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Melanie%20Griffith%202016%20crop.jpg",
     "spouseCount": 9
   },
@@ -731,7 +643,6 @@
     "name": "Orson Welles",
     "description": "American actor and filmmaker (1915–1985)",
     "uri": "http://www.wikidata.org/entity/Q24829",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Orson_Welles",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Orson%20Welles%201937%20cr3-4.jpg",
     "spouseCount": 9
   },
@@ -739,7 +650,6 @@
     "name": "Dennis Quaid",
     "description": "American actor",
     "uri": "http://www.wikidata.org/entity/Q200768",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Dennis_Quaid",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dennis%20Quaid%202020%20by%20Glenn%20Francis.jpg",
     "spouseCount": 9
   },
@@ -747,7 +657,6 @@
     "name": "Dennis Quaid",
     "description": "American actor",
     "uri": "http://www.wikidata.org/entity/Q200768",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Dennis_Quaid",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dennis%20Quaid%20Blue%20Angels.JPEG",
     "spouseCount": 9
   },
@@ -755,7 +664,6 @@
     "name": "Jane Fonda",
     "description": "American actress and activist",
     "uri": "http://www.wikidata.org/entity/Q41142",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Jane_Fonda",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jane%20Fonda%20Cannes%202014.jpg",
     "spouseCount": 9
   },
@@ -763,7 +671,6 @@
     "name": "David Hasselhoff",
     "description": "American actor, singer, producer, and businessman (born 1952)",
     "uri": "http://www.wikidata.org/entity/Q201927",
-    "wikiUrl": "https://en.wikipedia.org/wiki/David_Hasselhoff",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/David%20Hasselhof%20at%20re-publica%20May%202014%20%28cropped%29.jpg",
     "spouseCount": 9
   },
@@ -771,7 +678,6 @@
     "name": "Donald Sutherland",
     "description": "Canadian actor (1935–2024)",
     "uri": "http://www.wikidata.org/entity/Q103784",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Donald_Sutherland",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Donald%20Sutherland%20%28cropped%29.JPG",
     "spouseCount": 9
   },
@@ -779,7 +685,6 @@
     "name": "Kenneth Harlan",
     "description": "American actor (1895–1967)",
     "uri": "http://www.wikidata.org/entity/Q3096499",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Kenneth_Harlan",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kenneth%20Harlan%20Stars%20of%20the%20Photoplay.jpg",
     "spouseCount": 9
   },
@@ -787,7 +692,6 @@
     "name": "Hugh Hefner",
     "description": "American businessman and magazine publisher (1926–2017)",
     "uri": "http://www.wikidata.org/entity/Q194280",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Hugh_Hefner",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hugh%20Hefner%20Glamourcon%202010.jpg",
     "spouseCount": 9
   },
@@ -795,7 +699,6 @@
     "name": "Dorottya Géczi",
     "description": "Hungarian actress (1931–2023)",
     "uri": "http://www.wikidata.org/entity/Q1031284",
-    "wikiUrl": "No wiki url available",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/G%C3%A9czy%20dorottya%20hungarian%20actress%202015%20Pecs%20POSZT.jpg",
     "spouseCount": 9
   },
@@ -803,7 +706,6 @@
     "name": "Robin Williams",
     "description": "American actor and comedian (1951–2014)",
     "uri": "http://www.wikidata.org/entity/Q83338",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Robin_Williams",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Robin%20Williams%202011a%20%282%29.jpg",
     "spouseCount": 9
   },
@@ -811,7 +713,6 @@
     "name": "Alexander Tsekalo",
     "description": "Soviet and Russian musician, actor, radio and television presenter, producer, screenwriter",
     "uri": "http://www.wikidata.org/entity/Q1980399",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Aleksandr_Tsekalo",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%20%D0%A6%D0%B5%D0%BA%D0%B0%D0%BB%D0%BE.jpg",
     "spouseCount": 9
   },
@@ -819,7 +720,6 @@
     "name": "Mikhail Yefremov",
     "description": "Soviet and Russian actor",
     "uri": "http://www.wikidata.org/entity/Q2373179",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Mikhail_Yefremov_(actor)",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mikhail%20Yefremov.jpg",
     "spouseCount": 9
   },
@@ -827,7 +727,6 @@
     "name": "Boris Galkin",
     "description": "Russian actor and composer",
     "uri": "http://www.wikidata.org/entity/Q4132614",
-    "wikiUrl": "No wiki url available",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Boris%20Galkin.jpg",
     "spouseCount": 9
   },
@@ -835,7 +734,6 @@
     "name": "Franchot Tone",
     "description": "American actor (1905-1968)",
     "uri": "http://www.wikidata.org/entity/Q457229",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Franchot_Tone",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Franchot%20Tone%20Twilight%20Zone%201961.jpg",
     "spouseCount": 8
   },
@@ -843,7 +741,6 @@
     "name": "Roberto Rossellini",
     "description": "Italian film director (1906–1977)",
     "uri": "http://www.wikidata.org/entity/Q53003",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Roberto_Rossellini",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Roberto%20Rossellini.jpg",
     "spouseCount": 8
   },
@@ -851,7 +748,6 @@
     "name": "Mel Ferrer",
     "description": "American actor, director and producer (1917–2008)",
     "uri": "http://www.wikidata.org/entity/Q333475",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Mel_Ferrer",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mel%20Ferrer%20-%201960.jpg",
     "spouseCount": 8
   },
@@ -859,7 +755,6 @@
     "name": "Jennifer Lopez",
     "description": "American singer and actress (born 1969)",
     "uri": "http://www.wikidata.org/entity/Q40715",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Jennifer_Lopez",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jennifer%20Lopez%20at%20the%202025%20Sundance%20Film%20Festival%20%28cropped%203%29.jpg",
     "spouseCount": 8
   },
@@ -867,7 +762,6 @@
     "name": "Charlie Chaplin",
     "description": "British comic actor and filmmaker (1889–1977)",
     "uri": "http://www.wikidata.org/entity/Q882",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Charlie_Chaplin",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Charlie%20Chaplin%20portrait%20Getty%201739411952.jpg",
     "spouseCount": 8
   },
@@ -875,7 +769,6 @@
     "name": "Richard Burton",
     "description": "Welsh actor (1925–1984)",
     "uri": "http://www.wikidata.org/entity/Q151973",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Richard_Burton",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Richard%20Burton%20-%20The%20Robe.jpg",
     "spouseCount": 8
   },
@@ -883,7 +776,6 @@
     "name": "Ty Hardin",
     "description": "American actor (1930–2017)",
     "uri": "http://www.wikidata.org/entity/Q326878",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Ty_Hardin",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ty%20Hardin%201958.JPG",
     "spouseCount": 8
   },
@@ -891,7 +783,6 @@
     "name": "Zsa Zsa Gabor",
     "description": "Hungarian-American socialite and actress (1917–2016)",
     "uri": "http://www.wikidata.org/entity/Q207405",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Zsa_Zsa_Gabor",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gabor%2C%20Zsa%20Zsa.jpg",
     "spouseCount": 8
   },
@@ -899,7 +790,6 @@
     "name": "Viveca Lindfors",
     "description": "Swedish actress (1920–1995)",
     "uri": "http://www.wikidata.org/entity/Q267217",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Viveca_Lindfors",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Viveca%20Lindfors%201957.jpg",
     "spouseCount": 8
   },
@@ -907,7 +797,6 @@
     "name": "George Sanders",
     "description": "British actor (1906–1972)",
     "uri": "http://www.wikidata.org/entity/Q296491",
-    "wikiUrl": "https://en.wikipedia.org/wiki/George_Sanders",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/George%20Sanders%20Allan%20Warren.jpg",
     "spouseCount": 8
   },
@@ -915,7 +804,6 @@
     "name": "Alan Jay Lerner",
     "description": "American lyricist and librettist (1918-1986)",
     "uri": "http://www.wikidata.org/entity/Q961893",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Alan_Jay_Lerner",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Alan%20Jay%20Lerner%20%281962%29.jpg",
     "spouseCount": 8
   },
@@ -923,7 +811,6 @@
     "name": "Steven Seagal",
     "description": "American actor, martial artist, and film producer",
     "uri": "http://www.wikidata.org/entity/Q82110",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Steven_Seagal",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Steven%20Seagal%20at%20Russia%20Expo.jpg",
     "spouseCount": 8
   },
@@ -931,7 +818,6 @@
     "name": "Mike Nichols",
     "description": "American director and comedian (1931–2014)",
     "uri": "http://www.wikidata.org/entity/Q51537",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Mike_Nichols",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mike%20Nichols.jpg",
     "spouseCount": 8
   },
@@ -939,7 +825,6 @@
     "name": "George C. Scott",
     "description": "American actor, film director and producer (1927–1999)",
     "uri": "http://www.wikidata.org/entity/Q182450",
-    "wikiUrl": "https://en.wikipedia.org/wiki/George_C._Scott",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/George%20C.%20Scott%20-%20publicity.JPG",
     "spouseCount": 8
   },
@@ -947,7 +832,6 @@
     "name": "George C. Scott",
     "description": "American actor, film director and producer (1927–1999)",
     "uri": "http://www.wikidata.org/entity/Q182450",
-    "wikiUrl": "https://en.wikipedia.org/wiki/George_C._Scott",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/George%20C.%20Scott%201984%20cropped.jpg",
     "spouseCount": 8
   },
@@ -955,7 +839,6 @@
     "name": "Sky du Mont",
     "description": "German actor",
     "uri": "http://www.wikidata.org/entity/Q69340",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Sky_du_Mont",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/1642%20Sky%20du%20Mont.JPG",
     "spouseCount": 8
   },
@@ -963,7 +846,6 @@
     "name": "Asmahan",
     "description": "Egyptian singer & actor (1917-1944)",
     "uri": "http://www.wikidata.org/entity/Q1766092",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Asmahan",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Asmahan%20photo.jpg",
     "spouseCount": 8
   },
@@ -971,7 +853,6 @@
     "name": "Silvia Pinal",
     "description": "Mexican actress (1931–2024)",
     "uri": "http://www.wikidata.org/entity/Q332485",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Silvia_Pinal",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Silvia%20Pinal%20in%20Maribel%20y%20la%20extra%C3%B1a%20familia%20%281960%29%20%28cropped%29.jpg",
     "spouseCount": 8
   },
@@ -979,7 +860,6 @@
     "name": "Ghita Nørby",
     "description": "Danish actress",
     "uri": "http://www.wikidata.org/entity/Q289924",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Ghita_N%C3%B8rby",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ghita%20N%C3%B8rby.jpg",
     "spouseCount": 8
   },
@@ -987,7 +867,6 @@
     "name": "Daniel Filho",
     "description": "Brazilian film producer, film director, actor and screenwriter",
     "uri": "http://www.wikidata.org/entity/Q1791525",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Daniel_Filho",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/A%C3%A9cio%20Neves%20e%20Daniel%20Filho%20-%20Comenda%20Chico%20Xavier%20-%20Uberaba%202.jpg",
     "spouseCount": 8
   },
@@ -995,7 +874,6 @@
     "name": "Jane Seymour",
     "description": "British actress",
     "uri": "http://www.wikidata.org/entity/Q123849",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Jane_Seymour_(actress)",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jane%20Seymour%202019%20by%20Glenn%20Francis.jpg",
     "spouseCount": 8
   },
@@ -1003,7 +881,6 @@
     "name": "Ahmed Salem",
     "description": "Egyptian actor (1910–1949)",
     "uri": "http://www.wikidata.org/entity/Q10972466",
-    "wikiUrl": "No wiki url available",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ahmed%20Salem.jpg",
     "spouseCount": 8
   },
@@ -1011,7 +888,6 @@
     "name": "Stone Cold Steve Austin",
     "description": "American professional wrestler and actor",
     "uri": "http://www.wikidata.org/entity/Q44313",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Stone_Cold_Steve_Austin",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Steve%20Austin%20by%20Gage%20Skidmore.jpg",
     "spouseCount": 8
   },
@@ -1019,7 +895,6 @@
     "name": "Fran Drescher",
     "description": "American actress",
     "uri": "http://www.wikidata.org/entity/Q230632",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Fran_Drescher",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fran%20Drescher%202018.jpg",
     "spouseCount": 8
   },
@@ -1027,7 +902,6 @@
     "name": "Fred Astaire",
     "description": "American dancer, actor, and singer (1899–1987)",
     "uri": "http://www.wikidata.org/entity/Q100937",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Fred_Astaire",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Astaire%20singing%20in%20Second%20Chorus.jpg",
     "spouseCount": 8
   },
@@ -1035,7 +909,6 @@
     "name": "Fred Astaire",
     "description": "American dancer, actor, and singer (1899–1987)",
     "uri": "http://www.wikidata.org/entity/Q100937",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Fred_Astaire",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Astaire%2C%20Fred%20-%20Never%20Get%20Rich.jpg",
     "spouseCount": 8
   },
@@ -1043,7 +916,6 @@
     "name": "Barry Humphries",
     "description": "Australian comedian and actor (1934–2023)",
     "uri": "http://www.wikidata.org/entity/Q734221",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Barry_Humphries",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Barry%20Humphries%20July%202001.jpg",
     "spouseCount": 8
   },
@@ -1051,7 +923,6 @@
     "name": "Stan Laurel",
     "description": "British-American actor (1890–1965)",
     "uri": "http://www.wikidata.org/entity/Q72869",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Stan_Laurel",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Stan%20in%20color.jpg",
     "spouseCount": 8
   },
@@ -1059,7 +930,6 @@
     "name": "Johnny Carson",
     "description": "American talk show host and comedian (1925–2005)",
     "uri": "http://www.wikidata.org/entity/Q310819",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Johnny_Carson",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Johnny%20Carson%201970.JPG",
     "spouseCount": 8
   },
@@ -1067,7 +937,6 @@
     "name": "Johnny Carson",
     "description": "American talk show host and comedian (1925–2005)",
     "uri": "http://www.wikidata.org/entity/Q310819",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Johnny_Carson",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/JohnnyCarson1994.jpg",
     "spouseCount": 8
   },
@@ -1075,7 +944,6 @@
     "name": "Jennifer O'Neill",
     "description": "American actress and model",
     "uri": "http://www.wikidata.org/entity/Q240460",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Jennifer_O%27Neill",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jennifer%20O%27Neill%201973.JPG",
     "spouseCount": 8
   },
@@ -1083,7 +951,6 @@
     "name": "Nick Nolte",
     "description": "American actor",
     "uri": "http://www.wikidata.org/entity/Q188018",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Nick_Nolte",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nick%20Nolte%202008%20%282544500287%29.jpg",
     "spouseCount": 8
   },
@@ -1091,7 +958,6 @@
     "name": "Lina Basquette",
     "description": "American actress (1907–1994)",
     "uri": "http://www.wikidata.org/entity/Q275440",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Lina_Basquette",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lina%20Basquette%20prom.jpg",
     "spouseCount": 7
   },
@@ -1099,7 +965,6 @@
     "name": "Martha Raye",
     "description": "American comic actress and singer (1916-1994)",
     "uri": "http://www.wikidata.org/entity/Q435236",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Martha_Raye",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MARTHA%20RAYE.jpg",
     "spouseCount": 7
   },
@@ -1107,7 +972,6 @@
     "name": "Arline Judge",
     "description": "American actress (1912–1974)",
     "uri": "http://www.wikidata.org/entity/Q2861653",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Arline_Judge",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Arline%20Judge%20by%20A.%20L.%20Whitey%20Schafer.jpg",
     "spouseCount": 7
   },
@@ -1115,7 +979,6 @@
     "name": "Liz Renay",
     "description": "American actress and dancer (1926-2007)",
     "uri": "http://www.wikidata.org/entity/Q3494124",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Liz_Renay",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/LizRenayMissExoticWorld2006.jpg",
     "spouseCount": 7
   },
@@ -1123,7 +986,6 @@
     "name": "Paulette Goddard",
     "description": "American actress (1910–1990)",
     "uri": "http://www.wikidata.org/entity/Q95050",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Paulette_Goddard",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Paulette%20Goddard%2C%20A%20Stranger%20Came%20Home%20publicity%20%281954%29%20I.jpg",
     "spouseCount": 6
   },
@@ -1131,7 +993,6 @@
     "name": "Demi Moore",
     "description": "American actress and producer (born 1962)",
     "uri": "http://www.wikidata.org/entity/Q43044",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Demi_Moore",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Demi%20Moore%20at%20the%202024%20Toronto%20International%20Film%20Festival%203%20%28cropped%29%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -1139,7 +1000,6 @@
     "name": "Tom Cruise",
     "description": "American actor and producer (born 1962)",
     "uri": "http://www.wikidata.org/entity/Q37079",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Tom_Cruise",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tom%20Cruise-2428.jpg",
     "spouseCount": 6
   },
@@ -1147,7 +1007,6 @@
     "name": "James Brolin",
     "description": "American actor",
     "uri": "http://www.wikidata.org/entity/Q315051",
-    "wikiUrl": "https://en.wikipedia.org/wiki/James_Brolin",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/James%20Brolin%202013%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -1155,7 +1014,6 @@
     "name": "Jenna Jameson",
     "description": "American former pornographic actor (born 1974)",
     "uri": "http://www.wikidata.org/entity/Q400",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Jenna_Jameson",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jenna%20Jameson%202014.jpg",
     "spouseCount": 6
   },
@@ -1163,7 +1021,6 @@
     "name": "Brad Pitt",
     "description": "American actor and filmmaker (born 1963)",
     "uri": "http://www.wikidata.org/entity/Q35332",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Brad_Pitt",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Brad%20Pitt-69858.jpg",
     "spouseCount": 6
   },
@@ -1171,7 +1028,6 @@
     "name": "Kim Kardashian",
     "description": "American media personality, businesswoman, model and actress (born 1980)",
     "uri": "http://www.wikidata.org/entity/Q186304",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Kim_Kardashian",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/President%20Trump%20Meets%20with%20Sentencing%20Commutation%20Recipients%20%2849624188912%29%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -1179,7 +1035,6 @@
     "name": "Robin Wright",
     "description": "American actress",
     "uri": "http://www.wikidata.org/entity/Q272972",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Robin_Wright",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Robin%20Wright%20Cannes%202017%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -1187,7 +1042,6 @@
     "name": "Dick Haymes",
     "description": "Argentinian actor and singer (1918–1980)",
     "uri": "http://www.wikidata.org/entity/Q962908",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Dick_Haymes",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dick%20Haymes%20in%20State%20Fair%20trailer.jpg",
     "spouseCount": 6
   },
@@ -1195,7 +1049,6 @@
     "name": "Ruth Elder",
     "description": "American pilot and actress (1902–1977)",
     "uri": "http://www.wikidata.org/entity/Q2177602",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Ruth_Elder",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%D0%AD%D0%BB%D0%B4%D0%B5%D1%80%2C%20%D0%A0%D1%83%D1%82%20%281%29.jpg",
     "spouseCount": 6
   },
@@ -1203,7 +1056,6 @@
     "name": "Fritz Lang",
     "description": "Austrian filmmaker (1890–1976)",
     "uri": "http://www.wikidata.org/entity/Q19504",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Fritz_Lang",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fritz%20Lang%20%281969%29.jpg",
     "spouseCount": 6
   },
@@ -1211,7 +1063,6 @@
     "name": "Kaley Cuoco",
     "description": "American actress and producer (born 1985)",
     "uri": "http://www.wikidata.org/entity/Q16759",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Kaley_Cuoco",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kaley%20Cuoco%20%2835303585254%29%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -1219,7 +1070,6 @@
     "name": "Ryan Reynolds",
     "description": "Canadian actor, comedian, screenwriter, and film producer",
     "uri": "http://www.wikidata.org/entity/Q192682",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Ryan_Reynolds",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ryan%20Reynolds%20at%20the%202025%20Toronto%20International%20Film%20Festival%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -1227,7 +1077,6 @@
     "name": "Rex Harrison",
     "description": "British actor (1908–1990)",
     "uri": "http://www.wikidata.org/entity/Q181887",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Rex_Harrison",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rex%20Harrison%20Allan%20Warren.jpg",
     "spouseCount": 6
   },
@@ -1235,7 +1084,6 @@
     "name": "Julie Andrews",
     "description": "British actress, singer and author (born 1935)",
     "uri": "http://www.wikidata.org/entity/Q161819",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Julie_Andrews",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Julie%20Andrews%20Park%20Hyatt%2C%20Sydney%2C%20Australia%202013.jpg",
     "spouseCount": 6
   },
@@ -1243,7 +1091,6 @@
     "name": "Tony Curtis",
     "description": "American actor (1925–2010)",
     "uri": "http://www.wikidata.org/entity/Q162389",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Tony_Curtis",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tony%20Curtis%201958.jpg",
     "spouseCount": 6
   },
@@ -1251,7 +1098,6 @@
     "name": "Burgess Meredith",
     "description": "American actor (1907–1997)",
     "uri": "http://www.wikidata.org/entity/Q343633",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Burgess_Meredith",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/BurgessMeredithFeb1938.jpg",
     "spouseCount": 6
   },
@@ -1259,7 +1105,6 @@
     "name": "William Marshall",
     "description": "American singer and bandleader (1917-1994)",
     "uri": "http://www.wikidata.org/entity/Q3568810",
-    "wikiUrl": "https://en.wikipedia.org/wiki/William_Marshall_(bandleader)",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/William%20Marshall%20in%20Calendar%20Girl%20%281947%29.jpg",
     "spouseCount": 6
   },
@@ -1267,7 +1112,6 @@
     "name": "Marilyn Monroe",
     "description": "American actress and model (1926–1962)",
     "uri": "http://www.wikidata.org/entity/Q4616",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Marilyn_Monroe",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Marilyn%20Monroe%20in%20How%20to%20Marry%20a%20Millionaire.jpg",
     "spouseCount": 6
   },
@@ -1275,7 +1119,6 @@
     "name": "Mary Pickford",
     "description": "Canadian actress and producer (1892–1979)",
     "uri": "http://www.wikidata.org/entity/Q104109",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Mary_Pickford",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mary%20Pickford%20cph.3c17995u.jpg",
     "spouseCount": 6
   },
@@ -1283,7 +1126,6 @@
     "name": "Douglas Fairbanks",
     "description": "American actor, screenwriter, director, and producer (1883–1939)",
     "uri": "http://www.wikidata.org/entity/Q104127",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Douglas_Fairbanks",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Douglas%20Fairbanks%20cropped.jpg",
     "spouseCount": 6
   },
@@ -1291,7 +1133,6 @@
     "name": "Lee Majors",
     "description": "American actor (born 1939)",
     "uri": "http://www.wikidata.org/entity/Q454088",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Lee_Majors",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lee%20Majors%201972.JPG",
     "spouseCount": 6
   },
@@ -1299,7 +1140,6 @@
     "name": "Robert Dinesen",
     "description": "Danish film director (1874-1972)",
     "uri": "http://www.wikidata.org/entity/Q958733",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Robert_Dinesen",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20Robert%20Dinesen%20%281904%20or%2007%29%20by%20Gustav%20Borgen.%20NFB.25993.jpg",
     "spouseCount": 6
   },
@@ -1307,7 +1147,6 @@
     "name": "Uma Thurman",
     "description": "American actress and model (born 1970)",
     "uri": "http://www.wikidata.org/entity/Q125017",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Uma_Thurman",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/1994%20Uma%20Thurman%2003.jpg",
     "spouseCount": 6
   },
@@ -1315,7 +1154,6 @@
     "name": "Uma Thurman",
     "description": "American actress and model (born 1970)",
     "uri": "http://www.wikidata.org/entity/Q125017",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Uma_Thurman",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Uma%20Thurman%202014%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -1323,7 +1161,6 @@
     "name": "Uma Thurman",
     "description": "American actress and model (born 1970)",
     "uri": "http://www.wikidata.org/entity/Q125017",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Uma_Thurman",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Uma%20Thurman%20Cannes%202017%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -1331,7 +1168,6 @@
     "name": "Joachim Fuchsberger",
     "description": "German actor and television host (1927–2014)",
     "uri": "http://www.wikidata.org/entity/Q78119",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Joachim_Fuchsberger",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Joachim%20Fuchsberger%20ROMY2008.jpg",
     "spouseCount": 6
   },
@@ -1339,7 +1175,6 @@
     "name": "No name available",
     "description": "English actor and director (1907–1989)",
     "uri": "http://www.wikidata.org/entity/Q55245",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Laurence_Olivier",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lord%20Olivier%206%20Allan%20Warren.jpg",
     "spouseCount": 6
   },
@@ -1347,7 +1182,6 @@
     "name": "Michel Piccoli",
     "description": "French actor (1925–2020)",
     "uri": "http://www.wikidata.org/entity/Q295257",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Michel_Piccoli",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michel%20Piccoli%20Cannes.jpg",
     "spouseCount": 6
   },
@@ -1355,7 +1189,6 @@
     "name": "Harald Juhnke",
     "description": "German actor-comedian (1929-2005)",
     "uri": "http://www.wikidata.org/entity/Q314033",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Harald_Juhnke",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/WP%20Harald%20Juhnke.jpg",
     "spouseCount": 6
   },
@@ -1363,7 +1196,6 @@
     "name": "Geena Davis",
     "description": "American actress",
     "uri": "http://www.wikidata.org/entity/Q280098",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Geena_Davis",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Geena%20Davis%20%2853673143164%29%20cropped.jpg",
     "spouseCount": 6
   },
@@ -1371,7 +1203,6 @@
     "name": "Santiago Amigorena",
     "description": "Argentine/French screenwriter, film producer, film director and actor",
     "uri": "http://www.wikidata.org/entity/Q1762914",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Santiago_Amigorena",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Santiago%20Amigorena%20-%20Les%20Arcs.jpg",
     "spouseCount": 6
   },
@@ -1379,7 +1210,6 @@
     "name": "Alec Baldwin",
     "description": "American actor",
     "uri": "http://www.wikidata.org/entity/Q170572",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Alec_Baldwin",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Alec%20Baldwin%20by%20Gage%20Skidmore.jpg",
     "spouseCount": 6
   },
@@ -1387,7 +1217,6 @@
     "name": "Malcolm McDowell",
     "description": "British actor (born 1943)",
     "uri": "http://www.wikidata.org/entity/Q117392",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Malcolm_McDowell",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Malcolm%20McDowell%20Cannes%202011.jpg",
     "spouseCount": 6
   },
@@ -1395,7 +1224,6 @@
     "name": "Josh Duhamel",
     "description": "American actor and former model",
     "uri": "http://www.wikidata.org/entity/Q19794",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Josh_Duhamel",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Josh%20Duhamel%20SXSW%202017%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -1403,7 +1231,6 @@
     "name": "Loni Anderson",
     "description": "American actress (1945–2025)",
     "uri": "http://www.wikidata.org/entity/Q266340",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Loni_Anderson",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Loni%20Anderson%201992%20cropped.jpg",
     "spouseCount": 6
   },
@@ -1411,7 +1238,6 @@
     "name": "Faten Hamama",
     "description": "Egyptian producer and actress (1931–2015).",
     "uri": "http://www.wikidata.org/entity/Q2424957",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Faten_Hamama",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Faten%20Hamama%20%281965%29.jpg",
     "spouseCount": 6
   },
@@ -1419,7 +1245,6 @@
     "name": "Paul McCartney",
     "description": "English musician and member of the Beatles (born 1942)",
     "uri": "http://www.wikidata.org/entity/Q2599",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Paul_McCartney",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Paul%20McCartney%20in%20October%202018.jpg",
     "spouseCount": 6
   },
@@ -1427,7 +1252,6 @@
     "name": "Johnny Depp",
     "description": "American actor (born 1963)",
     "uri": "http://www.wikidata.org/entity/Q37175",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Johnny_Depp",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Johnny%20Depp%202020.jpg",
     "spouseCount": 6
   },
@@ -1435,7 +1259,6 @@
     "name": "Roman Polanski",
     "description": "French-Polish filmmaker",
     "uri": "http://www.wikidata.org/entity/Q51552",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Roman_Polanski",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Roman%20Polanski%20Cannes%202013.jpg",
     "spouseCount": 6
   },
@@ -1443,7 +1266,6 @@
     "name": "Albert Finney",
     "description": "British actor (1936–2019)",
     "uri": "http://www.wikidata.org/entity/Q219546",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Albert_Finney",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Albert%20Finney%201966.jpg",
     "spouseCount": 6
   },
@@ -1451,7 +1273,6 @@
     "name": "Rosanna Arquette",
     "description": "American actress",
     "uri": "http://www.wikidata.org/entity/Q109232",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Rosanna_Arquette",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rosanna%20Arquette%20-%20Monte-Carlo%20Television%20Festival.JPG",
     "spouseCount": 6
   },
@@ -1459,7 +1280,6 @@
     "name": "Jim Carrey",
     "description": "Canadian-American actor and comedian (born 1962)",
     "uri": "http://www.wikidata.org/entity/Q40504",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Jim_Carrey",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jim%20Carrey%202020%20cropped.jpg",
     "spouseCount": 6
   },
@@ -1467,7 +1287,6 @@
     "name": "Henry de La Falaise",
     "description": "American film director (1898-1972)",
     "uri": "http://www.wikidata.org/entity/Q3133197",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Henry_de_La_Falaise",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henry%20de%20La%20Falaise.jpg",
     "spouseCount": 6
   },
@@ -1475,7 +1294,6 @@
     "name": "Dermot Mulroney",
     "description": "American actor",
     "uri": "http://www.wikidata.org/entity/Q363386",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Dermot_Mulroney",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Homecoming%2019%20%2844698668742%29%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -1483,7 +1301,6 @@
     "name": "Taika Waititi",
     "description": "New Zealand filmmaker, actor, and comedian",
     "uri": "http://www.wikidata.org/entity/Q2388576",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Taika_Waititi",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Taika%20Waititi%20by%20Gage%20Skidmore%202.jpg",
     "spouseCount": 6
   },
@@ -1491,7 +1308,6 @@
     "name": "Julian McMahon",
     "description": "Australian–American actor (1968–2025)",
     "uri": "http://www.wikidata.org/entity/Q4223",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Julian_McMahon",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Julian%20McMahon%20Dec%202011%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -1499,7 +1315,6 @@
     "name": "Charlie Sheen",
     "description": "American actor",
     "uri": "http://www.wikidata.org/entity/Q103939",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Charlie_Sheen",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Charlie%20Sheen%20March%202009.JPG",
     "spouseCount": 6
   },
@@ -1507,7 +1322,6 @@
     "name": "Corey Feldman",
     "description": "American actor and musician",
     "uri": "http://www.wikidata.org/entity/Q375419",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Corey_Feldman",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Corey%20Feldman%20Photo%20Op%20GalaxyCon%20Richmond%202023.jpg",
     "spouseCount": 6
   },
@@ -1515,7 +1329,6 @@
     "name": "Dick Powell",
     "description": "American actor (1904-1963)",
     "uri": "http://www.wikidata.org/entity/Q287977",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Dick_Powell",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dick%20powell%20-%20publicity.JPG",
     "spouseCount": 6
   },
@@ -1523,7 +1336,6 @@
     "name": "Thomas Jane",
     "description": "American actor",
     "uri": "http://www.wikidata.org/entity/Q18938",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Thomas_Jane",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Thomas%20Jane%202019%20by%20Glenn%20Francis.jpg",
     "spouseCount": 6
   },
@@ -1531,7 +1343,6 @@
     "name": "Casper Van Dien",
     "description": "American actor",
     "uri": "http://www.wikidata.org/entity/Q313804",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Casper_Van_Dien",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Casper%20Van%20Dien%20%283x4%29.jpg",
     "spouseCount": 6
   },
@@ -1539,7 +1350,6 @@
     "name": "John Ritter",
     "description": "American actor (1948–2003)",
     "uri": "http://www.wikidata.org/entity/Q314812",
-    "wikiUrl": "https://en.wikipedia.org/wiki/John_Ritter",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/John%20Ritter%20at%20the%201988%20Emmy%20Awards.jpg",
     "spouseCount": 6
   },
@@ -1547,7 +1357,6 @@
     "name": "Jon Voight",
     "description": "American actor (born 1938)",
     "uri": "http://www.wikidata.org/entity/Q167520",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Jon_Voight",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jon%20Voight%202011.jpg",
     "spouseCount": 6
   },
@@ -1555,7 +1364,6 @@
     "name": "Brian De Palma",
     "description": "American film director and screenwriter",
     "uri": "http://www.wikidata.org/entity/Q189526",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Brian_De_Palma",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Brian%20De%20Palma%20%28Venice%202007%29.jpg",
     "spouseCount": 6
   },
@@ -1563,7 +1371,6 @@
     "name": "William Hurt",
     "description": "American actor (1950–2022)",
     "uri": "http://www.wikidata.org/entity/Q105825",
-    "wikiUrl": "https://en.wikipedia.org/wiki/William_Hurt",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/History%20of%20Violence%20002%20%287271227040%29.jpg",
     "spouseCount": 6
   },
@@ -1571,7 +1378,6 @@
     "name": "Sean Connery",
     "description": "Scottish actor (1930–2020)",
     "uri": "http://www.wikidata.org/entity/Q4573",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Sean_Connery",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sean%20Connery%20%281983%29.jpg",
     "spouseCount": 6
   },
@@ -1579,7 +1385,6 @@
     "name": "DeWolf Hopper",
     "description": "American actor (1858-1935)",
     "uri": "http://www.wikidata.org/entity/Q3020065",
-    "wikiUrl": "https://en.wikipedia.org/wiki/DeWolf_Hopper",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/DeWolf-Hopper-1901-Morrison.jpg",
     "spouseCount": 6
   },
@@ -1587,7 +1392,6 @@
     "name": "Burt Reynolds",
     "description": "American actor (1936–2018)",
     "uri": "http://www.wikidata.org/entity/Q202148",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Burt_Reynolds",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Burt%20Reynolds%201991%20portrait%20crop.jpg",
     "spouseCount": 6
   },
@@ -1595,7 +1399,6 @@
     "name": "Burt Reynolds",
     "description": "American actor (1936–2018)",
     "uri": "http://www.wikidata.org/entity/Q202148",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Burt_Reynolds",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Burt%20Reynolds%20Dan%20August.JPG",
     "spouseCount": 6
   },
@@ -1603,7 +1406,6 @@
     "name": "Reese Witherspoon",
     "description": "American actress (born 1976)",
     "uri": "http://www.wikidata.org/entity/Q44063",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Reese_Witherspoon",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Reese%20Witherspoon%20at%20TIFF%202014.jpg",
     "spouseCount": 6
   },
@@ -1611,7 +1413,6 @@
     "name": "Bing Crosby",
     "description": "American singer and actor (1903–1977)",
     "uri": "http://www.wikidata.org/entity/Q72984",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Bing_Crosby",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bing%20Crosby%20Paramount%20Pictures.jpg",
     "spouseCount": 6
   },
@@ -1619,7 +1420,6 @@
     "name": "Arnaud Desplechin",
     "description": "French film director and screenwriter",
     "uri": "http://www.wikidata.org/entity/Q691335",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Arnaud_Desplechin",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/ARNAUD%20DESPLECHIN%20CESAR%202020.jpg",
     "spouseCount": 6
   },
@@ -1627,7 +1427,6 @@
     "name": "Heather Locklear",
     "description": "American actress (born 1961)",
     "uri": "http://www.wikidata.org/entity/Q229749",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Heather_Locklear",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Heather%20Locklear%201993.jpg",
     "spouseCount": 6
   },
@@ -1635,7 +1434,6 @@
     "name": "Bernard-Henri Lévy",
     "description": "French film director and philosopher",
     "uri": "http://www.wikidata.org/entity/Q313509",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Bernard-Henri_L%C3%A9vy",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bernard-Henri%20L%C3%A9vy%20par%20Marc%20Roussel%20en%202024.jpg",
     "spouseCount": 6
   },
@@ -1643,7 +1441,6 @@
     "name": "Dany Boon",
     "description": "French actor, screenwriter and film director",
     "uri": "http://www.wikidata.org/entity/Q468190",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Dany_Boon",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dany%20Boon%20C%C3%A9sars%202015.jpg",
     "spouseCount": 6
   },
@@ -1651,7 +1448,6 @@
     "name": "Drew Barrymore",
     "description": "American actress (born 1975)",
     "uri": "http://www.wikidata.org/entity/Q676094",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Drew_Barrymore",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Drew%20Barrymore%20in%202019%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -1659,7 +1455,6 @@
     "name": "Nikita Mikhalkov",
     "description": "Russian film director, writer, producer and actor",
     "uri": "http://www.wikidata.org/entity/Q55207",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Nikita_Mikhalkov",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mikhalkov%202022.jpg",
     "spouseCount": 6
   },
@@ -1667,7 +1462,6 @@
     "name": "Dixie Carter",
     "description": "American actress (1939–2010)",
     "uri": "http://www.wikidata.org/entity/Q240360",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Dixie_Carter",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dixie%20Carter%201977.JPG",
     "spouseCount": 6
   },
@@ -1675,7 +1469,6 @@
     "name": "Melissa Gilbert",
     "description": "American actress",
     "uri": "http://www.wikidata.org/entity/Q230929",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Melissa_Gilbert",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Melissa%20Gilbert%20after%20Drug%20Free%20America%20shoot%20-%20cropped%20%285242325680%29.jpg",
     "spouseCount": 6
   },
@@ -1683,7 +1476,6 @@
     "name": "Elizabeth Montgomery",
     "description": "American actress (1933-1995)",
     "uri": "http://www.wikidata.org/entity/Q233843",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Elizabeth_Montgomery",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Elizabeth%20Montgomery%201967.jpg",
     "spouseCount": 6
   },
@@ -1691,7 +1483,6 @@
     "name": "Peggy Lee",
     "description": "American singer (1920–2002)",
     "uri": "http://www.wikidata.org/entity/Q229139",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Peggy_Lee",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Peggy%20Lee%201950.JPG",
     "spouseCount": 6
   },
@@ -1699,7 +1490,6 @@
     "name": "Virginia Madsen",
     "description": "American actress",
     "uri": "http://www.wikidata.org/entity/Q229784",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Virginia_Madsen",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/VirginiaMadsenSFIFF06%20adj%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -1707,7 +1497,6 @@
     "name": "Mariah Carey",
     "description": "American singer (born 1969)",
     "uri": "http://www.wikidata.org/entity/Q41076",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Mariah_Carey",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mariah%20Carey%20WBLS%202018%20Interview%202.jpg",
     "spouseCount": 6
   },
@@ -1715,7 +1504,6 @@
     "name": "Tia Carrere",
     "description": "American actress (born 1967)",
     "uri": "http://www.wikidata.org/entity/Q286570",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Tia_Carrere",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/TiaCarrereMay09%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -1723,7 +1511,6 @@
     "name": "Téa Leoni",
     "description": "American actress and film producer",
     "uri": "http://www.wikidata.org/entity/Q202475",
-    "wikiUrl": "https://en.wikipedia.org/wiki/T%C3%A9a_Leoni",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/T%C3%A9aLeoniJun07.jpg",
     "spouseCount": 6
   },
@@ -1731,7 +1518,6 @@
     "name": "Robert De Niro",
     "description": "American actor, director and producer (born 1943)",
     "uri": "http://www.wikidata.org/entity/Q36949",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Robert_De_Niro",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Robert%20de%20Niro-9568.jpg",
     "spouseCount": 6
   },
@@ -1739,7 +1525,6 @@
     "name": "David Lean",
     "description": "British film director (1908–1991)",
     "uri": "http://www.wikidata.org/entity/Q55260",
-    "wikiUrl": "https://en.wikipedia.org/wiki/David_Lean",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/DavidLean1965.jpg",
     "spouseCount": 6
   },
@@ -1747,7 +1532,6 @@
     "name": "Margot Kidder",
     "description": "Canadian and American actress and activist (1948–2018)",
     "uri": "http://www.wikidata.org/entity/Q234471",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Margot_Kidder",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Margot%20Kidder%201970%20publicity%20photo%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -1755,7 +1539,6 @@
     "name": "Margot Kidder",
     "description": "Canadian and American actress and activist (1948–2018)",
     "uri": "http://www.wikidata.org/entity/Q234471",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Margot_Kidder",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Margot%20Kidder%20in%20June%202013.jpg",
     "spouseCount": 6
   },
@@ -1763,7 +1546,6 @@
     "name": "Debbie Reynolds",
     "description": "American actress, singer, and dancer (1932–2016)",
     "uri": "http://www.wikidata.org/entity/Q263696",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Debbie_Reynolds",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Debbie%20Reynolds.jpg",
     "spouseCount": 6
   },
@@ -1771,7 +1553,6 @@
     "name": "Elia Kazan",
     "description": "American director and actor (1909–2003)",
     "uri": "http://www.wikidata.org/entity/Q72717",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Elia_Kazan",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Elia%20Kazan.JPG",
     "spouseCount": 6
   },
@@ -1779,7 +1560,6 @@
     "name": "Sammy Davis Jr.",
     "description": "American entertainer (1925–1990)",
     "uri": "http://www.wikidata.org/entity/Q297816",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Sammy_Davis_Jr.",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sammy%20Davis%20Jnr%20Allan%20Warren.jpg",
     "spouseCount": 6
   },
@@ -1787,7 +1567,6 @@
     "name": "Anthony LaPaglia",
     "description": "Australian actor",
     "uri": "http://www.wikidata.org/entity/Q308124",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Anthony_LaPaglia",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Anthony%20LaPaglia%20crop%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -1795,7 +1574,6 @@
     "name": "Jack Pickford",
     "description": "Canadian-American actor (1896-1933)",
     "uri": "http://www.wikidata.org/entity/Q1677170",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Jack_Pickford",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jackpickford.jpg",
     "spouseCount": 6
   },
@@ -1803,7 +1581,6 @@
     "name": "Jenifer",
     "description": "French singer",
     "uri": "http://www.wikidata.org/entity/Q270335",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Jenifer_(singer)",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jenifer%20Reims%2096534.jpg",
     "spouseCount": 6
   },
@@ -1811,7 +1588,6 @@
     "name": "Jack Lemmon",
     "description": "American actor (1925–2001)",
     "uri": "http://www.wikidata.org/entity/Q94123",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Jack_Lemmon",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jack%20Lemmon%20-%201968.jpg",
     "spouseCount": 6
   },
@@ -1819,7 +1595,6 @@
     "name": "Miloš Forman",
     "description": "Czech American director, screenwriter, and professor (1932–2018)",
     "uri": "http://www.wikidata.org/entity/Q51525",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Milo%C5%A1_Forman",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Milos%20Forman.jpg",
     "spouseCount": 6
   },
@@ -1827,7 +1602,6 @@
     "name": "Jaakko Pakkasvirta",
     "description": "Finnish film director, actor and screenwriter (1934–2018)",
     "uri": "http://www.wikidata.org/entity/Q2656592",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Jaakko_Pakkasvirta",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jaakko-Pakkasvirta-1969.jpg",
     "spouseCount": 6
   },
@@ -1835,7 +1609,6 @@
     "name": "Hasse Ekman",
     "description": "Swedish actor and director (1915–2004)",
     "uri": "http://www.wikidata.org/entity/Q445497",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Hasse_Ekman",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hasse%20Ekman-PO.jpg",
     "spouseCount": 6
   },
@@ -1843,7 +1616,6 @@
     "name": "Vincent Price",
     "description": "American actor (1911–1993)",
     "uri": "http://www.wikidata.org/entity/Q219640",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Vincent_Price",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20Price%201945.jpg",
     "spouseCount": 6
   },
@@ -1851,7 +1623,6 @@
     "name": "Kate Jackson",
     "description": "American actress",
     "uri": "http://www.wikidata.org/entity/Q236253",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Kate_Jackson",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kate%20Jackson%201976.JPG",
     "spouseCount": 6
   },
@@ -1859,7 +1630,6 @@
     "name": "Peter Steen",
     "description": "Danish actor (1936-2013)",
     "uri": "http://www.wikidata.org/entity/Q326884",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Peter_Steen",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Peter%20Steen%20%28skuespiller%29.jpg",
     "spouseCount": 6
   },
@@ -1867,7 +1637,6 @@
     "name": "Jack White",
     "description": "American musician",
     "uri": "http://www.wikidata.org/entity/Q272031",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Jack_White",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jack%20White%20Ottawa.jpg",
     "spouseCount": 6
   },
@@ -1875,7 +1644,6 @@
     "name": "Basil Dean",
     "description": "British actor and filmmaker",
     "uri": "http://www.wikidata.org/entity/Q2886797",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Basil_Dean",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Basil%20Dean.jpg",
     "spouseCount": 6
   },
@@ -1883,7 +1651,6 @@
     "name": "John Wayne",
     "description": "American actor (1907–1979)",
     "uri": "http://www.wikidata.org/entity/Q40531",
-    "wikiUrl": "https://en.wikipedia.org/wiki/John_Wayne",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/John%20Wayne%20-%20still%20portrait.jpg",
     "spouseCount": 6
   },
@@ -1891,7 +1658,6 @@
     "name": "Claude Rains",
     "description": "British actor (1889–1967)",
     "uri": "http://www.wikidata.org/entity/Q318734",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Claude_Rains",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Rains%20%28SAYRE%208646%29.jpg",
     "spouseCount": 6
   },
@@ -1899,7 +1665,6 @@
     "name": "Anna Lee",
     "description": "British actress (1913-2004)",
     "uri": "http://www.wikidata.org/entity/Q460474",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Anna_Lee",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Anna%20Lee%20pg736.jpg",
     "spouseCount": 6
   },
@@ -1907,7 +1672,6 @@
     "name": "Hilary Duff",
     "description": "American actress and singer (born 1987)",
     "uri": "http://www.wikidata.org/entity/Q122020",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Hilary_Duff",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hillary%20Duff%202005.jpg",
     "spouseCount": 6
   },
@@ -1915,7 +1679,6 @@
     "name": "Marilu Henner",
     "description": "American actress (born 1952)",
     "uri": "http://www.wikidata.org/entity/Q270747",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Marilu_Henner",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Marilu%20Henner%202011.jpg",
     "spouseCount": 6
   },
@@ -1923,7 +1686,6 @@
     "name": "Marilu Henner",
     "description": "American actress (born 1952)",
     "uri": "http://www.wikidata.org/entity/Q270747",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Marilu_Henner",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Marilu%20Henner%20at%20the%201991%20Emmy%20Awards.jpg",
     "spouseCount": 6
   },
@@ -1931,7 +1693,6 @@
     "name": "William A. Wellman",
     "description": "American director, actor (1896-1975)",
     "uri": "http://www.wikidata.org/entity/Q290962",
-    "wikiUrl": "https://en.wikipedia.org/wiki/William_A._Wellman",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/First%20Lieutenant%20William%20Augustus%20Wellman.png",
     "spouseCount": 6
   },
@@ -1939,7 +1700,6 @@
     "name": "Caitlyn Jenner",
     "description": "American media personality and retired decathlete",
     "uri": "http://www.wikidata.org/entity/Q365144",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Caitlyn_Jenner",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caitlyn%20Jenner.jpeg",
     "spouseCount": 6
   },
@@ -1947,7 +1707,6 @@
     "name": "Paul Newman",
     "description": "American actor and film director (1925–2008)",
     "uri": "http://www.wikidata.org/entity/Q41871",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Paul_Newman",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Paul%20Newman%20-%201958.jpg",
     "spouseCount": 6
   },
@@ -1955,7 +1714,6 @@
     "name": "Imre Józsa",
     "description": "Hungarian actor (1954-2016)",
     "uri": "http://www.wikidata.org/entity/Q1102828",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Imre_J%C3%B3zsa",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/J%C3%B3zsa%20Imre.jpg",
     "spouseCount": 6
   },
@@ -1963,7 +1721,6 @@
     "name": "Helen Gilbert",
     "description": "film actress and musician (1915-1995)",
     "uri": "http://www.wikidata.org/entity/Q83752361",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Helen_Gilbert_(actress)",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Helen%20Gilbert%20Cine%20M408.jpg",
     "spouseCount": 6
   },
@@ -1971,7 +1728,6 @@
     "name": "Victor Sjöström",
     "description": "Swedish film director, screenwriter and actor (1879-1960)",
     "uri": "http://www.wikidata.org/entity/Q55170",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Victor_Sj%C3%B6str%C3%B6m",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/VictorSjostrom.jpg",
     "spouseCount": 6
   },
@@ -1979,7 +1735,6 @@
     "name": "Rhonda Fleming",
     "description": "American actress (1923–2020)",
     "uri": "http://www.wikidata.org/entity/Q283335",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Rhonda_Fleming",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rhonda%20Fleming%20-%20publicity%20%28cropped%29.JPG",
     "spouseCount": 6
   },
@@ -1987,7 +1742,6 @@
     "name": "Rhonda Fleming",
     "description": "American actress (1923–2020)",
     "uri": "http://www.wikidata.org/entity/Q283335",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Rhonda_Fleming",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rhonda%20Fleming%201951%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -1995,7 +1749,6 @@
     "name": "Lou Diamond Phillips",
     "description": "American actor",
     "uri": "http://www.wikidata.org/entity/Q319725",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Lou_Diamond_Phillips",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lou%20Diamond%20Phillips%20at%20the%20Chiller%20Theatre%20Expo%202017.jpg",
     "spouseCount": 6
   },
@@ -2003,7 +1756,6 @@
     "name": "Loretta Young",
     "description": "American actress (1913–2000)",
     "uri": "http://www.wikidata.org/entity/Q253384",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Loretta_Young",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Loretta%20Young%20ca.%201940-2%20crop.jpg",
     "spouseCount": 6
   },
@@ -2011,7 +1763,6 @@
     "name": "Anwar Wagdi",
     "description": "Egyptian actor (1904–1955)",
     "uri": "http://www.wikidata.org/entity/Q3361991",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Anwar_Wagdi",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Anwar%20Wagdi%20%28b-w%29.jpg",
     "spouseCount": 6
   },
@@ -2019,7 +1770,6 @@
     "name": "Katie Boyle",
     "description": "Italian-born British actress, presenter (1926-2018)",
     "uri": "http://www.wikidata.org/entity/Q290287",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Katie_Boyle",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Katie%20Boyle.jpg",
     "spouseCount": 6
   },
@@ -2027,7 +1777,6 @@
     "name": "Sergei Solovyov",
     "description": "Soviet and Russian film director, producer, screenwriter and actor (1944—2021)",
     "uri": "http://www.wikidata.org/entity/Q2362904",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Sergei_Solovyov_(film_director)",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sergey%20Solovyov%202017.jpg",
     "spouseCount": 6
   },
@@ -2035,7 +1784,6 @@
     "name": "Kelsey Grammer",
     "description": "American actor",
     "uri": "http://www.wikidata.org/entity/Q196560",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Kelsey_Grammer",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kelsey%20Grammer%202016.jpg",
     "spouseCount": 6
   },
@@ -2043,7 +1791,6 @@
     "name": "Jiří Pomeje",
     "description": "Czech dubbing actor, film producer, actor and entrepreneur (1964-2019)",
     "uri": "http://www.wikidata.org/entity/Q11727270",
-    "wikiUrl": "No wiki url available",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iveta%20Barto%C5%A1ov%C3%A1%20a%20Ji%C5%99%C3%AD%20Pomeje%202008%20M%C3%A1nes.jpg",
     "spouseCount": 6
   },
@@ -2051,7 +1798,6 @@
     "name": "Dieter Hallervorden",
     "description": "German actor and comedian",
     "uri": "http://www.wikidata.org/entity/Q78006",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Dieter_Hallervorden",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/20130922%20Bundestagswahl%202013%20in%20Berlin%20by%20Moritz%20Kosinsky0138.jpg",
     "spouseCount": 6
   },
@@ -2059,7 +1805,6 @@
     "name": "Dieter Hallervorden",
     "description": "German actor and comedian",
     "uri": "http://www.wikidata.org/entity/Q78006",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Dieter_Hallervorden",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oliver%20Mark%20-%20Dieter%20Hallervorden%2C%20Berlin%202013.jpg",
     "spouseCount": 6
   },
@@ -2067,7 +1812,6 @@
     "name": "Vera Sotnikova",
     "description": "Soviet actress",
     "uri": "http://www.wikidata.org/entity/Q4429859",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Vera_Sotnikova",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vera%20Sotnikova.jpg",
     "spouseCount": 6
   },
@@ -2075,7 +1819,6 @@
     "name": "Oliver Pocher",
     "description": "German comedian and entertainer",
     "uri": "http://www.wikidata.org/entity/Q70912",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Oliver_Pocher",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Die%20Pochers%20hier%21%20-%202020187203242%202020-07-05%20Die%20Pochers%20hier%21%20-%20Sven%20-%201D%20X%20MK%20II%20-%200146%20-%20AK8I1823.jpg",
     "spouseCount": 6
   },
@@ -2083,7 +1826,6 @@
     "name": "Eva Funck",
     "description": "actress",
     "uri": "http://www.wikidata.org/entity/Q4949242",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Eva_Funck",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eva%20Funck.jpg",
     "spouseCount": 6
   },
@@ -2091,7 +1833,6 @@
     "name": "Alan Thicke",
     "description": "Canadian actor, songwriter, and television host (1947–2016)",
     "uri": "http://www.wikidata.org/entity/Q277895",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Alan_Thicke",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/CFC%20in%20LA%20%28Alan%20Thicke%29.jpg",
     "spouseCount": 6
   },
@@ -2099,7 +1840,6 @@
     "name": "Thierry Ardisson",
     "description": "French television producer and host (1949–2025)",
     "uri": "http://www.wikidata.org/entity/Q732005",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Thierry_Ardisson",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/ARDISSON%20CANAL%2B%20024%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -2107,7 +1847,6 @@
     "name": "Alyssa Milano",
     "description": "American actress (born 1972)",
     "uri": "http://www.wikidata.org/entity/Q189067",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Alyssa_Milano",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Alyssa%20Milano%20%282019%29.jpg",
     "spouseCount": 6
   },
@@ -2115,7 +1854,6 @@
     "name": "William Churchill deMille",
     "description": "American screenwriter and film director (1878-1955)",
     "uri": "http://www.wikidata.org/entity/Q454464",
-    "wikiUrl": "https://en.wikipedia.org/wiki/William_C._deMille",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Young%20William%20C.%20de%20Mille.jpg",
     "spouseCount": 6
   },
@@ -2123,7 +1861,6 @@
     "name": "Larry David",
     "description": "American comedian, writer and actor (born 1947)",
     "uri": "http://www.wikidata.org/entity/Q23728",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Larry_David",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Larry%20David%20at%20the%202009%20Tribeca%20Film%20Festival%202.jpg",
     "spouseCount": 6
   },
@@ -2131,7 +1868,6 @@
     "name": "Justin Hartley",
     "description": "American actor (born 1977)",
     "uri": "http://www.wikidata.org/entity/Q195255",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Justin_Hartley",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Justin%20Hartley%202018.jpg",
     "spouseCount": 6
   },
@@ -2139,7 +1875,6 @@
     "name": "Christopher Plummer",
     "description": "Canadian actor (1929–2021)",
     "uri": "http://www.wikidata.org/entity/Q190523",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Christopher_Plummer",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Christopher%20Plummer%202007.jpg",
     "spouseCount": 6
   },
@@ -2147,7 +1882,6 @@
     "name": "Angela Lansbury",
     "description": "British–American actress (1925–2022)",
     "uri": "http://www.wikidata.org/entity/Q206856",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Angela_Lansbury",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Angela%20Lansbury%20%288356239174%29.jpg",
     "spouseCount": 6
   },
@@ -2155,7 +1889,6 @@
     "name": "Angelica Agurbash",
     "description": "Belarusian singer and model",
     "uri": "http://www.wikidata.org/entity/Q274306",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Angelica_Agurbash",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Angelica%20Agurbash.jpg",
     "spouseCount": 6
   },
@@ -2163,7 +1896,6 @@
     "name": "Fyodor Bondarchuk",
     "description": "Russian cinematographist",
     "uri": "http://www.wikidata.org/entity/Q2299195",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Fyodor_Bondarchuk",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fedor%20Bondarchuk%201.JPG",
     "spouseCount": 6
   },
@@ -2171,7 +1903,6 @@
     "name": "Mikhail Derzhavin",
     "description": "Soviet and Russian actor (1936–2018)",
     "uri": "http://www.wikidata.org/entity/Q4158905",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Mikhail_Derzhavin",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mikhail%20Derzhavin%202011-01-30.jpg",
     "spouseCount": 6
   },
@@ -2179,7 +1910,6 @@
     "name": "Edvard Radzinsky",
     "description": "Russian historian",
     "uri": "http://www.wikidata.org/entity/Q283859",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Edvard_Radzinsky",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Radzinsky%2001.jpg",
     "spouseCount": 6
   },
@@ -2187,7 +1917,6 @@
     "name": "Irina Ponarovskaya",
     "description": "Russian actor and singer",
     "uri": "http://www.wikidata.org/entity/Q4371812",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Irina_Ponarovskaya",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ponarovskaya.jpg",
     "spouseCount": 6
   },
@@ -2195,7 +1924,6 @@
     "name": "Yuliya Rutberg",
     "description": "Soviet and Russian actress",
     "uri": "http://www.wikidata.org/entity/Q4401155",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Yuliya_Rutberg",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%D0%A0%D1%83%D1%82%D0%B1%D0%B5%D1%80%D0%B3%20%D0%AE%D0%BB%D0%B8%D1%8F%20%D0%98%D0%BB%D1%8C%D0%B8%D0%BD%D0%B8%D1%87%D0%BD%D0%B0.jpg",
     "spouseCount": 6
   },
@@ -2203,7 +1931,6 @@
     "name": "Tigran Keosayan",
     "description": "Russian film director, actor, and television presenter (1966–2025)",
     "uri": "http://www.wikidata.org/entity/Q1142513",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Tigran_Keosayan",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tigran%20Keosayan%202018-10-12%20enchanced.jpg",
     "spouseCount": 6
   },
@@ -2211,7 +1938,6 @@
     "name": "Juliusz Machulski",
     "description": "Polish film director, screenwriter and film producer",
     "uri": "http://www.wikidata.org/entity/Q1349134",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Juliusz_Machulski",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Machulski%20Juliusz.jpg",
     "spouseCount": 6
   },
@@ -2219,7 +1945,6 @@
     "name": "Yaël Abecassis",
     "description": "Israeli actress and model",
     "uri": "http://www.wikidata.org/entity/Q460358",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Yael_Abecassis",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yael%20Abecassis1.jpg",
     "spouseCount": 6
   },
@@ -2227,7 +1952,6 @@
     "name": "Valeriya",
     "description": "Russian singer",
     "uri": "http://www.wikidata.org/entity/Q302484",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Valeriya",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Valeriya%206016.jpg",
     "spouseCount": 6
   },
@@ -2235,7 +1959,6 @@
     "name": "Howard Hawks",
     "description": "American film director, producer and screenwriter (1896–1977)",
     "uri": "http://www.wikidata.org/entity/Q51581",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Howard_Hawks",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Howard%20Hawks%20head%20shot.jpg",
     "spouseCount": 6
   },
@@ -2243,7 +1966,6 @@
     "name": "Poul Reichhardt",
     "description": "Danish actor (1913-1985)",
     "uri": "http://www.wikidata.org/entity/Q712472",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Poul_Reichhardt",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Poul%20Reichhardt%2C%20Udsnit%20fra%20ASA-personale.jpg",
     "spouseCount": 6
   },
@@ -2251,7 +1973,6 @@
     "name": "Per Oscarsson",
     "description": "Swedish film actor, director, producer and screenwriter (1927-2010)",
     "uri": "http://www.wikidata.org/entity/Q254793",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Per_Oscarsson",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Per%20Oscarsson%201948.jpg",
     "spouseCount": 6
   },
@@ -2259,7 +1980,6 @@
     "name": "Joan Rivers",
     "description": "American comedian, actress, and television host (1933–2014)",
     "uri": "http://www.wikidata.org/entity/Q240933",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Joan_Rivers",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Joan%20Rivers%201.jpg",
     "spouseCount": 6
   },
@@ -2267,7 +1987,6 @@
     "name": "Joan Rivers",
     "description": "American comedian, actress, and television host (1933–2014)",
     "uri": "http://www.wikidata.org/entity/Q240933",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Joan_Rivers",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Joan%20Rivers%201987.jpg",
     "spouseCount": 6
   },
@@ -2275,7 +1994,6 @@
     "name": "Mervyn LeRoy",
     "description": "American film director and producer (1900–1987)",
     "uri": "http://www.wikidata.org/entity/Q103788",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Mervyn_LeRoy",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mervyn%20LeRoy%20%28SAYRE%205738%29.jpg",
     "spouseCount": 6
   },
@@ -2283,7 +2001,6 @@
     "name": "Ashton Dearholt",
     "description": "actor (1894-1942)",
     "uri": "http://www.wikidata.org/entity/Q4806031",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Ashton_Dearholt",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Richard%20Holt%20%28Ashton%20Dearholt%29%201925.jpg",
     "spouseCount": 6
   },
@@ -2291,7 +2008,6 @@
     "name": "No name available",
     "description": "American actor (1957–2025)",
     "uri": "http://www.wikidata.org/entity/Q220584",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Michael_Madsen",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michael%20Madsen%20by%20Gage%20Skidmore.jpg",
     "spouseCount": 6
   },
@@ -2299,7 +2015,6 @@
     "name": "Zhaleh Kazemi",
     "description": "Iranian voice actress",
     "uri": "http://www.wikidata.org/entity/Q8070097",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Zhaleh_Kazemi",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Zhaleh%20Kazemi%20-%201971%20portrait.png",
     "spouseCount": 6
   },
@@ -2307,7 +2022,6 @@
     "name": "Mónica Naranjo",
     "description": "Spanish singer and songwriter",
     "uri": "http://www.wikidata.org/entity/Q589248",
-    "wikiUrl": "https://en.wikipedia.org/wiki/M%C3%B3nica_Naranjo",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/M%C3%B3nica%20Naranjo%20en%20la%20presentaci%C3%B3n%20de%20la%208%C2%AA%20edici%C3%B3n%20de%20la%20Gala%20Sida.jpg",
     "spouseCount": 6
   },
@@ -2315,7 +2029,6 @@
     "name": "Pernilla Wahlgren",
     "description": "Swedish singer, actress and presenter",
     "uri": "http://www.wikidata.org/entity/Q941210",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Pernilla_Wahlgren",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pernilla%20Wahlgren%202016-05-25%20001.jpg",
     "spouseCount": 6
   },
@@ -2323,7 +2036,6 @@
     "name": "Peggy Hopkins Joyce",
     "description": "American actress, model and dancer (1893-1957)",
     "uri": "http://www.wikidata.org/entity/Q531133",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Peggy_Hopkins_Joyce",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Peggyhopkinsjoyce.jpg",
     "spouseCount": 6
   },
@@ -2331,7 +2043,6 @@
     "name": "Gail O'Grady",
     "description": "American actress (born 1963)",
     "uri": "http://www.wikidata.org/entity/Q270743",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Gail_O%27Grady",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gail%20O%27Grady%20%281994%29.jpg",
     "spouseCount": 6
   },
@@ -2339,7 +2050,6 @@
     "name": "Janet Jackson",
     "description": "American singer, songwriter, dancer and actress (born 1966)",
     "uri": "http://www.wikidata.org/entity/Q131324",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Janet_Jackson",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/JanetJacksonUnbreakableTourSanFran2015%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -2347,7 +2057,6 @@
     "name": "Stacy Keach",
     "description": "American actor",
     "uri": "http://www.wikidata.org/entity/Q315090",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Stacy_Keach",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/StacyKeachMay07.jpg",
     "spouseCount": 6
   },
@@ -2355,7 +2064,6 @@
     "name": "Patrick Stewart",
     "description": "British actor (born 1940)",
     "uri": "http://www.wikidata.org/entity/Q16296",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Patrick_Stewart",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Patrick%20Stewart%20by%20Gage%20Skidmore%202.jpg",
     "spouseCount": 6
   },
@@ -2363,7 +2071,6 @@
     "name": "Jim Belushi",
     "description": "American actor",
     "uri": "http://www.wikidata.org/entity/Q107933",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Jim_Belushi",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jim%20Belushi%20Unveils%20Belushi%20Performance%20Hall%20at%20MAC%20Motown%202015.jpg",
     "spouseCount": 6
   },
@@ -2371,7 +2078,6 @@
     "name": "No name available",
     "description": "Canadian-American actor and comedian (1926–2010)",
     "uri": "http://www.wikidata.org/entity/Q82786",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Leslie_Nielsen",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leslie%20Nielsen.jpg",
     "spouseCount": 6
   },
@@ -2379,7 +2085,6 @@
     "name": "Alyssa Chia",
     "description": "Taiwanese actress and television host",
     "uri": "http://www.wikidata.org/entity/Q710571",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Alyssa_Chia",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Alyssa%20Chia%20-%20ELLE%20Taiwan%20Digital%20Cover%20Story%20July%20Issue%202023.png",
     "spouseCount": 6
   },
@@ -2387,7 +2092,6 @@
     "name": "Alyssa Chia",
     "description": "Taiwanese actress and television host",
     "uri": "http://www.wikidata.org/entity/Q710571",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Alyssa_Chia",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Alyssa%20Chia%202007.jpg",
     "spouseCount": 6
   },
@@ -2395,7 +2099,6 @@
     "name": "Leonard Nimoy",
     "description": "American actor (1931–2015)",
     "uri": "http://www.wikidata.org/entity/Q16345",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Leonard_Nimoy",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonard%20Nimoy%20Mission%20Impossible.jpg",
     "spouseCount": 6
   },
@@ -2403,7 +2106,6 @@
     "name": "Robert Redford",
     "description": "American actor",
     "uri": "http://www.wikidata.org/entity/Q59215",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Robert_Redford",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Robert%20Redford%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -2411,7 +2113,6 @@
     "name": "Mike Myers",
     "description": "Canadian actor, comedian and filmmaker",
     "uri": "http://www.wikidata.org/entity/Q185724",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Mike_Myers",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mike%20Myers%202017%20%2837220071326%29%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -2419,7 +2120,6 @@
     "name": "Wes Craven",
     "description": "American film director, screenwriter and producer (1939–2015)",
     "uri": "http://www.wikidata.org/entity/Q223992",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Wes_Craven",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Wes%20Craven%202010.jpg",
     "spouseCount": 6
   },
@@ -2427,7 +2127,6 @@
     "name": "Ed Asner",
     "description": "American actor (1929–2021)",
     "uri": "http://www.wikidata.org/entity/Q154421",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Ed_Asner",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ed%20Asner%20in%202017.jpg",
     "spouseCount": 6
   },
@@ -2435,7 +2134,6 @@
     "name": "Joe Piscopo",
     "description": "American actor",
     "uri": "http://www.wikidata.org/entity/Q2474995",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Joe_Piscopo",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/JoePiscopoByPhilKonstantin.JPG",
     "spouseCount": 6
   },
@@ -2443,7 +2141,6 @@
     "name": "Stacey Dash",
     "description": "American actress (born 1967)",
     "uri": "http://www.wikidata.org/entity/Q454328",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Stacey_Dash",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Stacey%20Dash.jpg",
     "spouseCount": 6
   },
@@ -2451,7 +2148,6 @@
     "name": "Eddie Murphy",
     "description": "American actor and comedian",
     "uri": "http://www.wikidata.org/entity/Q43874",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Eddie_Murphy",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eddie%20Murphy%20by%20David%20Shankbone.jpg",
     "spouseCount": 6
   },
@@ -2459,7 +2155,6 @@
     "name": "Dwayne Johnson",
     "description": "American actor and professional wrestler (born 1972)",
     "uri": "http://www.wikidata.org/entity/Q10738",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Dwayne_Johnson",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dwayne%20Johnson-1809%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -2467,7 +2162,6 @@
     "name": "Thomas Gottschalk",
     "description": "German television host and entertainer",
     "uri": "http://www.wikidata.org/entity/Q203806",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Thomas_Gottschalk",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Maischberger%20-%202018-02-28-9492.jpg",
     "spouseCount": 6
   },
@@ -2475,7 +2169,6 @@
     "name": "Phil Collins",
     "description": "English drummer, singer, and songwriter (born 1951)",
     "uri": "http://www.wikidata.org/entity/Q144622",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Phil_Collins",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Phil%20Collins%20-%20Royal%20Albert%20Hall%20-%20Wednesday%207th%20June%202017%20PhilCollinsRAH070617-3%20%2835215802836%29%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -2483,7 +2176,6 @@
     "name": "Dmitry Dibrov",
     "description": "Soviet journalist",
     "uri": "http://www.wikidata.org/entity/Q4161104",
-    "wikiUrl": "No wiki url available",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9%20%D0%94%D0%B8%D0%B1%D1%80%D0%BE%D0%B2%202021%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -2491,7 +2183,6 @@
     "name": "Bryan Cranston",
     "description": "American actor, director, and producer",
     "uri": "http://www.wikidata.org/entity/Q23547",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Bryan_Cranston",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bryan%20Cranston%202022%20%283x4%20cropped%29.jpg",
     "spouseCount": 6
   },
@@ -2499,7 +2190,6 @@
     "name": "George Carlin",
     "description": "American stand-up comedian (1937–2008)",
     "uri": "http://www.wikidata.org/entity/Q150651",
-    "wikiUrl": "https://en.wikipedia.org/wiki/George_Carlin",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/George%20Carlin%201975%20%28Little%20David%20Records%29%20Publicity.jpg",
     "spouseCount": 6
   },
@@ -2507,7 +2197,6 @@
     "name": "Boris Karloff",
     "description": "British actor (1887–1969)",
     "uri": "http://www.wikidata.org/entity/Q203219",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Boris_Karloff",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Boris%20Karloff.jpg",
     "spouseCount": 6
   },
@@ -2515,7 +2204,6 @@
     "name": "Alejandro Jodorowsky",
     "description": "Chilean-French filmmaker and comics writer",
     "uri": "http://www.wikidata.org/entity/Q263730",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Alejandro_Jodorowsky",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Utopiales%202011%20Alejandro%20Jodorowsky%2016%20%28cropped%29.jpg",
     "spouseCount": 6
   },
@@ -2523,7 +2211,6 @@
     "name": "Bob Saget",
     "description": "American stand-up comedian (1957–2022)",
     "uri": "http://www.wikidata.org/entity/Q333544",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Bob_Saget",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bob%20Saget%2C%20Behind%20The%20Velvet%20Rope%20TV%20.05.jpg",
     "spouseCount": 6
   },
@@ -2531,7 +2218,6 @@
     "name": "Roger Daltrey",
     "description": "English musician and lead vocalist of The Who",
     "uri": "http://www.wikidata.org/entity/Q311672",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Roger_Daltrey",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Roger%20Daltrey%20-%20May%202016.jpg",
     "spouseCount": 6
   },
@@ -2539,7 +2225,6 @@
     "name": "Gene Gutowski",
     "description": "Polish-American film producer",
     "uri": "http://www.wikidata.org/entity/Q3100452",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Gene_Gutowski",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gene%20Gutowski%20%28Garmisch%2C%201946%29.jpg",
     "spouseCount": 6
   },
@@ -2547,7 +2232,6 @@
     "name": "Johnny Knoxville",
     "description": "American stunt performer and actor",
     "uri": "http://www.wikidata.org/entity/Q295034",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Johnny_Knoxville",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Johnny-Knoxville.jpg",
     "spouseCount": 6
   },
@@ -2555,7 +2239,6 @@
     "name": "John Loder",
     "description": "British-American actor (1898-1988)",
     "uri": "http://www.wikidata.org/entity/Q1700875",
-    "wikiUrl": "https://en.wikipedia.org/wiki/John_Loder_(actor)",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hedy%20Lamarr%20and%20John%20Loder.jpg",
     "spouseCount": 5
   },
@@ -2563,7 +2246,6 @@
     "name": "Rita Hayworth",
     "description": "American actress (1918–1987)",
     "uri": "http://www.wikidata.org/entity/Q42745",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Rita_Hayworth",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rita%20Hayworth-publicity.JPG",
     "spouseCount": 5
   },
@@ -2571,7 +2253,6 @@
     "name": "Eddie Fisher",
     "description": "American singer and actor (1928–2010)",
     "uri": "http://www.wikidata.org/entity/Q363708",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Eddie_Fisher",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eddie%20Fisher%20-%20still.JPG",
     "spouseCount": 5
   },
@@ -2579,7 +2260,6 @@
     "name": "Sylvia Ashley",
     "description": "English model, actress and socialite (1904-1977)",
     "uri": "http://www.wikidata.org/entity/Q7660883",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Sylvia_Ashley",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sylvia%20Ashley%20%28cropped%29.jpg",
     "spouseCount": 5
   },
@@ -2587,7 +2267,6 @@
     "name": "Lex Barker",
     "description": "American actor (1919–1973)",
     "uri": "http://www.wikidata.org/entity/Q520819",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Lex_Barker",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lex%20Barker%201951%20crop.jpg",
     "spouseCount": 5
   },
@@ -2595,7 +2274,6 @@
     "name": "Joseph Stephen Crane",
     "description": "American actor (1916-1985)",
     "uri": "http://www.wikidata.org/entity/Q16011186",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Joseph_Stephen_Crane",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Stephen%20Crane%2C%201943.png",
     "spouseCount": 5
   },
@@ -2603,7 +2281,6 @@
     "name": "Clark Gable",
     "description": "American actor (1901–1960)",
     "uri": "http://www.wikidata.org/entity/Q71243",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Clark_Gable",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Clark%20Gable%20-%20publicity.JPG",
     "spouseCount": 5
   },
@@ -2611,7 +2288,6 @@
     "name": "Gig Young",
     "description": "American actor (1913–1978)",
     "uri": "http://www.wikidata.org/entity/Q344758",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Gig_Young",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gig%20Young%20-%201953.jpg",
     "spouseCount": 5
   },
@@ -2619,7 +2295,6 @@
     "name": "George Brent",
     "description": "Irish-American actor (1899-1979)",
     "uri": "http://www.wikidata.org/entity/Q1124735",
-    "wikiUrl": "https://en.wikipedia.org/wiki/George_Brent",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/George%20Brent%201-M-2004.jpg",
     "spouseCount": 5
   },
@@ -2627,7 +2302,6 @@
     "name": "Rod Steiger",
     "description": "American actor (1925–2002)",
     "uri": "http://www.wikidata.org/entity/Q273215",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Rod_Steiger",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rod%20Steiger%201964.jpg",
     "spouseCount": 5
   },
@@ -2635,7 +2309,6 @@
     "name": "Roy Boulting",
     "description": "British director, writer and producer",
     "uri": "http://www.wikidata.org/entity/Q212466",
-    "wikiUrl": "No wiki url available",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Colonel%20Frank%20Capra%20%28right%29%20of%20the%20US%20Army%20Signal%20Corps%20confers%20with%20Captain%20Roy%20Boulting%20of%20the%20British%20Army%20Film%20Unit%20on%20the%20editing%20of%20the%20film%20%27Tunisian%20Victory%27%20in%20February%201944.%20D18377.jpg",
     "spouseCount": 5
   },
@@ -2643,7 +2316,6 @@
     "name": "Miloš Kopecký",
     "description": "Czech actor (1922-1996)",
     "uri": "http://www.wikidata.org/entity/Q53111",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Milo%C5%A1_Kopeck%C3%BD",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Karolina%20Milo%C5%A1%20Kopeck%C3%BD.jpg",
     "spouseCount": 5
   },
@@ -2651,7 +2323,6 @@
     "name": "David Soul",
     "description": "American-British actor (1943–2024)",
     "uri": "http://www.wikidata.org/entity/Q727752",
-    "wikiUrl": "https://en.wikipedia.org/wiki/David_Soul",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/David%20Soul%20%22Starsky%20%26%20Hutch%22%20%281975%20ABC%20publicity%20photo%29.jpg",
     "spouseCount": 5
   },
@@ -2659,7 +2330,6 @@
     "name": "David Soul",
     "description": "American-British actor (1943–2024)",
     "uri": "http://www.wikidata.org/entity/Q727752",
-    "wikiUrl": "https://en.wikipedia.org/wiki/David_Soul",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/DavidSoul%202013.jpg",
     "spouseCount": 5
   },
@@ -2667,7 +2337,6 @@
     "name": "William Boyd",
     "description": "American actor (1895–1972)",
     "uri": "http://www.wikidata.org/entity/Q1477751",
-    "wikiUrl": "https://en.wikipedia.org/wiki/William_Boyd_(actor)",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/William%20Boyd%2C%20portrait.jpg",
     "spouseCount": 5
   },
@@ -2675,7 +2344,6 @@
     "name": "Johnny Weissmuller",
     "description": "American swimmer, water polo player, and actor (1904–1984)",
     "uri": "http://www.wikidata.org/entity/Q151284",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Johnny_Weissmuller",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Johny%20Weissmuller-publicity.JPG",
     "spouseCount": 5
   },
@@ -2683,7 +2351,6 @@
     "name": "Nathaniel Carl Goodwin",
     "description": "American actor (1857-1919)",
     "uri": "http://www.wikidata.org/entity/Q462049",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Nat_Goodwin",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nathaniel%20Carl%20Goodwin.jpg",
     "spouseCount": 5
   },
@@ -2691,7 +2358,6 @@
     "name": "Lorenzo Lamas",
     "description": "American actor",
     "uri": "http://www.wikidata.org/entity/Q145464",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Lorenzo_Lamas",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lorenzo%20Lamas.jpg",
     "spouseCount": 5
   },
@@ -2699,7 +2365,6 @@
     "name": "Ginger Rogers",
     "description": "American actress and dancer (1911–1995)",
     "uri": "http://www.wikidata.org/entity/Q95089",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Ginger_Rogers",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ginger%20Rogers%201945%20hairstyle.jpg",
     "spouseCount": 5
   },
@@ -2707,7 +2372,6 @@
     "name": "Herbert Marshall",
     "description": "English actor (1890-1966)",
     "uri": "http://www.wikidata.org/entity/Q1273317",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Herbert_Marshall",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Herbert%20Marshall%2C%20Photoplay%201934.jpg",
     "spouseCount": 5
   },
@@ -2715,7 +2379,6 @@
     "name": "Stanley Donen",
     "description": "American film director and choreographer (1924-2019)",
     "uri": "http://www.wikidata.org/entity/Q48765",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Stanley_Donen",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Stanley%20Donen%20%28cropped%29.JPG",
     "spouseCount": 5
   },
@@ -2723,7 +2386,6 @@
     "name": "Xavier Cugat",
     "description": "Spanish-Cuban musician and bandleader (1900–1990)",
     "uri": "http://www.wikidata.org/entity/Q334180",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Xavier_Cugat",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Xavier%20Cugat%20%28Gottlieb%2010661%29.jpg",
     "spouseCount": 5
   },
@@ -2731,7 +2393,6 @@
     "name": "Sacha Guitry",
     "description": "French playwright and filmmaker (1885-1957)",
     "uri": "http://www.wikidata.org/entity/Q337276",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Sacha_Guitry",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/SachaGuitry-1938-Harcourt.png",
     "spouseCount": 5
   },
@@ -2739,7 +2400,6 @@
     "name": "Louis Prima",
     "description": "American musician (1910–1978)",
     "uri": "http://www.wikidata.org/entity/Q367447",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Louis_Prima",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Louis%20Prima%20crop.jpg",
     "spouseCount": 5
   },
@@ -2747,7 +2407,6 @@
     "name": "Salman Rushdie",
     "description": "Indian-born British-American novelist (born 1947)",
     "uri": "http://www.wikidata.org/entity/Q44306",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Salman_Rushdie",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Salman%20Rushdie%202014%20%28cropped%29.jpg",
     "spouseCount": 5
   },
@@ -2755,7 +2414,6 @@
     "name": "Barbara Payton",
     "description": "American actress (1927-1967)",
     "uri": "http://www.wikidata.org/entity/Q4859221",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Barbara_Payton",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Barbara%20payton%20from%201953%20Bad%20Blonde.jpg",
     "spouseCount": 5
   },
@@ -2763,7 +2421,6 @@
     "name": "Joan O'Brien",
     "description": "American actress and singer",
     "uri": "http://www.wikidata.org/entity/Q3179611",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Joan_O%27Brien",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Joan%20O%27Brien%20in%20It%20Happened%20at%20the%20World%27s%20Fair.jpg",
     "spouseCount": 5
   },
@@ -2771,7 +2428,6 @@
     "name": "Timothy Leary",
     "description": "American psychologist (1920–1996)",
     "uri": "http://www.wikidata.org/entity/Q211731",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Timothy_Leary",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dr.%20Timothy%20Leary%20%281970%20AP%20Photo%29.jpg",
     "spouseCount": 5
   },
@@ -2779,7 +2435,6 @@
     "name": "Michael Crichton",
     "description": "American author, screenwriter, film director (1942–2008)",
     "uri": "http://www.wikidata.org/entity/Q172140",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Michael_Crichton",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MichaelCrichton%202.jpg",
     "spouseCount": 5
   },
@@ -2787,7 +2442,6 @@
     "name": "Evangeline Russell",
     "description": "American actress (1902-1966)",
     "uri": "http://www.wikidata.org/entity/Q61862123",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Evangeline_Russell",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Floodgates%20%281924%29%20-%202.jpg",
     "spouseCount": 5
   },
@@ -2795,7 +2449,6 @@
     "name": "Joyce Bulifant",
     "description": "American actress",
     "uri": "http://www.wikidata.org/entity/Q6297411",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Joyce_Bulifant",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mary%20Tyler%20Moore%20Show%201975%20%28cropped%29.jpg",
     "spouseCount": 5
   },
@@ -2803,7 +2456,6 @@
     "name": "Dagmar Dahlgren",
     "description": "American actress (1880-1951)",
     "uri": "http://www.wikidata.org/entity/Q5208581",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Dagmar_Dahlgren",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dagmar%20Dahlgren.jpg",
     "spouseCount": 5
   },
@@ -2811,7 +2463,6 @@
     "name": "Jane Powell",
     "description": "American actress, dancer, and singer (1929-2021)",
     "uri": "http://www.wikidata.org/entity/Q260099",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Jane_Powell",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jane%20Powell%201952.jpg",
     "spouseCount": 5
   },
@@ -2819,7 +2470,6 @@
     "name": "Sue Lyon",
     "description": "American actress (1946–2019)",
     "uri": "http://www.wikidata.org/entity/Q436722",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Sue_Lyon",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kinema-Junpo-1962-September-late-1.jpg",
     "spouseCount": 5
   },
@@ -2827,7 +2477,6 @@
     "name": "Juan Orol",
     "description": "Mexican-Spanish actor and film director",
     "uri": "http://www.wikidata.org/entity/Q3330652",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Juan_Orol",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rosa%20Carmina%2C%20Juan%20Arol%20y%20Gilberto%20Gonzalez%2C%20circa%201950s.jpg",
     "spouseCount": 5
   },
@@ -2835,7 +2484,6 @@
     "name": "Robert Cummings",
     "description": "American actor (1910–1990)",
     "uri": "http://www.wikidata.org/entity/Q366678",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Robert_Cummings",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Robert%20Cummings%20%281979%29.jpg",
     "spouseCount": 5
   },
@@ -2843,7 +2491,6 @@
     "name": "Tom Mix",
     "description": "American film actor (1880-1940)",
     "uri": "http://www.wikidata.org/entity/Q345468",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Tom_Mix",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tommixportrait.jpg",
     "spouseCount": 5
   },
@@ -2851,7 +2498,6 @@
     "name": "Ove Tjernberg",
     "description": "Swedish actor",
     "uri": "http://www.wikidata.org/entity/Q6211849",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Ove_Tjernberg",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ove%20Tjernberg%20-%20GTM-4629-1.jpg",
     "spouseCount": 5
   },
@@ -2859,7 +2505,6 @@
     "name": "Norodom Sihanouk",
     "description": "Cambodian monarch and politician (1922–2012)",
     "uri": "http://www.wikidata.org/entity/Q160318",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Norodom_Sihanouk",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Norodom%20Sihanouk%20%28c.%201952%29.jpg",
     "spouseCount": 5
   },
@@ -2867,7 +2512,6 @@
     "name": "Doug McClure",
     "description": "American actor (1935–1995)",
     "uri": "http://www.wikidata.org/entity/Q1251819",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Doug_McClure",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Doug%20McClure%201961.JPG",
     "spouseCount": 5
   },
@@ -2875,7 +2519,6 @@
     "name": "Rex Lease",
     "description": "American actor (1903-1966)",
     "uri": "http://www.wikidata.org/entity/Q9068560",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Rex_Lease",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Troopers%20Three%20lobby%20card.jpg",
     "spouseCount": 5
   },
@@ -2883,7 +2526,6 @@
     "name": "Lucy Cotton",
     "description": "American actress (1895-1948)",
     "uri": "http://www.wikidata.org/entity/Q6698249",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Lucy_Cotton",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lucy%20Cotton%20from%20Who%27s%20Who%20on%20the%20Screen.jpg",
     "spouseCount": 5
   },
@@ -2891,7 +2533,6 @@
     "name": "Lucy Cotton",
     "description": "American actress (1895-1948)",
     "uri": "http://www.wikidata.org/entity/Q6698249",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Lucy_Cotton",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lucycottonstanding-dateunknown-baincollection-crop-colorized.jpg",
     "spouseCount": 5
   },
@@ -2899,7 +2540,6 @@
     "name": "Pauline Frederick",
     "description": "American actress (1883–1938)",
     "uri": "http://www.wikidata.org/entity/Q461370",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Pauline_Frederick",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pauline%20Frederick%201918.jpg",
     "spouseCount": 5
   },
@@ -2907,7 +2547,6 @@
     "name": "Bela Lugosi",
     "description": "Hungarian-American actor (1882–1956)",
     "uri": "http://www.wikidata.org/entity/Q34529",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Bela_Lugosi",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lugosi%20B%C3%A9la%20fortepan%2014652%20%28cropped%29.jpg",
     "spouseCount": 5
   },
@@ -2915,7 +2554,6 @@
     "name": "Peter Brown",
     "description": "American television actor (1935-2016)",
     "uri": "http://www.wikidata.org/entity/Q1477388",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Peter_Brown_(actor)",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Peter%20Brown%20Lawman%201961.JPG",
     "spouseCount": 5
   },
@@ -2923,7 +2561,6 @@
     "name": "Leo Gorcey",
     "description": "American actor (1917-1969)",
     "uri": "http://www.wikidata.org/entity/Q2560665",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Leo_Gorcey",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leo%20Gorcey%20in%20Gallant%20Sons%20trailer.jpg",
     "spouseCount": 5
   },
@@ -2931,7 +2568,6 @@
     "name": "Ruth Warrick",
     "description": "American actress and singer (1916–2005)",
     "uri": "http://www.wikidata.org/entity/Q456375",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Ruth_Warrick",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/RUTHWarrick.jpg",
     "spouseCount": 5
   },
@@ -2939,7 +2575,6 @@
     "name": "Ruth Mix",
     "description": "American actress (1912-1977)",
     "uri": "http://www.wikidata.org/entity/Q7383134",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Ruth_Mix",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/That%20Girl%20Oklahoma%20%281926%29%20-%202.jpg",
     "spouseCount": 5
   },
@@ -2947,7 +2582,6 @@
     "name": "Victor Mature",
     "description": "American actor (1913–1999)",
     "uri": "http://www.wikidata.org/entity/Q358317",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Victor_Mature",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Victor%20Mature%20-%20publicity.JPG",
     "spouseCount": 5
   },
@@ -2955,7 +2589,6 @@
     "name": "Fred Crane",
     "description": "American film and television actor and radio announcer (1918-2008)",
     "uri": "http://www.wikidata.org/entity/Q656804",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Fred_Crane_(actor)",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/FredCraneCirca1960s.png",
     "spouseCount": 5
   },
@@ -2963,7 +2596,6 @@
     "name": "Dick Emery",
     "description": "English comic actor",
     "uri": "http://www.wikidata.org/entity/Q3026579",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Dick_Emery",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dick%20Emery%20and%20Susie%20Silvey.jpg",
     "spouseCount": 5
   },
@@ -2971,7 +2603,6 @@
     "name": "Christina Hendricks",
     "description": "British-American actress (born 1975)",
     "uri": "http://www.wikidata.org/entity/Q210462",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Christina_Hendricks",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Christina%20Hendricks%20at%20PaleyFest%202014.jpg",
     "spouseCount": 4
   },
@@ -2979,7 +2610,6 @@
     "name": "Julie Gayet",
     "description": "French film actress and film producer",
     "uri": "http://www.wikidata.org/entity/Q435925",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Julie_Gayet",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Julie%20Gayet%202024%20%28cropped%29.jpg",
     "spouseCount": 4
   },
@@ -2987,7 +2617,6 @@
     "name": "Ashton Kutcher",
     "description": "American actor, producer and model (born 1978)",
     "uri": "http://www.wikidata.org/entity/Q164782",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Ashton_Kutcher",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ashton%20Kutcher%20-%202023%20-%20P060603-652701%20%28cropped%29.jpg",
     "spouseCount": 4
   },
@@ -2995,7 +2624,6 @@
     "name": "Mimi Rogers",
     "description": "American actress",
     "uri": "http://www.wikidata.org/entity/Q233054",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Mimi_Rogers",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MimiRogersApr09.jpg",
     "spouseCount": 4
   },
@@ -3003,7 +2631,6 @@
     "name": "Kishore Kumar",
     "description": "Indian singer and actor (1929–1987)",
     "uri": "http://www.wikidata.org/entity/Q471542",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Kishore_Kumar",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kishore%20Kumar%202016%20postcard%20of%20India%20%28cropped%29.jpg",
     "spouseCount": 4
   },
@@ -3011,7 +2638,6 @@
     "name": "Chris Pratt",
     "description": "American actor (born 1979)",
     "uri": "http://www.wikidata.org/entity/Q503706",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Chris_Pratt",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chris%20Pratt%202018.jpg",
     "spouseCount": 4
   },
@@ -3019,7 +2645,6 @@
     "name": "Marc Anthony",
     "description": "American singer (born 1968)",
     "uri": "http://www.wikidata.org/entity/Q26625",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Marc_Anthony",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Interview%20with%20Marc%20Anthony%20%28cropped%29.png",
     "spouseCount": 4
   },
@@ -3027,7 +2652,6 @@
     "name": "Diane Lane",
     "description": "American actress",
     "uri": "http://www.wikidata.org/entity/Q255070",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Diane_Lane",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Diane%20Lane%20%28Berlin%20Film%20Festival%202011%29%202.jpg",
     "spouseCount": 4
   },
@@ -3035,7 +2659,6 @@
     "name": "No name available",
     "description": "American rapper, actor and comedian",
     "uri": "http://www.wikidata.org/entity/Q348533",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Nick_Cannon",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nick%20Cannon%20by%20David%20Shankbone.jpg",
     "spouseCount": 4
   },
@@ -3043,7 +2666,6 @@
     "name": "Ben Affleck",
     "description": "American film actor, director and screenwriter",
     "uri": "http://www.wikidata.org/entity/Q483118",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Ben_Affleck",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ben%20Affleck%20by%20Gage%20Skidmore%203.jpg",
     "spouseCount": 4
   },
@@ -3051,7 +2673,6 @@
     "name": "Douglas Fairbanks Jr.",
     "description": "American actor and United States naval officer (1909–2000)",
     "uri": "http://www.wikidata.org/entity/Q528428",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Douglas_Fairbanks_Jr.",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Douglas%20Fairbanks%20Jnr%20colour%20Allan%20Warren.jpg",
     "spouseCount": 4
   },
@@ -3059,7 +2680,6 @@
     "name": "Lauren Bacall",
     "description": "American actress (1924–2014)",
     "uri": "http://www.wikidata.org/entity/Q104000",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Lauren_Bacall",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lauren%20Bacall%20by%20Bernard%20Gotfryd.jpg",
     "spouseCount": 4
   },
@@ -3067,7 +2687,6 @@
     "name": "Carey Lowell",
     "description": "American actress",
     "uri": "http://www.wikidata.org/entity/Q236151",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Carey_Lowell",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carey%20Lowell%202011%20Shankbone.JPG",
     "spouseCount": 4
   },
@@ -3075,7 +2694,6 @@
     "name": "Steven Spielberg",
     "description": "American filmmaker (born 1946)",
     "uri": "http://www.wikidata.org/entity/Q8877",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Steven_Spielberg",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MKr25402%20Steven%20Spielberg%20%28Berlinale%202023%29.jpg",
     "spouseCount": 4
   },
@@ -3083,7 +2701,6 @@
     "name": "Jada Pinkett Smith",
     "description": "American actress (born 1971)",
     "uri": "http://www.wikidata.org/entity/Q228787",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Jada_Pinkett_Smith",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jada%20Pinkett%20Smith%20at%20NY%20PaleyFest%202014%20for%20Gotham.jpg",
     "spouseCount": 4
   },
@@ -3091,7 +2708,6 @@
     "name": "Linda Hamilton",
     "description": "American actress",
     "uri": "http://www.wikidata.org/entity/Q208214",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Linda_Hamilton",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Linda%20Hamilton%20Photo%20Op%20GalaxyCon%20Raleigh%202024.jpg",
     "spouseCount": 4
   },
@@ -3099,7 +2715,6 @@
     "name": "Courtney Love",
     "description": "American rock musician and actress (born 1964)",
     "uri": "http://www.wikidata.org/entity/Q222071",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Courtney_Love",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Life%20Ball%202014%20Courtney%20Love%20Crop.png",
     "spouseCount": 4
   },
@@ -3107,7 +2722,6 @@
     "name": "Jeanne Moreau",
     "description": "French actress, singer, screenwriter and director (1928-2017)",
     "uri": "http://www.wikidata.org/entity/Q106099",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Jeanne_Moreau",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jeanne%20Moreau%20%282009%29.jpg",
     "spouseCount": 4
   },
@@ -3115,7 +2729,6 @@
     "name": "Evelyn Keyes",
     "description": "American film actress",
     "uri": "http://www.wikidata.org/entity/Q253328",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Evelyn_Keyes",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/EvelynKeyes.jpg",
     "spouseCount": 4
   },
@@ -3123,7 +2736,6 @@
     "name": "Gloria Vanderbilt",
     "description": "American businesswoman, fashion designer, socialite and writer (1924-2019)",
     "uri": "http://www.wikidata.org/entity/Q264730",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Gloria_Vanderbilt",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gloria%20Vanderbilt%201959.JPG",
     "spouseCount": 4
   },
@@ -3131,7 +2743,6 @@
     "name": "Jana Brejchová",
     "description": "Czech actress (*1940)",
     "uri": "http://www.wikidata.org/entity/Q448467",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Jana_Brejchov%C3%A1",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jana%20Brejchov%C3%A1%201975-04-17.jpg",
     "spouseCount": 4
   },
@@ -3139,7 +2750,6 @@
     "name": "Gene Markey",
     "description": "American writer and producer",
     "uri": "http://www.wikidata.org/entity/Q5531333",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Gene_Markey",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hedy%20Lamarr%20and%20her%20new%20husband%20Gene%20Markey%2C%20March%201939.jpg",
     "spouseCount": 4
   },
@@ -3147,7 +2757,6 @@
     "name": "Alexa PenaVega",
     "description": "American actress",
     "uri": "http://www.wikidata.org/entity/Q152555",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Alexa_PenaVega",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Alexa%20Vega%203%2C%202012%20%28cropped%29.jpg",
     "spouseCount": 4
   },
@@ -3155,7 +2764,6 @@
     "name": "Anna Karina",
     "description": "Danish-French actress (1940–2019)",
     "uri": "http://www.wikidata.org/entity/Q232113",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Anna_Karina",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aankomst%20Franse%20filmster%20Anna%20Karina%20op%20Schiphol%2C%20Anna%20Karina%20tijdens%20persconfer%2C%20Bestanddeelnr%20921-0593.jpg",
     "spouseCount": 4
   },
@@ -3163,7 +2771,6 @@
     "name": "Jane Wyman",
     "description": "American actress (1917–2007)",
     "uri": "http://www.wikidata.org/entity/Q95055",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Jane_Wyman",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eiganotomo-janewyman-dec1953.jpg",
     "spouseCount": 4
   },
@@ -3171,7 +2778,6 @@
     "name": "Anouk Aimée",
     "description": "French actress (1932–2024)",
     "uri": "http://www.wikidata.org/entity/Q228607",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Anouk_Aim%C3%A9e",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Anouk%20Aim%C3%A9e%20Harcourt%201952.jpg",
     "spouseCount": 4
   },
@@ -3179,7 +2785,6 @@
     "name": "Damon Dash",
     "description": "American music executive (born 1971)",
     "uri": "http://www.wikidata.org/entity/Q344384",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Damon_Dash",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Damon%20Dash%20by%20David%20Shankbone.jpg",
     "spouseCount": 4
   },
@@ -3187,7 +2792,6 @@
     "name": "Lotte Lenya",
     "description": "Austrian singer and actress (1898-1981)",
     "uri": "http://www.wikidata.org/entity/Q93604",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Lotte_Lenya",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lotte%20Lenya.jpg",
     "spouseCount": 4
   },
@@ -3195,8 +2799,49 @@
     "name": "Julia Vysotskaya",
     "description": "Russian actress and television presenter",
     "uri": "http://www.wikidata.org/entity/Q3154160",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Julia_Vysotskaya",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vysotskaya%20Yulia.png",
     "spouseCount": 4
   }
 ]
+
+  
+async function fetchEntityData(qid) {
+  const url = `https://www.wikidata.org/wiki/Special:EntityData/${qid}.json`;
+  const res = await fetch(url).catch(err => {
+    // ignore error and return blank object
+    return {}
+  })
+  const data = await res.json();
+
+  const entity = data?.entities?.[qid];
+  const name = entity?.labels?.en?.value || "No name available";
+  const description =
+    entity?.descriptions?.en?.value || "No description available";
+  const wikiUrl = entity?.sitelinks?.enwiki?.url || "No wiki url available"
+
+  return { name, description, wikiUrl };
+}
+
+(async function (data) {
+  const promises = data.map(async (entry) => {
+      const qid = entry.uri.split("/").pop();
+      const { name, description, wikiUrl } = await fetchEntityData(qid);
+
+      return {
+        name,
+        description,
+        uri: entry.uri,
+        wikiUrl: wikiUrl,
+        image: entry.image,
+        spouseCount: Number(entry.spouseCount),
+      };
+  })
+
+  const mapped = await Promise.all(promises)
+   await writeFile(
+    resolve(import.meta.dirname, './newCelebs.json'),
+    JSON.stringify(mapped, null, 2),
+    'utf8'
+  );
+  console.log('new Celebrities data written');
+})(data)
