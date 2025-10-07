@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import allCelebrities from '../assets/Celebs.json'
+import { getCelebrities } from "../services/wikidataApi";
 import ScorePopup from "./ScorePopup";
 import GameOver from "./GameOver";
 
-const NUM_QUESTIONS = 10;
+const NUM_QUESTIONS = 2;
 
 function PersonSection({ handleClick, imgSrc, name, description }) {
   return (
@@ -49,6 +49,7 @@ function getRandomCelebs(allCelebs) {
 }
 
 export default function QuizPage() {
+  const [allCelebrities, setAllCelebrities] = useState([]);
   const [celebPairs, setCelebPairs] = useState([]);
   const [currPairIdx, setCurrPairIdx] = useState(0);
   const [score, setScore] = useState(0);
@@ -63,10 +64,10 @@ export default function QuizPage() {
     setHasAnswered(false);
   };
 
-  function resetState(allCelebrities) {
+  function resetState(allCelebs) {
     const celebPairs = [];
     for (let i = 0; i < NUM_QUESTIONS; i++) {
-      celebPairs.push(getRandomCelebs(allCelebrities));
+      celebPairs.push(getRandomCelebs(allCelebs));
     }
     setCelebPairs(celebPairs);
     setShowPopup(false);
@@ -77,15 +78,30 @@ export default function QuizPage() {
   }
 
   async function init() {
-    resetState(allCelebrities);
+    const data = await getCelebrities();
+    setAllCelebrities(data);
 
-    // preload imgs
+    // Generate celeb pairs for preloading
+    const celebPairs = [];
+    for (let i = 0; i < NUM_QUESTIONS; i++) {
+      celebPairs.push(getRandomCelebs(data));
+    }
+
+    // Preload all images before starting the game
     celebPairs.forEach((pair) => {
       pair.forEach((celeb) => {
         const img = new Image();
         img.src = celeb.image;
       });
     });
+
+    // Now set the state with the preloaded data
+    setCelebPairs(celebPairs);
+    setShowPopup(false);
+    setIsCorrect(false);
+    setHasAnswered(false);
+    setCurrPairIdx(0);
+    setScore(0);
   }
 
   useEffect(() => {

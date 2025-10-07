@@ -19,22 +19,28 @@ async function fetchInitialPersonList() {
   return await res.json();
 }
 
-// add in celebs when you are ready to change the dataset call
-export async function getCelebrities() {
-  return Promise.all(
-    jsonData.results.bindings.map(async (entry) => {
-      const qid = entry.person.value.split("/").pop();
-      const { name, description } = await fetchEntityData(qid);
+// Convert Wikimedia Commons image URL to thumbnail with fixed width
+function getCompressedImageUrl(imageUrl, width = 300) {
+  if (!imageUrl) return null;
 
-      return {
-        name,
-        description,
-        uri: entry.person.value,
-        image: entry.image.value,
-        spouseCount: Number(entry.spouseCount.value),
-      };
-    })
-  );
+  // Extract filename from URL
+  const filename = imageUrl.split('/').pop();
+  if (!filename) return imageUrl;
+
+  // Create thumbnail URL with fixed width for consistent sizing
+  return `https://commons.wikimedia.org/wiki/Special:FilePath/${filename}?width=${width}`;
+}
+
+// Process the celebrity data from the JSON file
+export async function getCelebrities() {
+  return jsonData.map((celeb) => ({
+    name: celeb.name,
+    description: celeb.description,
+    uri: celeb.uri,
+    image: getCompressedImageUrl(celeb.image, 300),
+    spouseCount: celeb.spouseCount,
+    wikiUrl: celeb.wikiUrl,
+  }));
 }
 
 async function fetchEntityData(qid) {

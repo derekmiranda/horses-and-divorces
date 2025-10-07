@@ -1,95 +1,93 @@
-@font-face {
-  font-family: "Redaction";
-  src: url("/path-to-font/Redaction.woff2") format("woff2"),
-    url("/path-to-font/Redaction.woff") format("woff");
-  font-display: swap; /* Ensures text is visible while the font loads */
-}
-
 @keyframes fontCycle {
-  0% {
-    font-family: "Redaction";
-  }
+    0% {
+        font-family: "Redaction";
+    }
 
-  14.28% {
-    font-family: "Redaction 10";
-  }
+    14.28% {
+        font-family: "Redaction 10";
+    }
 
-  28.56% {
-    font-family: "Redaction 20";
-  }
+    28.56% {
+        font-family: "Redaction 20";
+    }
 
-  42.84% {
-    font-family: "Redaction 35";
-  }
+    42.84% {
+        font-family: "Redaction 35";
+    }
 
-  57.12% {
-    font-family: "Redaction 50";
-  }
+    57.12% {
+        font-family: "Redaction 50";
+    }
 
-  71.4% {
-    font-family: "Redaction 70";
-  }
+    71.4% {
+        font-family: "Redaction 70";
+    }
 
-  85.68% {
-    font-family: "Redaction 100";
-  }
+    85.68% {
+        font-family: "Redaction 100";
+    }
 
-  100% {
-    font-family: "Redaction";
-  }
+    100% {
+        font-family: "Redaction";
+    }
 }
 
 .start-screen {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  gap: 1rem;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 1rem;
 }
 
 .start-screen h1 {
-  animation: fontCycle 2s infinite;
-  font-size: 8rem;
-  line-height: 80%;
+    font-size: 8rem;
+    line-height: 80%;
+    font-family: "Redaction";
+    /* Default font before animation starts */
+}
+
+.start-screen h1.animate {
+    animation: fontCycle 2s infinite;
 }
 
 .start-screen h4 {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .start-screen button {
-  font-family: "Redaction 50";
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin: clamp(0.6rem, 0.8rem, 1rem);
+    font-family: "Redaction 50";
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: clamp(0.6rem, 0.8rem, 1rem);
 }
 
 p {
-  font-family: Redaction;
+    font-family: Redaction;
 }
 
 .disclaimer {
-  position: absolute;
-  bottom: clamp(0.6rem, 0.8rem, 1.2rem);
-  width: 50%;
-  font-size: clamp(0.8rem, 1rem, 1.2rem);
+    position: absolute;
+    bottom: clamp(0.6rem, 0.8rem, 1.2rem);
+    width: 50%;
+    font-size: clamp(0.8rem, 1rem, 1.2rem);
 }
 
 @media (max-width: 420px) {
-  .start-screen h1 {
-    font-size: 3rem;
-  }
+    .start-screen h1 {
+        font-size: 3rem;
+    }
 
-  .start-screen h4 {
-    font-size: 1.5rem;
-    line-height: 1.2;
-  }
+    .start-screen h4 {
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
 
-  .disclaimer {
-    width: 100%;
-  }
+    .disclaimer {
+        width: 100%;
+    }
 }
