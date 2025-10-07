@@ -20,7 +20,7 @@ export default function GameOver({ score, celebPairs, totalQuestions }) {
 
 function endScreenCopy(score) {
   switch (true) {
-    case score === 10:
+    case score >= 8 && score <= 10:
       return "Hollywood should fear you. You know everything.";
     case score >= 6 && score <= 9:
       return "You’ve clearly spent a healthy amount of time reading celebrity gossip";
@@ -36,15 +36,44 @@ function endScreenCopy(score) {
 }
 
 function SpouseCountList({ celebs }) {
-  return celebs.map((celeb, i) => (
-    <a key={i} href={celeb.wikiUrl} className="spouse-row-link" target="_blank" rel="noreferrer">
+  // Split celebrities into three columns
+  const column1 = celebs.filter((_, i) => i % 3 === 0);
+  const column2 = celebs.filter((_, i) => i % 3 === 1);
+  const column3 = celebs.filter((_, i) => i % 3 === 2);
+
+  return (
+    <div className="celebrities-table">
+      <div className="celebrities-column">
+        {column1.map((celeb, i) => (
+          <CelebrityRow key={i} celeb={celeb} />
+        ))}
+      </div>
+      <div className="celebrities-column">
+        {column2.map((celeb, i) => (
+          <CelebrityRow key={i} celeb={celeb} />
+        ))}
+      </div>
+      <div className="celebrities-column">
+        {column3.map((celeb, i) => (
+          <CelebrityRow key={i} celeb={celeb} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function CelebrityRow({ celeb }) {
+  return (
+    <a href={celeb.wikiUrl} className="spouse-row-link" target="_blank" rel="noreferrer">
       <div className="spouse-count-row">
         <div className="game-over-person-image-container">
           <img src={celeb.image} alt={celeb.name} className="person-image" />
         </div>
-        <p className="spouse-name">{celeb.name}</p>
-        <p className="spouse-count">{celeb.spouseCount}</p>
+        <div className="celeb-info">
+          <p className="spouse-name">{celeb.name}</p>
+          <p className="spouse-count">{celeb.spouseCount}</p>
+        </div>
       </div>
     </a>
-  ))
+  );
 }
