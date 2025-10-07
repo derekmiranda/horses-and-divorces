@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import StartScreen from "./components/StartPage";
 import QuizPage from "./components/QuizPage";
+import { getCelebrities } from "./services/wikidataApi";
 
 // Font preloading function
 function preloadFonts() {
@@ -38,23 +39,43 @@ function preloadFonts() {
 function App() {
   const [currentScreen, setCurrentScreen] = useState("start-screen");
   const [fontsLoaded, setFontsLoaded] = useState(false);
+  const [celebritiesData, setCelebritiesData] = useState(null);
 
   useEffect(() => {
-    preloadFonts().then(() => {
+    // Load both fonts and celebrity data in parallel
+    Promise.all([
+      preloadFonts(),
+      getCelebrities()
+    ]).then(([, celebrities]) => {
       setFontsLoaded(true);
+      setCelebritiesData(celebrities);
+    }).catch((error) => {
+      console.error('Error loading app data:', error);
+      setFontsLoaded(true); // Still show the app even if data fails
     });
   }, []);
-
   if (!fontsLoaded) {
     return (
       <div style={{
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         height: '100vh',
-        fontFamily: 'system-ui, sans-serif'
+        fontFamily: 'monospace',
+        whiteSpace: 'pre'
       }}>
-        Loading...
+        {`
+     .---.
+    /     \\
+    \\.@-@./
+    /\`\\_/\`\\
+   //  _  \\\\
+  | \\     )|_
+ /\`\\_\`>  <_/ \\
+ \\__/'---'\\__/
+        `}
+        <div>Loading fonts and celebrity data...</div>
       </div>
     );
   }
@@ -64,7 +85,7 @@ function App() {
   // switch-case to be able to scale to higher number of pages
   switch (currentScreen) {
     case "quiz":
-      screen = <QuizPage />;
+      screen = celebritiesData ? <QuizPage preloadedCelebrities={celebritiesData} /> : <div>Loading...</div>;
   }
 
   return <>{screen}</>;

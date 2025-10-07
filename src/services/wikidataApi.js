@@ -1,6 +1,4 @@
-import jsonData from "../assets/Celebs.json";
-
-async function fetchInitialPersonList() {
+async function fetchCelebritiesFromWikidata() {
   const endpoint = "https://query.wikidata.org/sparql";
   const query = `
     SELECT DISTINCT ?person ?image (COUNT(?spouse) AS ?spouseCount) ?dob WHERE {
@@ -10,8 +8,9 @@ async function fetchInitialPersonList() {
       FILTER(?dob >  "+1901-00-00T00:00:00Z"^^xsd:dateTime)
     }
     GROUP BY ?person ?image ?dob
+    HAVING (COUNT(?spouse) >= 2)
     ORDER BY RAND()
-    LIMIT 50
+    LIMIT 100
   `;
   const url = endpoint + "?query=" + encodeURIComponent(query);
   const headers = { Accept: "application/sparql-results+json" };
@@ -31,16 +30,42 @@ function getCompressedImageUrl(imageUrl, width = 300) {
   return `https://commons.wikimedia.org/wiki/Special:FilePath/${filename}?width=${width}`;
 }
 
-// Process the celebrity data from the JSON file
+// Calculate adjusted spouse count based on specific rules
+function calculateAdjustedSpouseCount(originalCount) {
+  if (originalCount === 6) {
+    return originalCount / 3; // 6 becomes 2
+  } else if (originalCount === 8) {
+    return originalCount / 2; // 8 becomes 4
+  } else if (originalCount === 9) {
+    return originalCount / 3; // 9 becomes 3
+  } else if (originalCount >= 10) {
+    return originalCount / 2; // 10+ becomes 5+
+  }
+  return originalCount; // Keep original for other counts
+}
+
+// Process the celebrity data from Wikidata SPARQL query
 export async function getCelebrities() {
-  return jsonData.map((celeb) => ({
-    name: celeb.name,
-    description: celeb.description,
-    uri: celeb.uri,
-    image: getCompressedImageUrl(celeb.image, 300),
-    spouseCount: celeb.spouseCount,
-    wikiUrl: celeb.wikiUrl,
-  }));
+  const sparqlData = await fetchCelebritiesFromWikidata();
+
+  return Promise.all(
+    sparqlData.results.bindings.map(async (entry) => {
+      const qid = entry.person.value.split("/").pop();
+      const { name, description } = await fetchEntityData(qid);
+      const originalSpouseCount = Number(entry.spouseCount.value);
+      const adjustedSpouseCount = calculateAdjustedSpouseCount(originalSpouseCount);
+
+      return {
+        name,
+        description,
+        uri: entry.person.value,
+        image: getCompressedImageUrl(entry.image.value, 300),
+        spouseCount: adjustedSpouseCount,
+        originalSpouseCount: originalSpouseCount, // Keep original for reference
+        wikiUrl: `https://en.wikipedia.org/wiki/${name.replace(/\s+/g, '_')}`,
+      };
+    })
+  );
 }
 
 async function fetchEntityData(qid) {

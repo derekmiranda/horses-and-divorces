@@ -3,7 +3,7 @@ import { getCelebrities } from "../services/wikidataApi";
 import ScorePopup from "./ScorePopup";
 import GameOver from "./GameOver";
 
-const NUM_QUESTIONS = 2;
+const NUM_QUESTIONS = 10;
 
 function PersonSection({ handleClick, imgSrc, name, description }) {
   return (
@@ -48,8 +48,8 @@ function getRandomCelebs(allCelebs) {
   return randomIndices.map((i) => allCelebs[i]);
 }
 
-export default function QuizPage() {
-  const [allCelebrities, setAllCelebrities] = useState([]);
+export default function QuizPage({ preloadedCelebrities }) {
+  const [allCelebrities, setAllCelebrities] = useState(preloadedCelebrities || []);
   const [celebPairs, setCelebPairs] = useState([]);
   const [currPairIdx, setCurrPairIdx] = useState(0);
   const [score, setScore] = useState(0);
@@ -77,9 +77,8 @@ export default function QuizPage() {
     setScore(0);
   }
 
-  async function init() {
-    const data = await getCelebrities();
-    setAllCelebrities(data);
+  function init() {
+    const data = preloadedCelebrities || allCelebrities;
 
     // Generate celeb pairs for preloading
     const celebPairs = [];
@@ -105,8 +104,10 @@ export default function QuizPage() {
   }
 
   useEffect(() => {
-    init(); // Fetch the initial set of celebrities
-  }, []);
+    if (preloadedCelebrities) {
+      init(); // Initialize with preloaded data
+    }
+  }, [preloadedCelebrities]);
 
   const handleChoice = (idx) => {
     if (hasAnswered) return;
