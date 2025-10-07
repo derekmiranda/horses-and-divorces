@@ -40,18 +40,34 @@ function App() {
   const [currentScreen, setCurrentScreen] = useState("start-screen");
   const [fontsLoaded, setFontsLoaded] = useState(false);
   const [celebritiesData, setCelebritiesData] = useState(null);
+  const [loadingProgress, setLoadingProgress] = useState(0);
 
   useEffect(() => {
+    let progress = 0;
+    const progressInterval = setInterval(() => {
+      progress += Math.random() * 15; // Random increment between 0-15
+      if (progress > 90) progress = 90; // Cap at 90% until actually done
+      setLoadingProgress(Math.min(progress, 90));
+    }, 200);
+
     // Load both fonts and celebrity data in parallel
     Promise.all([
       preloadFonts(),
       getCelebrities()
     ]).then(([, celebrities]) => {
-      setFontsLoaded(true);
-      setCelebritiesData(celebrities);
+      clearInterval(progressInterval);
+      setLoadingProgress(100);
+      setTimeout(() => {
+        setFontsLoaded(true);
+        setCelebritiesData(celebrities);
+      }, 500); // Small delay to show 100%
     }).catch((error) => {
       console.error('Error loading app data:', error);
-      setFontsLoaded(true); // Still show the app even if data fails
+      clearInterval(progressInterval);
+      setLoadingProgress(100);
+      setTimeout(() => {
+        setFontsLoaded(true); // Still show the app even if data fails
+      }, 500);
     });
   }, []);
   if (!fontsLoaded) {
@@ -76,6 +92,9 @@ function App() {
                          '_''
         `}</span>
         <div>Neigh Neigh</div>
+        <div style={{ marginTop: '1rem', fontSize: '1.2rem' }}>
+          {Math.round(loadingProgress)}%
+        </div>
       </div>
     );
   }
