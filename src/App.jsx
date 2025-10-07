@@ -65,17 +65,17 @@ function App() {
         fontFamily: 'monospace',
         whiteSpace: 'pre'
       }}>
-        {`
-     .---.
-    /     \\
-    \\.@-@./
-    /\`\\_/\`\\
-   //  _  \\\\
-  | \\     )|_
- /\`\\_\`>  <_/ \\
- \\__/'---'\\__/
-        `}
-        <div>Loading fonts and celebrity data...</div>
+        <span>{`
+                _|\ _/|_,
+             ,((\\''-\\\\_
+           ,(())      '\\\
+         ,(()))       ,_ \\
+        ((())'   |        \\
+        )))))     >.__     \\
+        ((('     /    '__..c|
+                         '_''
+        `}</span>
+        <div>Neigh Neigh</div>
       </div>
     );
   }
