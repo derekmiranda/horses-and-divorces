@@ -19,12 +19,14 @@ function PersonSection({ handleClick, imgSrc, name, description }) {
   );
 }
 
-function getRandomCelebs(allCelebs) {
+function getRandomCelebs(allCelebs, usedIndices = []) {
   const randomIndices = [];
 
   while (randomIndices.length < 2 && allCelebs.length >= 2) {
     let randomIndex = Math.floor(Math.random() * allCelebs.length);
-    if (!randomIndices.includes(randomIndex)) {
+
+    // Skip if already used in this round or if it's a duplicate in this pair
+    if (!usedIndices.includes(randomIndex) && !randomIndices.includes(randomIndex)) {
       // ensure no ties
       while (
         randomIndices.length && ((
@@ -66,9 +68,21 @@ export default function QuizPage({ preloadedCelebrities }) {
 
   function resetState(allCelebs) {
     const celebPairs = [];
+    const usedIndices = [];
+
     for (let i = 0; i < NUM_QUESTIONS; i++) {
-      celebPairs.push(getRandomCelebs(allCelebs));
+      const pair = getRandomCelebs(allCelebs, usedIndices);
+      celebPairs.push(pair);
+
+      // Add the indices of the selected celebrities to usedIndices
+      pair.forEach(celeb => {
+        const celebIndex = allCelebs.findIndex(c => c.name === celeb.name);
+        if (celebIndex !== -1) {
+          usedIndices.push(celebIndex);
+        }
+      });
     }
+
     setCelebPairs(celebPairs);
     setShowPopup(false);
     setIsCorrect(false);
@@ -82,8 +96,19 @@ export default function QuizPage({ preloadedCelebrities }) {
 
     // Generate celeb pairs for preloading
     const celebPairs = [];
+    const usedIndices = [];
+
     for (let i = 0; i < NUM_QUESTIONS; i++) {
-      celebPairs.push(getRandomCelebs(data));
+      const pair = getRandomCelebs(data, usedIndices);
+      celebPairs.push(pair);
+
+      // Add the indices of the selected celebrities to usedIndices
+      pair.forEach(celeb => {
+        const celebIndex = data.findIndex(c => c.name === celeb.name);
+        if (celebIndex !== -1) {
+          usedIndices.push(celebIndex);
+        }
+      });
     }
 
     // Preload all images before starting the game

@@ -5,7 +5,7 @@ async function fetchCelebritiesFromWikidata() {
       ?person wdt:P26 ?spouse.
       ?person wdt:P18 ?image.
       ?person wdt:P569 ?dob.
-      FILTER(?dob >  "+1901-00-00T00:00:00Z"^^xsd:dateTime)
+      FILTER(?dob >  "+1945-00-00T00:00:00Z"^^xsd:dateTime)
     }
     GROUP BY ?person ?image ?dob
     HAVING (COUNT(?spouse) >= 2)
@@ -41,14 +41,13 @@ function calculateAdjustedSpouseCount(originalCount) {
   } else if (originalCount >= 10) {
     return originalCount / 2; // 10+ becomes 5+
   }
-  return originalCount; // Keep original for other counts
+  return originalCount;
 }
 
-// Process the celebrity data from Wikidata SPARQL query
 export async function getCelebrities() {
   const sparqlData = await fetchCelebritiesFromWikidata();
 
-  return Promise.all(
+  const allCelebrities = await Promise.all(
     sparqlData.results.bindings.map(async (entry) => {
       const qid = entry.person.value.split("/").pop();
       const { name, description } = await fetchEntityData(qid);
@@ -66,6 +65,8 @@ export async function getCelebrities() {
       };
     })
   );
+
+  return allCelebrities.filter(celeb => celeb.name !== "No name available");
 }
 
 async function fetchEntityData(qid) {

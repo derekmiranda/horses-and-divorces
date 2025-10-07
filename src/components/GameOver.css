@@ -27,38 +27,32 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 100%;
-    max-width: 1200px;
     overflow: hidden;
 }
 
 .celebrities-table {
     display: flex;
-    gap: 1rem;
     width: 100%;
     justify-content: center;
+    gap: clamp(0.8rem, 1.2rem, 2rem)
 }
 
 .celebrities-column {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     flex: 1;
     max-width: 400px;
+    gap: clamp(0.8rem, 1.2rem, 2rem)
 }
 
-/* Ensure only the title animates; stop any inherited animations */
-.spouse-count-row,
-.spouse-count-row * {
-    animation: none !important;
-}
 
 .spouse-count-row {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    width: 20vw;
-    padding: 0.1rem;
+    min-width: fit-content;
+    width: 16rem;
+    text-wrap: auto;
+    gap: clamp(0.4rem, 0.6rem, 0.8rem);
     border: 2px solid var(--color-primary);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     background: var(--bg);
@@ -112,8 +106,4 @@
     text-decoration: none;
     color: inherit;
     display: block;
-}
-
-.non-animate {
-    animation: none;
 }
