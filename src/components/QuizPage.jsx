@@ -50,7 +50,7 @@ function getRandomCelebs(allCelebs, usedIndices = []) {
   return randomIndices.map((i) => allCelebs[i]);
 }
 
-export default function QuizPage({ preloadedCelebrities }) {
+export default function QuizPage({ preloadedCelebrities, onBackToStart }) {
   const [allCelebrities, setAllCelebrities] = useState(preloadedCelebrities || []);
   const [celebPairs, setCelebPairs] = useState([]);
   const [currPairIdx, setCurrPairIdx] = useState(0);
@@ -128,11 +128,12 @@ export default function QuizPage({ preloadedCelebrities }) {
     setScore(0);
   }
 
+  // Initialize with fresh pairs every time the component mounts
   useEffect(() => {
     if (preloadedCelebrities) {
-      init(); // Initialize with preloaded data
+      init();
     }
-  }, [preloadedCelebrities]);
+  }, []); // Empty dependency array means this runs on every mount
 
   const handleChoice = (idx) => {
     if (hasAnswered) return;
@@ -163,7 +164,7 @@ export default function QuizPage({ preloadedCelebrities }) {
           <GameOver score={score} celebPairs={celebPairs} totalQuestions={NUM_QUESTIONS} />
         </div>
         <div>
-          <button onClick={() => resetState(allCelebrities)}>
+          <button onClick={onBackToStart}>
             Play Again?
           </button>
         </div>

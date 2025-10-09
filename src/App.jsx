@@ -104,7 +104,7 @@ function App() {
   // switch-case to be able to scale to higher number of pages
   switch (currentScreen) {
     case "quiz":
-      screen = celebritiesData ? <QuizPage preloadedCelebrities={celebritiesData} /> : <div>Loading...</div>;
+      screen = celebritiesData ? <QuizPage preloadedCelebrities={celebritiesData} onBackToStart={() => setCurrentScreen("start-screen")} /> : <div>Loading...</div>;
   }
 
   return <>{screen}</>;
